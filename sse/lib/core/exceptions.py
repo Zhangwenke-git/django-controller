@@ -54,5 +54,9 @@ def exc_exceptions(exc, context):
         # 调试模式
         logger.error(traceback.format_exc())
         traceback.format_exc()
-
-    return APIResponse(error=error, result=False, msg=msg, headers=response.headers, status=status)
+        header = None
+        try:
+            header = response.headers
+        except AttributeError:
+            msg="Uncaptured exception"
+    return APIResponse(error=error, result=False, msg=msg, headers=header, status=status)

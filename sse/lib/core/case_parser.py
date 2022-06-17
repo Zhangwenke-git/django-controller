@@ -87,7 +87,8 @@ def case_parser(params, *args, **kwargs):
             k_=k.split("@")[0]
             p_dict_.update({k_:v})
         for k,v in item["validator"].items():
-            k_=k.split("@")[0]
+            v_key = k.split("@")
+            k_ = v_key[0] + "@" + v_key[1]
             v_dict_.update({k_:v})
         scenarios.append([p_dict_,item["scenario"],v_dict_])
 
@@ -116,7 +117,8 @@ def module_parser(params, *args, **kwargs):
                 k_ = k.split("@")[0]
                 p_dict_.update({k_: v})
             for k, v in item["validator"].items():
-                k_ = k.split("@")[0]
+                v_key = k.split("@")
+                k_ = v_key[0] + "@" + v_key[1]
                 v_dict_.update({k_: v})
             scenarios.append([p_dict_, item["scenario"], v_dict_])
         del case_copy["case_scenario"]
@@ -148,7 +150,8 @@ def project_parser(params, *args, **kwargs):
                     k_ = k.split("@")[0]
                     p_dict_.update({k_: v})
                 for k, v in item["validator"].items():
-                    k_ = k.split("@")[0]
+                    v_key = k.split("@")
+                    k_ = v_key[0] + "@" + v_key[1]
                     v_dict_.update({k_: v})
                 scenarios.append([p_dict_, item["scenario"], v_dict_])
             del case_copy["case_scenario"]

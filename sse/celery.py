@@ -41,7 +41,7 @@ app.conf.update(
     CELERYBEAT_SCHEDULE={
         'heart_beats_job': {
             'task': 'sse.celery_job.jobs.heart_beats',
-            'schedule': timedelta(seconds=60),
+            'schedule': timedelta(seconds=300),
             'args': ()
         },
         'clean_logs_job': {

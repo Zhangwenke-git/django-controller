@@ -54,7 +54,7 @@ class ScenarioSerializer(serializers.ModelSerializer):
         expects = {}
         for expect in validated_data["validator"]:
             expect = parser(expect)
-            expression = expect["expression"]+"@"+str(expect["type"])
+            expression = expect["expression"]+"@"+str(expect["mode"])+"@"+str(expect["type"])
             expects.update({expression: expect["val"]})
         validated_data["validator"] = expects
 
@@ -72,7 +72,7 @@ class ScenarioSerializer(serializers.ModelSerializer):
         vals = {}
         validator_ = validated_data.get('validator', instance.validator)
         for val in validator_:
-            expression = val["expression"] + "@" + str(val["type"])
+            expression = val["expression"] + "@" + str(val["mode"]) +"@" + str(val["type"])
             vals.update({expression: val["val"]})
         instance.validator = vals
 
