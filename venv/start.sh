@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+python manage.py makemigrations
 python manage.py migrate
-python manage.py runservwer 9091
+python manage.py runserver 9091

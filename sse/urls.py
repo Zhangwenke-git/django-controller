@@ -17,14 +17,14 @@ from django.contrib import admin
 from django.urls import path,re_path,include
 import api.urls as api_urls
 import user.urls as user_urls
-from rest_framework.documentation import include_docs_urls
+# from rest_framework.documentation import include_docs_urls
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(api_urls)),
     path('user/', include(user_urls)),
-    path('docs/', include_docs_urls(title='站点页面标题'))
+    # path('docs/', include_docs_urls(title='站点页面标题'))
 ]
 
 

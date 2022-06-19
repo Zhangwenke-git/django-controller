@@ -639,7 +639,7 @@ function change(details_id) {
     
                     <tr>
                         <td>执行编码</td>
-                        <td>EXEC_24F3C88616514C03A7621F34728EAE36</td>
+                        <td>EXEC_B490D1BD8B094987B319D00505FB8258</td>
                     </tr>
 
                 
@@ -651,7 +651,7 @@ function change(details_id) {
                 
     <tr>
         <td>开始时间</td>
-        <td>2022-06-12 23:23:41</td>
+        <td>2022-06-19 12:21:51</td>
     </tr>
     <tr>
         <td>开发人员</td>
@@ -682,9 +682,9 @@ function change(details_id) {
         <td align="center" style="color:green">0</td>
         <td align="center" style="color:gray">0</td>
         <td align="center">0.0%</td>
-        <td align="center">0.71 ms</td>
-        <td align="center">0.483 ms</td>
-        <td align="center">0.483 ms</td>   
+        <td align="center">0.15 ms</td>
+        <td align="center">0.042 ms</td>
+        <td align="center">0.042 ms</td>   
     </tr>
     
 </table>
@@ -731,15 +731,15 @@ function change(details_id) {
                 
                     <tr class="scenario">
                         <td class="col-name" align="center">1</td>
-                        <td class="col-name">testsuites.EXEC_24F3C88616514C03A7621F34728EAE36.test_AGGR.TestCase_AGGR</td>
+                        <td class="col-name">testsuites.EXEC_B490D1BD8B094987B319D00505FB8258.test_Portainer.TestCase_Portainer</td>
                         <td class="col-name">0</td>
                         <td class="col-name">1</td>
                         <td class="col-name">0</td>
                         <td class="col-name">0</td>
                         <td class="col-name">0.0%</td>
-                        <td class="col-time">0.48 ms</td>
-                        <td class="col-duration">0.483 ms</td>
-                        <td class="col-links">0.483 ms</td>
+                        <td class="col-time">0.04 ms</td>
+                        <td class="col-duration">0.042 ms</td>
+                        <td class="col-links">0.042 ms</td>
                         <td class="col-result"  align="center"><span class="col-result button small white">×</span></td>
                     </tr>
             
@@ -759,9 +759,9 @@ function change(details_id) {
 
                     <tr class="case">
                         <td align="center">1-1</td>
-                        <td>test_login_api_EXEC_24F3C88616514C03A7621F34728EAE36[param0-用户名错误密码正确-expect0]</td>
+                        <td>test_auth_api_EXEC_B490D1BD8B094987B319D00505FB8258[param0-用户名和密码均正确-expect0]</td>
                         <td align="center">1</td>
-                        <td align="right">0.483</td>
+                        <td align="right">0.042</td>
                         <td align="center" id="outcome" class="failed">Failed</td>
                         <td align="center"><a style="" href="javascript:change('page_details_1-1')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
                                                                                       id="page_details_1-1_image"></a></td>
@@ -773,11 +773,11 @@ function change(details_id) {
 
                                 <table class="loginfo">
                                     <tr align="left" style="color: red;">
-                                        <td style="white-space: normal;background-color:#faebd7;"><h3><span class="button small orange">Error</span> </h3>'assert False == 200   -False   +200'</td>
+                                        <td style="white-space: normal;background-color:#faebd7;"><h3><span class="button small orange">Error</span> </h3>'ValueError: not enough values to unpack (expected 2, got 1)'</td>
                                     </tr>
 
                                     <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange"><span class="button small orange">Details</span> </h3>self = , param = {'password': 'eeeeeeeeeeee', 'user_id': 'root'}, desc = '用户名错误密码正确', expect = {'$.result': 200} json_template = .read_template_by_test_name at 0x000001BB2D4AC048> @pytest.mark.parametrize("param,desc,expect", [[{'user_id': 'root', 'password': 'eeeeeeeeeeee'}, '用户名错误密码正确', {'$.result': 200}]]) @allure.story("Case:登录接口") @allure.severity("critical") def test_login_api_EXEC_24F3C88616514C03A7621F34728EAE36(self,param,desc,expect,json_template): """登录接口测试""" with allure.step("step:生成测试数据"): param = param if param !='' and param is not None else dict() case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').upper() in ['POST','PUT']: res = request_(method=case.get('method').upper(),url=case.get('url'),headers=case.get('header'), data=data) elif case.get('method').upper()=='GET': res = request_("GET",url=case.get('url'),headers=case.get('header'), params=data) else: res = request_(case.get('method').upper(),url=case.get('url'),headers=case.get('header')) with allure.step("step:请求断言"): for expression,value in expect.items(): if parser(res,expression) == 'Not matched': assert False else: > assert parser(res,expression)[0] == value E assert False == 200 E -False E +200 testsuites\EXEC_24F3C88616514C03A7621F34728EAE36\test_AGGR.py:42: AssertionError</td>
+                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange"><span class="button small orange">Details</span> </h3>self = param = {'password': 'aaaa1111!', 'username': 'root'}, desc = '用户名和密码均正确' expect = {'$.jwt': 'eyJ'} json_template = .read_template_by_test_name at 0x7f22baeff9a0> @pytest.mark.parametrize("param,desc,expect", [[{'password': 'aaaa1111!', 'username': 'root'}, '用户名和密码均正确', {'$.jwt': 'eyJ'}]]) @allure.story("Case:容器云Portainer登录认证接口") @allure.severity("critical") def test_auth_api_EXEC_B490D1BD8B094987B319D00505FB8258(self,param,desc,expect,json_template): """""" with allure.step("step:生成测试数据"): param = param if param !='' and param is not None else dict() case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').upper() in ['POST','PUT']: res = request_(method=case.get('method').upper(),url=case.get('url'),headers=case.get('header'), data=data) elif case.get('method').upper()=='GET': res = request_("GET",url=case.get('url'),headers=case.get('header'), params=data) else: res = request_(case.get('method').upper(),url=case.get('url'),headers=case.get('header')) with allure.step("step:请求断言"): for expression,value in expect.items(): > assert parser(res,expression,value) testsuites/EXEC_B490D1BD8B094987B319D00505FB8258/test_Portainer.py:39: _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ data = {'details': 'Unauthorized', 'message': 'Invalid credentials'} pattern = '$.jwt', expected = 'eyJ' def parser(data:dict, pattern,expected): """ 根据表达式，在dict检索出符合表达式的值 @param data: @param pattern: 匹配表达式，例如$.list[3].user_id @return: list """ compared_result= True if isinstance(data, dict): if pattern.startswith("$"): > pattern,mode = pattern.split("@") E ValueError: not enough values to unpack (expected 2, got 1) lib/core/Requester.py:64: ValueError</td>
                                     </tr>
                                     
                                     <tr>
