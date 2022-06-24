@@ -1,0 +1,19 @@
+[2022-06-23 13:14:24,483] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\models.py changed, reloading.
+[2022-06-23 13:25:58,473] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\models.py changed, reloading.
+[2022-06-23 13:52:31,469] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py changed, reloading.
+[2022-06-23 14:05:27,464] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py changed, reloading.
+[2022-06-23 14:05:49,917] [INFO] [Thread-2 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-06-23 14:05:49,919] [INFO] [Thread-1 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-06-23 14:05:50,061] [INFO] [Thread-3 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-06-23 14:05:51,428] [INFO] [Thread-4 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-06-23 14:05:51,439] [INFO] [Thread-5 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-06-23 14:05:51,452] [INFO] [Thread-6 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-06-23 14:05:59,131] [INFO] [Thread-7 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/batch-execute/ with method: POST
+[2022-06-23 14:14:57,991] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py changed, reloading.
+[2022-06-23 14:15:04,596] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py changed, reloading.
+[2022-06-23 14:15:49,905] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py changed, reloading.
+[2022-06-23 14:16:03,580] [INFO] [Thread-1 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/batch-execute/ with method: POST
+[2022-06-23 14:17:28,492] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\models.py changed, reloading.
+[2022-06-23 14:18:48,357] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\models.py changed, reloading.
+[2022-06-23 14:19:49,294] [INFO] [Thread-1 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/batch-execute/ with method: POST
+[2022-06-24 10:13:54,832] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py changed, reloading.

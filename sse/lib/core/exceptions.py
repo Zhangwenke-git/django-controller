@@ -21,7 +21,7 @@ def exc_exceptions(exc, context):
     except Exception:
         code = 404
     error, status, msg = {"code": code,"message": str(exc)}, HTTP_400_BAD_REQUEST, "数据校验不通过,Invalid data"
-
+    header = None
     if response is not None:
         if isinstance(response.data, dict):
             if response.data.get("detail"):
@@ -54,7 +54,7 @@ def exc_exceptions(exc, context):
         # 调试模式
         logger.error(traceback.format_exc())
         traceback.format_exc()
-        header = None
+
         try:
             header = response.headers
         except AttributeError:

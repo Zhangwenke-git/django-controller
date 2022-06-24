@@ -189,3 +189,13 @@ class ExecutionRecord(models.Model):
 
 
 
+class ExecutionRequestBackup(models.Model):
+    code =  models.CharField(max_length=64,primary_key=True, verbose_name='执行编码')
+    body=models.JSONField(verbose_name='请求体')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
+
+    class Meta:
+        verbose_name_plural = '执行请求备份'
+        ordering = ('-update_time',)
+

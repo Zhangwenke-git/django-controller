@@ -1,7 +1,7 @@
 import datetime
 import json
 import os,re
-from django.http import HttpResponse
+from django.http import HttpResponse, StreamingHttpResponse
 from pathlib import Path
 from rest_framework_jwt.utils import jwt_decode_handler
 from rest_framework_jwt.authentication import jwt_decode_handler
@@ -11,7 +11,7 @@ from django.shortcuts import render
 from user.permissions import PermissionChecker
 from rest_framework.parsers import JSONParser
 from sse.lib.core.model_view_set import RewriteModelViewSet
-from api.models import Project, Scenario, Templates, TestCase, TestSuit, ExecutionRecord
+from api.models import Project, Scenario, Templates, TestCase, TestSuit, ExecutionRecord,ExecutionRequestBackup
 from api.model_serializer import ProjectSerializer, TestCaseSerializer, TestSuitSerializer, \
     TemplateSerializer, ScenarioSerializer, ExecutionRecordSerializer
 from api.filter import ProjectFilter, TemplateFilter, TestCaseFilter, TestSuitFilter, \
@@ -195,6 +195,22 @@ def batch_execute(request):
 
 
 @csrf_exempt
+def re_execute(request):
+    token = get_authorization_header(request)
+    user = jwt_decode_handler(token)
+    data = json.loads(request.body.decode())
+    exec_id = data['exec_id']
+    backup=ExecutionRequestBackup.objects.filter(code=exec_id).first()
+    if backup:
+        ExecutionRecord.objects.filter(code=exec_id).update(statue=0,person=user["user_id"])
+        res = {"success": True, "message": f"重复执行请求发送成功，执行编码【{exec_id}】，请访问测试报告面板查看结果！"}
+        celery_exec_request.delay(message=backup.body,re_flag=True)
+    else:
+        res = {"success": False, "message": f"重复执行请求发送失败，执行编码【{exec_id}】执行记录不存在"}
+
+    return HttpResponse(json.dumps(res, ensure_ascii=False))
+
+@csrf_exempt
 def report_view(request):
     data = json.loads(request.body.decode())
     exec_id = data['exec_id']
@@ -265,3 +281,43 @@ def parameter_fields(request):
     res = {"success": False, "fields":fields,"func_dict_list": func_dict_list}
     print(res)
     return HttpResponse(json.dumps(res, ensure_ascii=False))
+
+
+@csrf_exempt
+def report_download(request, pk=None):
+    """
+    文件下载
+    :return: 文件流对象
+    """
+    # 迭代读取文件
+    def file_iterator(file_path, chunk_size=512):
+        with open(file_path, 'rb') as f:
+            while True:
+                content = f.read(chunk_size)
+                if content:
+                    yield content
+                else:
+                    break
+
+    file_dir = os.path.join(BASE_DIR, 'templates/ant')
+    file_name = f'{pk}.html'
+
+    download_file = os.path.join(file_dir, file_name)
+    if not os.path.isfile(download_file):
+        logger.debug(f"Start to download report from FTP server.")
+        report = ExecutionRecord.objects.filter(code=pk, statue=0).first()
+        if report:
+            remote_path = report.path
+            logger.debug(f"Report on FTP server path is:{remote_path},and prepare to download correlated report.")
+            ftp = FTPHelper(ip=ip, password=pwd, port=port, username=user)
+            ftp.download_file(file_dir, remote_path)
+            ftp.close()
+        else:
+            logger.error(f"Fail to find record about EXEC_CODE:{pk},whose status is success.")
+
+    response = StreamingHttpResponse(file_iterator(download_file))
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename="{0}"'.format(file_name)
+
+    return response
+

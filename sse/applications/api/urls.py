@@ -27,7 +27,9 @@ router.register('report',views.ReportViewSet,'report')
 
 urlpatterns = [
     path('execute/',views.execute),
+    path('re-execute/',views.re_execute),
     path('batch-execute/',views.batch_execute),
+    re_path(r'^report-download/(?P<pk>\w+)/$',views.report_download),
     path('report-details/view/',views.report_view),
     path('parameter-fields/',views.parameter_fields),
 ]

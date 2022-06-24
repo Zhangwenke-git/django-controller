@@ -40,9 +40,10 @@ class ConfigParser():
         password = self.config.get("MQ","password")
         virtual_host = self.config.get("MQ","virtual_host")
         request_queue = self.config.get("MQ","request_queue")
+        reply_queue = self.config.get("MQ","reply_queue")
         exchange = self.config.get("MQ","exchange")
         port = self.config.getint("MQ","port")
-        return host,port,user,password,virtual_host,exchange,request_queue
+        return host,port,user,password,virtual_host,exchange,request_queue,reply_queue
 
     @property
     def read_allowed_ip(self):
