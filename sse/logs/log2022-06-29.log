@@ -1,0 +1,31 @@
+[2022-06-29 15:07:57,011] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-06-29 15:10:17,272] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-06-29 15:19:13,776] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\user\admin.py changed, reloading.
+[2022-06-29 15:19:13,778] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-06-29 15:27:55,853] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\lib\utils\rabbitMq.py changed, reloading.
+[2022-06-29 16:03:05,348] [INFO] [Thread-1 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /user/login/ with method: POST
+[2022-06-29 16:03:08,577] [INFO] [Thread-2 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-06-29 16:03:08,578] [INFO] [Thread-3 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-06-29 16:03:09,456] [INFO] [Thread-4 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-06-29 16:03:11,013] [INFO] [Thread-6 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-06-29 16:03:11,046] [INFO] [Thread-7 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-06-29 16:03:11,052] [INFO] [Thread-5 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-06-29 16:03:11,846] [INFO] [Thread-9 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-06-29 16:03:11,849] [INFO] [Thread-8 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-06-29 16:03:13,311] [INFO] [Thread-10 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/report/ with method: GET
+[2022-06-29 16:03:15,670] [INFO] [Thread-12 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-06-29 16:03:15,687] [INFO] [Thread-13 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-06-29 16:03:15,711] [INFO] [Thread-11 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-06-29 16:03:16,792] [INFO] [Thread-14 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-06-29 16:03:23,207] [INFO] [Thread-15 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-06-29 16:03:23,217] [INFO] [Thread-16 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-06-29 16:03:25,712] [INFO] [Thread-17 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-06-29 16:03:33,604] [INFO] [Thread-18 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-06-29 16:03:35,968] [INFO] [Thread-19 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-06-29 16:03:36,826] [INFO] [Thread-20 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-06-29 16:03:36,871] [INFO] [Thread-21 (process_request_thread)] [sse.lib.utils.logger] | Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-06-29 16:08:07,634] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\lib\utils\rabbitMq.py changed, reloading.
+[2022-06-29 16:10:45,685] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\lib\utils\rabbitMq.py changed, reloading.
+[2022-06-29 16:10:45,686] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-06-29 16:11:19,933] [INFO] [MainThread] [django.utils.autoreload] | C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py changed, reloading.
+[2022-06-29 16:11:19,934] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor

@@ -3,7 +3,7 @@ import ast
 import datetime
 import time
 from pathlib import Path
-from sse.lib.utils.rabbitMq import Rabbitmq
+from sse.lib.utils.rabbitMq import AMQP
 from api.models import ExecutionRecord
 from sse.lib.utils.config_parser import ConfigParser
 from sse.lib.utils.logger import logger
@@ -52,13 +52,10 @@ def celery_exec_request(message:dict,re_flag=False):
             code = message.get("exec_id"),
             body=message
         )
-    exec_request_mq = Rabbitmq(request_queue)
+
     try:
-        exec_request_mq.basic_publish(message)
+        exec_request_mq = AMQP()
+        exec_request_mq.basic_publish(message,"pytest.exec.report")
     except Exception as e:
         logger.error(f"Fail to publish message to execution engine,errors as following:{str(e)}.")
-
-
-
-
 

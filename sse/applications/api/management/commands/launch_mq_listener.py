@@ -2,7 +2,7 @@ import ast
 import json
 
 from django.core.management.base import BaseCommand
-from sse.lib.utils.rabbitMq import Rabbitmq
+from sse.lib.utils.rabbitMq import AMQP
 from sse.lib.utils.logger import logger
 from sse.celery_job.tasks import celery_update
 from sse.lib.utils.config_parser import ConfigParser
@@ -20,7 +20,6 @@ class Command(BaseCommand):
             celery_update.delay(message)
             ch.basic_ack(delivery_tag=method.delivery_tag)
 
-        exec_reply_mq = Rabbitmq(reply_queue)
-        exec_reply_mq.basic_consume(callback=callback)
+        exec_reply_mq = AMQP(reply_queue)
+        exec_reply_mq.consume(routing_key="pytest.result.#",callback=callback)
         logger.info("Waiting for response from execution engine...")
-        exec_reply_mq.consume()
