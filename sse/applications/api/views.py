@@ -133,12 +133,16 @@ def execute(request):
             body = project_parser(data)
         else:
             raise NotImplementedError("Type error,only including case,module and project.")
-
+        setting=data['setting']
+        code =data["id"]
         ExecutionRecord.objects.create(
-            code=data["id"],
-            remark=data.get('remark'),
+            code=code,
+            remark=setting.get('remark'),
             start=datetime.datetime.now(),
             type=type,
+            task_type=setting["task_type"],
+            stick_start_point=setting.get("start_point"),
+            loop_interval=setting["interval"],
             person=user["user_id"]
         )
     except Exception as e:
@@ -147,7 +151,16 @@ def execute(request):
     else:
         message = {"exec_id": data['id'], "body": body}
         logger.debug(f"Success to insert a record,exec_id:[{data['id']}]")
-        res = {"success": True, "message": f"执行请求发送成功，执行编码【{data['id']}】，请访问测试报告面板查看结果！"}
+        type_=setting['task_type']
+        if type_=="0":
+            type_="普通任务"
+        elif type_=="1":
+            type_="定时任务:"+setting["start_point"]
+        elif type_=="2":
+            type_="轮询任务:周期"+str(setting["interval"])
+
+        callback = {"id":code,"type":type_}
+        res = {"success": True, "message": callback}
 
         celery_exec_request.delay(message)
 

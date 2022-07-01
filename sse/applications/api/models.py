@@ -167,10 +167,18 @@ class ExecutionRecord(models.Model):
         (2, "测试用例"),
         (3,"未知")
     )
+    task_type_choice = (
+        (0,"普通任务"),
+        (1,"定时任务"),
+        (2,"轮询任务"),
+    )
     code = models.CharField(max_length=64,primary_key=True, verbose_name='执行编码')
     remark = models.CharField(max_length=128, verbose_name='执行备注',null=True,blank=True)
     statue = models.SmallIntegerField(choices=statue_choice,default=1, verbose_name="状态")
     type = models.SmallIntegerField(choices=type_choice, default=3,verbose_name="类型")
+    task_type = models.SmallIntegerField(choices=task_type_choice, default=0,verbose_name="任务类型")
+    stick_start_point = models.DateTimeField(null=True,verbose_name="定时任务时间点")
+    loop_interval = models.SmallIntegerField(null=True, verbose_name="轮询任务时间间隔")
     start = models.CharField(max_length=32, verbose_name='开始执行时间')
     path = models.CharField(max_length=128, verbose_name='FTP报告路径',null=True,blank=True)
     duration = models.CharField(max_length=32, verbose_name='耗时',null=True,blank=True)

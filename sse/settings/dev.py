@@ -14,7 +14,7 @@ import sys
 import datetime
 from pathlib import Path
 from sse.lib.utils.config_parser import ConfigParser
-
+from sse.settings.config import *
 CONSTANT = ConfigParser()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -36,6 +36,8 @@ SECRET_KEY = 'django-insecure-i(bo^m0hm-n%6%biu)$^g6c_x2^o22a#_u^u%55z@!3s+_q*u$
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+
 
 #ALLOWED_HOSTS = CONSTANT.read_allowed_ip
 ALLOWED_HOSTS = ["*"]
@@ -66,8 +68,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'sse.lib.core.logsseta.LoggerMiddleware',
-    'sse.lib.core.logsseta.SentryMiddleware',
+    # 'sse.lib.core.logsseta.LoggerMiddleware',
+    # 'sse.lib.core.logsseta.SentryMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -80,7 +82,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     # 自定义中间件添加在最后
-    'sse.lib.core.logsseta.CollectionMiddleware'
+    # 'sse.lib.core.logsseta.CollectionMiddleware',
+
+    'sse.lib.utils.middleware.middleware.ApiLoggingMiddleware'
 ]
 
 ROOT_URLCONF = 'sse.urls'
@@ -180,74 +184,6 @@ AUTH_USER_MODEL = 'user.UserProfile'
 
 from rest_framework.settings import settings
 
-REST_FRAMEWORK = {
-'DEFAULT_RENDERER_CLASSES': (  # 默认响应渲染类
-        'rest_framework.renderers.JSONRenderer',  # json渲染器
-        #'rest_framework.renderers.BrowsableAPIRenderer',  # 浏览API渲染器
-    ),
-    'DEFAULT_THROTTLE_CLASSES': [
-        'rest_framework.throttling.AnonRateThrottle',
-        'rest_framework.throttling.UserRateThrottle',
-        'rest_framework.throttling.ScopedRateThrottle',
-    ],
-    'DEFAULT_THROTTLE_RATES': {
-        'anon': '3/min', # 未登录用户访问频率限制
-        'user': '70/min', # 登录用户访问频率限制
-        'project_view': '30/min', # 局部视图频率限制
-        'user_view': '30/min',
-    },
-
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',  # 认证组件
-        'rest_framework.authentication.BasicAuthentication'
-    ],
-    'EXCEPTION_HANDLER': 'sse.lib.core.exceptions.exc_exceptions',  # 自定义的异常捕获
-    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),  # 筛选组件
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',  # LimitOffsetPagination 分页风格
-    'PAGE_SIZE': CONSTANT.read_page_size,  # 每页多少条记录
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',  # 生成API文档
-}
-
-JWT_AUTH = {
-    "JWT_AUTH_HEADER_PREFIX": "",
-    "JWT_RESPONSE_PAYLOAD_HANDLER": "sse.lib.core.jwt_response_handler.jwt_response_handler",  # 自定义认证组件
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),  # 超时组件
-}
-
-CORS_ALLOW_CREDENTIALS = True
-if DEBUG:
-    CORS_ORIGIN_ALLOW_ALL = True
-else:
-    CORS_ORIGIN_WHITELIST = (
-        'www.example.com',
-    )
-
-CORS_ALLOW_METHODS = (
-    'DELETE',
-    'GET',
-    'POST',
-    'PUT',
-)
-
-CORS_ALLOW_HEADERS = (
-    # 'XMLHttpRequest',
-    # 'X_FILENAME',
-    # 'accept-encoding',
-    'authorization',
-    'content-type',
-    # 'redirect',
-    # 'dnt',
-    'origin',
-    # 'user-agent',
-    'x-csrftoken',
-    # 'x-requested-with',
-    # 'Pragma',
-)
-
-
-HEADER_CHECKER=False  #使用自定义的token规则还是jwt_自带的规则
-
-
 
 
 
@@ -321,3 +257,14 @@ CELERY_WORKER_MAX_TASKS_PER_CHILD = 200
 
 
 """============================================================================================="""
+TABLE_PREFIX = locals().get('TABLE_PREFIX', "")
+
+
+API_LOG_ENABLE = True
+# API_LOG_METHODS = 'ALL' # ['POST', 'DELETE']
+API_LOG_METHODS = ["POST", "DELETE", "PUT"]  # ['POST', 'DELETE']
+API_MODEL_MAP = {
+
+    "/user/login/": "登录模块",
+
+}
