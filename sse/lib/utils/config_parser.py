@@ -46,6 +46,15 @@ class ConfigParser():
         return host,port,user,password,virtual_host,exchange,request_queue,reply_queue
 
     @property
+    def getRedis(self):
+        host = self.config.get("REDIS", "host")
+        port = self.config.getint("REDIS", "port")
+        db = self.config.getint("REDIS", "db")
+        password = self.config.get("REDIS", "password")
+        return {"host":host,"port":port,"password":password,"db":db}
+
+
+    @property
     def read_allowed_ip(self):
         ips = self.config.get("ALLOWED_IP","ips")
         return json.loads(ips)

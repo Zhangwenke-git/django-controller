@@ -1990,3 +1990,616 @@ TypeError: can only concatenate str (not "int") to str
 [2022-07-01 18:07:21,309][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 98659
 [2022-07-01 18:07:41,979][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\views.py changed, reloading.
 [2022-07-01 18:07:43,168][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 10:57:48,231][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 10:58:23,522][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 11:00:15,232][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\settings\dev.py changed, reloading.
+[2022-07-02 11:00:16,455][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 11:01:13,377][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 11:03:09,081][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 11:03:45,656][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 11:04:19,937][django.server.log_message():161] [INFO] "POST /user/login/ HTTP/1.1" 200 416
+[2022-07-02 11:14:24,563][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 142
+[2022-07-02 11:14:24,563][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 142
+[2022-07-02 11:14:25,922][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-02 11:14:27,101][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-02 11:14:27,101][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 142
+[2022-07-02 11:14:27,102][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 142
+[2022-07-02 11:14:28,315][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 142
+[2022-07-02 11:14:56,280][django.server.log_message():161] [INFO] "POST /api/project/ HTTP/1.1" 200 334
+[2022-07-02 11:14:56,324][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 417
+[2022-07-02 11:14:58,599][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 142
+[2022-07-02 11:14:58,604][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 417
+[2022-07-02 11:15:22,636][django.server.log_message():161] [INFO] "POST /api/suit/ HTTP/1.1" 200 344
+[2022-07-02 11:15:22,670][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 427
+[2022-07-02 11:15:24,279][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-02 11:17:22,909][django.server.log_message():161] [INFO] "POST /api/template/ HTTP/1.1" 200 465
+[2022-07-02 11:17:22,944][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 11:17:24,984][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 11:17:24,991][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 427
+[2022-07-02 11:17:24,997][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 142
+[2022-07-02 11:17:50,787][django.server.log_message():161] [INFO] "POST /api/case/ HTTP/1.1" 200 923
+[2022-07-02 11:17:50,827][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1006
+[2022-07-02 11:17:52,474][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1006
+[2022-07-02 11:17:52,483][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 142
+[2022-07-02 11:17:55,359][django.server.log_message():161] [INFO] "POST /api/parameter-fields/ HTTP/1.1" 200 76
+[2022-07-02 11:19:08,893][django.server.log_message():161] [INFO] "POST /api/scenario/ HTTP/1.1" 200 448
+[2022-07-02 11:19:08,940][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 11:19:10,602][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 142
+[2022-07-02 11:19:14,937][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 11:19:14,949][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 11:19:14,965][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 11:19:18,068][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 11:19:36,413][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-02 11:19:45,245][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 101
+[2022-07-02 11:19:52,957][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 11:19:59,787][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1727
+[2022-07-02 11:20:03,403][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 248, in report_view
+    return render(request, 'ant/%s.html' % exec_id)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: ant/EXEC_0F17105C87C74124840A7EF357513DFF.html
+[2022-07-02 11:20:03,405][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 96711
+[2022-07-02 11:20:06,426][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 248, in report_view
+    return render(request, 'ant/%s.html' % exec_id)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: ant/EXEC_DC639F6A888C47EEAE84C0E366AC8A6C.html
+[2022-07-02 11:20:06,428][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 96711
+[2022-07-02 11:22:30,281][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 11:22:49,039][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1727
+[2022-07-02 11:22:58,200][sse.lib.utils.logger.__init__():25] [ERROR] Fail to login [('192.168.246.128', 21)] with user info [('ftpuser', 'aaaa1111!')],error as follows:[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2022-07-02 11:22:58,245][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 243, in report_view
+    ftp.download_file(ant_report_dir, remote_path)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\utils\FtpUtils.py", line 123, in download_file
+    self.obj.retrbinary('RETR %s' % remote_file_path, file_handle.write)
+AttributeError: 'NoneType' object has no attribute 'retrbinary'
+[2022-07-02 11:22:58,247][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 86661
+[2022-07-02 11:23:11,755][sse.lib.utils.logger.__init__():25] [ERROR] Fail to login [('192.168.246.128', 21)] with user info [('ftpuser', 'aaaa1111!')],error as follows:[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2022-07-02 11:23:11,795][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 243, in report_view
+    ftp.download_file(ant_report_dir, remote_path)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\utils\FtpUtils.py", line 123, in download_file
+    self.obj.retrbinary('RETR %s' % remote_file_path, file_handle.write)
+AttributeError: 'NoneType' object has no attribute 'retrbinary'
+[2022-07-02 11:23:11,796][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 86643
+[2022-07-02 11:23:48,895][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 11:23:50,820][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 0
+[2022-07-02 11:24:15,878][sse.lib.utils.logger.__init__():25] [ERROR] Fail to login [('192.168.246.128', 21)] with user info [('ftpuser001', 'aaaa1111!')],error as follows:[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2022-07-02 11:24:15,926][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 243, in report_view
+    ftp.download_file(ant_report_dir, remote_path)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\utils\FtpUtils.py", line 123, in download_file
+    self.obj.retrbinary('RETR %s' % remote_file_path, file_handle.write)
+AttributeError: 'NoneType' object has no attribute 'retrbinary'
+[2022-07-02 11:24:15,928][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 86715
+[2022-07-02 11:24:25,508][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 11:24:27,859][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 0
+[2022-07-02 11:24:30,612][sse.lib.utils.logger.__init__():27] [INFO] 220 (vsFTPd 3.0.3)
+[2022-07-02 11:24:30,640][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 23325
+[2022-07-02 11:24:33,452][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 0
+[2022-07-02 11:25:05,595][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 23325
+[2022-07-02 13:51:26,005][sse.lib.utils.logger.__init__():27] [INFO] 220 (vsFTPd 3.0.3)
+[2022-07-02 13:51:26,038][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 23329
+[2022-07-02 13:51:28,718][sse.lib.utils.logger.__init__():27] [INFO] 220 (vsFTPd 3.0.3)
+[2022-07-02 13:51:28,742][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 23325
+[2022-07-02 14:02:05,432][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1727
+[2022-07-02 14:02:42,035][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1727
+[2022-07-02 14:02:58,770][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1727
+[2022-07-02 14:04:44,587][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1727
+[2022-07-02 14:12:53,243][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\settings\config.py changed, reloading.
+[2022-07-02 14:12:55,042][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 14:13:44,979][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\settings\config.py changed, reloading.
+[2022-07-02 14:13:46,764][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 14:14:19,329][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\settings\config.py changed, reloading.
+[2022-07-02 14:14:21,105][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 14:14:45,951][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\settings\config.py changed, reloading.
+[2022-07-02 14:14:47,711][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 14:15:15,821][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\settings\config.py changed, reloading.
+[2022-07-02 14:15:17,595][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 14:48:01,823][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 14:48:03,603][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 14:49:38,097][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 14:49:39,848][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 14:51:29,351][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 1727
+[2022-07-02 14:51:35,119][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 14:51:35,137][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 14:51:35,156][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 14:51:38,170][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 14:51:55,396][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 14:52:02,364][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 2144
+[2022-07-02 15:07:58,279][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 2144
+[2022-07-02 15:07:58,911][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 2144
+[2022-07-02 15:07:59,647][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 2144
+[2022-07-02 15:07:59,837][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 2144
+[2022-07-02 15:12:48,382][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 15:12:48,382][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 15:12:49,168][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 15:12:49,170][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 15:12:49,171][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 15:12:50,359][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 15:12:58,719][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 15:19:40,070][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 15:19:41,942][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 15:20:09,691][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 15:38:04,161][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\settings\config.py changed, reloading.
+[2022-07-02 15:38:05,895][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 15:38:15,168][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 16:19:22,218][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 16:19:22,220][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:19:24,123][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 3404
+[2022-07-02 16:20:23,648][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 16:20:23,652][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 16:20:23,652][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:20:24,060][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 16:20:24,061][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:20:25,016][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 16:20:25,031][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:20:25,035][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 16:20:26,494][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 16:21:24,135][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\settings\config.py changed, reloading.
+[2022-07-02 16:21:25,892][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 16:43:21,534][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 16:43:21,538][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:43:21,541][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 16:43:57,986][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 16:44:05,650][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 16:44:15,850][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 16:44:19,258][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 16:44:19,258][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:44:19,652][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 3820
+[2022-07-02 16:45:10,568][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 16:45:10,573][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:45:10,777][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 16:45:10,790][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 16:45:10,803][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:45:12,942][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 16:45:16,877][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 101
+[2022-07-02 16:46:06,886][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 16:46:10,403][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4652
+[2022-07-02 16:49:50,467][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 16:49:50,469][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:49:50,479][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 16:49:50,752][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 16:49:50,754][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:49:52,167][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 16:49:52,171][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:49:52,175][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 16:49:53,388][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 16:49:56,931][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 101
+[2022-07-02 16:50:01,816][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 16:50:01,822][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:50:03,325][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4524
+[2022-07-02 16:50:05,864][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 16:50:05,873][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 16:50:05,886][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:50:07,146][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 16:50:14,154][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 16:50:17,416][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:50:17,431][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 16:50:19,399][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 16:50:20,330][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 16:50:20,341][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 16:50:20,354][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:50:22,028][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 16:50:22,028][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 16:50:22,883][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4414
+[2022-07-02 17:07:10,622][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 17:07:12,481][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 20:18:32,752][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 20:18:34,820][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 20:26:01,977][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\cron_task.py changed, reloading.
+[2022-07-02 20:26:03,787][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 20:26:58,038][django.server.log_message():161] [INFO] "POST /user/login/ HTTP/1.1" 200 416
+[2022-07-02 20:26:59,815][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4414
+[2022-07-02 20:27:02,427][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:27:02,444][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:27:02,445][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:27:03,617][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 20:27:36,697][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 163, in execute
+    cron_task_create(setting["stick_start_point"],message)
+KeyError: 'stick_start_point'
+[2022-07-02 20:27:36,699][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92741
+[2022-07-02 20:27:44,108][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 163, in execute
+    cron_task_create(setting["stick_start_point"],message)
+KeyError: 'stick_start_point'
+[2022-07-02 20:27:44,110][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92741
+[2022-07-02 20:28:35,165][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 20:28:36,995][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 20:28:39,927][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-02 20:29:53,152][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\cron_task.py changed, reloading.
+[2022-07-02 20:29:54,991][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 20:30:35,605][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 20:31:10,702][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-02 20:31:17,572][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:31:17,587][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:31:19,001][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4379
+[2022-07-02 20:34:16,407][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=2 HTTP/1.1" 200 2984
+[2022-07-02 20:34:19,123][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 4379
+[2022-07-02 20:49:56,701][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 20:49:58,534][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 20:50:18,234][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:50:18,252][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:50:18,255][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:50:18,598][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:50:18,606][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:50:20,789][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:50:20,795][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:50:20,800][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:50:33,373][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 20:50:35,139][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 20:50:39,176][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 20:50:46,745][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 20:52:22,749][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-02 20:52:32,642][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 20:54:14,142][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4395
+[2022-07-02 20:54:20,643][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:20,655][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:54:22,315][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:54:22,323][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:54:22,337][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:24,343][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:54:24,540][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:54:24,558][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:54:24,567][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:24,957][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:54:24,959][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:25,748][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:54:25,764][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:54:25,765][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:26,600][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:54:26,604][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:27,176][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:54:27,189][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:27,189][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:54:27,707][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:54:27,709][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:28,580][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:54:28,595][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:28,596][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:54:29,188][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:54:29,195][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:32,496][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:54:32,508][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:54:32,509][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:35,971][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:54:35,977][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:54:37,638][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4395
+[2022-07-02 20:56:00,607][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 20:56:02,388][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 20:57:25,144][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:57:25,148][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:58:37,839][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 20:58:37,857][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:58:37,861][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 20:58:39,980][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 20:58:46,795][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 20:59:07,473][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 20:59:11,468][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 20:59:11,472][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 20:59:12,808][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4398
+[2022-07-02 21:02:38,945][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:03:07,099][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 21:03:07,112][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 21:03:07,114][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 21:03:08,354][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 21:03:09,008][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 21:03:18,346][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:05:37,326][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 21:05:39,152][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:06:14,949][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:08:01,897][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 21:08:03,755][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:08:25,129][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:09:41,727][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 21:09:43,575][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:13:52,836][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:16:12,576][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\cron_task.py changed, reloading.
+[2022-07-02 21:16:14,429][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:16:24,547][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\cron_task.py changed, reloading.
+[2022-07-02 21:16:26,363][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:19:37,521][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 21:19:39,395][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:19:55,935][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:31:21,027][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 21:31:22,859][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:32:43,708][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:34:58,063][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 21:34:59,867][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:35:39,516][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:37:09,309][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 21:37:11,103][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:37:25,799][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:48:14,350][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 21:48:16,197][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:49:12,115][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:50:25,577][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\period_task.py changed, reloading.
+[2022-07-02 21:50:27,605][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:50:45,866][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-02 21:52:09,635][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 21:52:10,056][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 21:52:10,056][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 21:52:11,411][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4419
+[2022-07-02 21:53:05,348][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-02 21:53:05,348][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 21:53:06,412][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-02 21:53:06,428][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-02 21:53:06,429][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-02 21:53:27,370][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\cron_task.py changed, reloading.
+[2022-07-02 21:53:29,284][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:54:15,792][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 21:54:42,992][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-02 21:54:51,542][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4437
+[2022-07-02 21:56:11,185][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 4437
+[2022-07-02 21:57:04,903][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\cron_task.py changed, reloading.
+[2022-07-02 21:57:06,764][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:57:23,318][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\cron_task.py changed, reloading.
+[2022-07-02 21:57:25,292][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 21:57:27,079][django.server.log_message():161] [INFO] "GET /api/case/?case=&statue=&priority=&testsuit=&page=1 HTTP/1.1" 200 1410
+[2022-07-02 21:57:28,727][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-02 21:57:45,180][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-02 21:59:18,989][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4569
+[2022-07-02 22:04:12,251][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 22:04:14,123][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:08:35,940][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 22:08:37,780][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:08:41,947][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 22:08:43,733][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:10:28,126][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 22:10:29,917][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:11:11,026][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 22:11:12,883][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:12:03,805][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\utils\config_parser.py changed, reloading.
+[2022-07-02 22:12:05,626][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:14:56,024][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 22:14:57,802][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:15:19,406][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 22:15:21,289][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:21:43,958][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-02 22:21:45,872][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:25:15,670][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\celery.py changed, reloading.
+[2022-07-02 22:25:17,523][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-02 22:26:02,493][sse.lib.utils.logger.__init__():27] [INFO] 220 (vsFTPd 3.0.3)
+[2022-07-02 22:26:02,534][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 23329
+[2022-07-03 07:21:09,326][django.server.log_message():161] [INFO] "POST /user/login/ HTTP/1.1" 200 416
+[2022-07-03 07:21:17,464][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 07:21:17,560][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 07:21:17,577][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 07:21:17,577][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-03 07:21:20,582][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-03 07:21:20,584][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 07:21:30,000][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4569
+[2022-07-03 07:29:14,509][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\celery_job\tasks.py changed, reloading.
+[2022-07-03 07:29:19,464][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 08:03:19,150][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\celery.py changed, reloading.
+[2022-07-03 08:03:20,891][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 08:12:41,784][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-03 08:12:41,786][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 08:12:41,912][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 08:12:41,929][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-03 08:12:41,940][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 08:12:45,830][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-03 08:13:02,644][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-03 08:22:46,319][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 08:36:57,900][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 08:38:03,013][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\celery.py changed, reloading.
+[2022-07-03 08:38:04,873][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 08:38:10,173][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\celery.py changed, reloading.
+[2022-07-03 08:38:11,937][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 08:42:08,082][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\celery.py changed, reloading.
+[2022-07-03 08:42:09,895][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 08:53:13,725][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-03 08:53:31,035][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 08:53:48,306][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 08:53:49,517][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 4729
+[2022-07-03 08:53:52,920][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 4729
+[2022-07-03 08:53:54,416][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 4729
+[2022-07-03 08:54:33,200][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 4844
+[2022-07-03 08:54:40,507][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 4844
+[2022-07-03 08:54:41,986][sse.lib.utils.logger.__init__():27] [INFO] 220 (vsFTPd 3.0.3)
+[2022-07-03 08:54:42,048][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 23329
+[2022-07-03 08:54:46,274][django.server.log_message():161] [INFO] "POST /api/report-details/view/ HTTP/1.1" 200 23329
+[2022-07-03 08:55:07,732][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 4959
+[2022-07-03 08:56:48,232][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\celery.py changed, reloading.
+[2022-07-03 08:56:49,981][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 08:57:53,247][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 4959
+[2022-07-03 08:58:03,669][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 4959
+[2022-07-03 11:41:02,545][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-03 11:41:02,545][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 11:41:02,582][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 11:41:02,596][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-03 11:41:02,614][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 11:41:10,012][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 11:41:10,580][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 11:41:10,605][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-03 11:41:10,626][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 11:41:13,040][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-03 11:41:20,643][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-03 11:46:43,671][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 11:47:00,923][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 11:47:05,206][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 11:47:05,236][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-03 11:47:05,653][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 5134
+[2022-07-03 11:47:08,288][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 5134
+[2022-07-03 11:47:09,384][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 5134
+[2022-07-03 11:47:16,513][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 5134
+[2022-07-03 11:47:32,958][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 5249
+[2022-07-03 11:47:34,990][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 5249
+[2022-07-03 11:55:20,764][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 5364
+[2022-07-03 11:55:23,654][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-03 11:55:23,657][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 11:55:25,086][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 11:55:27,600][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 11:55:27,618][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-03 11:55:27,641][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 11:55:28,627][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-03 11:55:47,666][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 11:56:06,181][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 11:56:26,685][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 12:04:13,800][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-03 12:04:15,704][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 12:08:55,553][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 12:09:17,125][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 15:18:13,577][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-03 15:18:18,931][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 15:24:42,376][django.server.log_message():161] [INFO] "POST /user/login/ HTTP/1.1" 200 416
+[2022-07-03 15:24:44,277][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 15:24:44,311][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-03 15:24:44,320][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 15:24:45,985][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-03 15:24:59,100][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 15:25:14,775][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 15:44:29,406][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 15:44:35,191][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-03 15:44:49,601][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 15:56:00,209][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 15:56:13,390][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 121
+[2022-07-03 15:56:19,286][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-03 15:56:23,520][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 101
+[2022-07-03 15:56:30,540][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 109
+[2022-07-03 15:59:20,783][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-03 15:59:20,788][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 15:59:21,026][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 5342
+[2022-07-03 16:03:22,789][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 5342
+[2022-07-03 18:13:25,552][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\celery.py changed, reloading.
+[2022-07-03 18:13:27,690][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 18:18:04,856][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\models.py changed, reloading.
+[2022-07-03 18:18:06,838][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 19:31:54,969][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\models.py changed, reloading.
+[2022-07-03 19:31:56,928][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 19:54:57,378][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 19:56:16,714][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\settings\config.py changed, reloading.
+[2022-07-03 19:56:18,502][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 19:59:32,385][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 5942
+[2022-07-03 20:02:08,416][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=3 HTTP/1.1" 200 5293
+[2022-07-03 20:02:10,614][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=6 HTTP/1.1" 200 1908
+[2022-07-03 20:02:12,171][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=5 HTTP/1.1" 200 4924
+[2022-07-03 20:02:13,789][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=4 HTTP/1.1" 200 4980
+[2022-07-03 20:02:14,219][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=3 HTTP/1.1" 200 5293
+[2022-07-03 20:02:15,607][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=2 HTTP/1.1" 200 6041
+[2022-07-03 20:02:34,821][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=3 HTTP/1.1" 200 5293
+[2022-07-03 20:02:36,200][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=4 HTTP/1.1" 200 4980
+[2022-07-03 20:02:37,336][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=5 HTTP/1.1" 200 4924
+[2022-07-03 20:02:37,973][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=6 HTTP/1.1" 200 1908
+[2022-07-03 20:02:39,884][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 5942
+[2022-07-03 20:03:11,296][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 5942
+[2022-07-03 20:03:30,971][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 5942
+[2022-07-03 20:09:56,142][sse.lib.utils.logger.__init__():27] [INFO] 220 (vsFTPd 3.0.3)
+[2022-07-03 20:09:56,198][django.server.log_message():161] [INFO] "GET /api/report-download/EXEC_09E3678E955A4D9DA381599CA903EC93/ HTTP/1.1" 200 23329
+[2022-07-03 20:13:14,464][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-03 20:13:16,303][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 20:13:17,032][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 5942
+[2022-07-03 20:13:20,232][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 548
+[2022-07-03 20:13:20,255][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1710
+[2022-07-03 20:13:20,255][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 20:13:21,387][django.server.log_message():161] [INFO] "GET /api/case/10199a2f057c4e40913ba75b2c78abcd/ HTTP/1.1" 200 1327
+[2022-07-03 20:13:25,098][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 173, in execute
+    ExecutionRecord.objects.get(code=code).first().update(cron_task_status=1)
+AttributeError: 'ExecutionRecord' object has no attribute 'first'
+[2022-07-03 20:13:25,102][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92889
+[2022-07-03 20:13:27,998][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 173, in execute
+    ExecutionRecord.objects.get(code=code).first().update(cron_task_status=1)
+AttributeError: 'ExecutionRecord' object has no attribute 'first'
+[2022-07-03 20:13:28,000][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92889
+[2022-07-03 20:13:59,114][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-03 20:14:01,003][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 20:14:09,368][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 173, in execute
+    ExecutionRecord.objects.get(code=code).update(cron_task_status=1)
+AttributeError: 'ExecutionRecord' object has no attribute 'update'
+[2022-07-03 20:14:09,370][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92877
+[2022-07-03 20:15:03,280][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-03 20:15:05,095][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 20:15:08,101][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 101
+[2022-07-03 20:15:12,342][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1410
+[2022-07-03 20:15:12,360][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 531
+[2022-07-03 20:15:12,795][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 5628
+[2022-07-03 20:17:58,627][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-03 20:18:00,658][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-03 20:20:37,551][django.server.log_message():161] [INFO] "GET /api/report/?remark=&statue=&person=&type=&create_time=&start=&end=&page=1 HTTP/1.1" 200 5628
+[2022-07-03 20:24:40,732][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py changed, reloading.
+[2022-07-03 20:24:42,541][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader

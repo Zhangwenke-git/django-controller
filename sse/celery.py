@@ -1,16 +1,14 @@
 from __future__ import absolute_import, unicode_literals
+
 """
 Celery的初始化
 """
 
-
-import os,sys
+import os, sys
 from celery import Celery
 from sse.lib.utils.config_parser import ConfigParser
 from celery.schedules import crontab
 from datetime import timedelta
-
-
 
 # 设置环境变量
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sse.settings.dev')
@@ -26,8 +24,7 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks(packages=['sse.celery_job'])
 
 # 自动从Django的指定的包中发现定时任务
-app.conf['imports'] = ['sse.celery_job.jobs',]
-
+app.conf['imports'] = ['sse.celery_job.jobs', ]
 
 
 # 一个测试任务,测试celery环境是否正常，出现[2022-05-24 12:01:41,008: INFO/MainProcess] celery@Zhangwenke ready.则说明正常
@@ -36,14 +33,13 @@ def debug_test_task(self):
     print(f'Request: {self.request!r}')
 
 
-
 app.conf.update(
     CELERYBEAT_SCHEDULE={
-        'heart_beats_job': {
-            'task': 'sse.celery_job.jobs.heart_beats',
-            'schedule': timedelta(seconds=300),
-            'args': ()
-        },
+        # 'heart_beats_job': {
+        #     'task': 'sse.celery_job.jobs.heart_beats',
+        #     'schedule': timedelta(seconds=300),
+        #     'args': ()
+        # },
         'clean_logs_job': {
             'task': 'sse.celery_job.jobs.clean_logs_job',
             'schedule': crontab(hour=5, minute=30),
@@ -55,10 +51,20 @@ app.conf.update(
             'args': ()
         },
         'update_expired_job': {
-            'task': 'jobs.update_expired_job',
+            'task': 'sse.celery_job.jobs.update_expired_job',
             'schedule': crontab(hour=6, minute=0),
             'args': ()
+        },
+        'clean_cron_task_job': {
+            'task': 'sse.celery_job.jobs.clean_cron_task_job',
+            'schedule': crontab(hour=6, minute=30),
+            'args': ()
+        },
+        'reset_period_task_job': {
+            'task': 'sse.celery_job.jobs.reset_period_task_job',
+            'schedule': timedelta(seconds=60),
+            'args': ()
         }
+
     }
 )
-

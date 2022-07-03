@@ -172,10 +172,21 @@ class ExecutionRecord(models.Model):
         (1,"定时任务"),
         (2,"轮询任务"),
     )
+
+    cron_task_status_choice = (
+        (0,"未启动"),
+        (1,"运行中"),
+        (2,"已结束"),
+        (3,"暂停"),
+        (4,"已删除"),
+        (5,"过期"),
+    )
+
     code = models.CharField(max_length=64,primary_key=True, verbose_name='执行编码')
     remark = models.CharField(max_length=128, verbose_name='执行备注',null=True,blank=True)
     statue = models.SmallIntegerField(choices=statue_choice,default=1, verbose_name="状态")
     type = models.SmallIntegerField(choices=type_choice, default=3,verbose_name="类型")
+    cron_task_status = models.SmallIntegerField(choices=cron_task_status_choice, default=0,verbose_name="类型")
     task_type = models.SmallIntegerField(choices=task_type_choice, default=0,verbose_name="任务类型")
     stick_start_point = models.DateTimeField(null=True,verbose_name="定时任务时间点")
     loop_interval = models.SmallIntegerField(null=True, verbose_name="轮询任务时间间隔")

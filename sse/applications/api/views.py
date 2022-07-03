@@ -1,6 +1,7 @@
 import datetime
 import json
 import os,re
+import redis
 from django.http import HttpResponse, StreamingHttpResponse
 from pathlib import Path
 from rest_framework_jwt.utils import jwt_decode_handler
@@ -22,8 +23,20 @@ from sse.lib.utils.logger import logger
 from sse.celery_job.tasks import celery_exec_request
 from sse.lib.utils.config_parser import ConfigParser
 from sse.lib.utils.FtpUtils import FTPHelper
+from sse.lib.core.period_task import period_task_create
+from sse.lib.core.cron_task import cron_task_create
 
 ip, port, user, pwd = ConfigParser().read_ftp_info
+redis_info = ConfigParser().getRedis
+
+
+rds = redis.Redis(**redis_info, decode_responses=True)
+period_task_names = []
+cron_task_names = []
+rds.set("period_task_names",json.dumps(period_task_names,ensure_ascii=False))
+rds.set("cron_task_names",json.dumps(cron_task_names,ensure_ascii=False))
+
+
 
 logger = logger()
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -114,6 +127,8 @@ class ReportViewSet(RewriteModelViewSet):
         serializer.save(person=self.request.user)
 
 
+
+
 @csrf_exempt
 def execute(request):
     token = get_authorization_header(request)
@@ -149,20 +164,40 @@ def execute(request):
         logger.error(f"Fail to parser data,due to error:{str(e)}")
         res = {"success": False, "message": "执行请求发送失败！"}
     else:
-        message = {"exec_id": data['id'], "body": body}
+        message = {"exec_id": code, "body": body}
         logger.debug(f"Success to insert a record,exec_id:[{data['id']}]")
         type_=setting['task_type']
+
+
+
         if type_=="0":
             type_="普通任务"
+            ExecutionRecord.objects.filter(code=code).update(cron_task_status=1)
+            celery_exec_request.delay(message)
+
         elif type_=="1":
             type_="定时任务:"+setting["start_point"]
+            cron_task_name = cron_task_create(setting["start_point"],message)
+
+            cron_task_names = json.loads(rds.get("cron_task_names"))
+            cron_task_names.append(cron_task_name)
+            rds.set("cron_task_names",json.dumps(cron_task_names))
+
+
         elif type_=="2":
             type_="轮询任务:周期"+str(setting["interval"])
+            period_task_name = period_task_create(setting["interval"],message)
+
+
+            period_task_names = json.loads(rds.get("period_task_names"))
+            period_task_names.append(period_task_name)
+            rds.set("period_task_names",json.dumps(period_task_names))
+
 
         callback = {"id":code,"type":type_}
         res = {"success": True, "message": callback}
 
-        celery_exec_request.delay(message)
+
 
         # t = threading.Thread(target=exec_request, args=(message,))  # 将请求参数发给后端执行引擎，开启子线程，t.setDaemon(False)并不再等待返回结果
         # t.setDaemon(False)

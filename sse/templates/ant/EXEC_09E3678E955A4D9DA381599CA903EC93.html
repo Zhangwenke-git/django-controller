@@ -639,7 +639,7 @@ function change(details_id) {
     
                     <tr>
                         <td>执行编码</td>
-                        <td>EXEC_F7A3E7DDE3484E74907D50FF305FF7A5</td>
+                        <td>EXEC_09E3678E955A4D9DA381599CA903EC93</td>
                     </tr>
 
                 
@@ -651,7 +651,7 @@ function change(details_id) {
                 
     <tr>
         <td>开始时间</td>
-        <td>2022-06-30 09:16:16</td>
+        <td>2022-07-03 07:57:31</td>
     </tr>
     <tr>
         <td>开发人员</td>
@@ -676,15 +676,15 @@ function change(details_id) {
     </tr>
     
     <tr valign="top" class="" style="font-weight:bold">
-        <td align="center" style="color:black">2</td>
+        <td align="center" style="color:black">1</td>
         <td align="center" style="color:orange">0</td>
-        <td align="center" style="color:red">1</td>
+        <td align="center" style="color:red">0</td>
         <td align="center" style="color:green">1</td>
         <td align="center" style="color:gray">0</td>
-        <td align="center">50.0%</td>
+        <td align="center">100.0%</td>
         <td align="center">0.16 ms</td>
-        <td align="center">0.077 ms</td>
-        <td align="center">0.08 ms</td>   
+        <td align="center">0.076 ms</td>
+        <td align="center">0.076 ms</td>   
     </tr>
     
 </table>
@@ -727,20 +727,20 @@ function change(details_id) {
 
         
         
-                <tbody class="failed results-table-row">
+                <tbody class="passed results-table-row">
                 
                     <tr class="scenario">
                         <td class="col-name" align="center">1</td>
-                        <td class="col-name">testsuites.EXEC_F7A3E7DDE3484E74907D50FF305FF7A5.test_PORTAINER.TestCase_PORTAINER</td>
+                        <td class="col-name">testsuites.EXEC_09E3678E955A4D9DA381599CA903EC93.test_PORTAINER.TestCase_PORTAINER</td>
+                        <td class="col-name">0</td>
                         <td class="col-name">0</td>
                         <td class="col-name">1</td>
-                        <td class="col-name">1</td>
                         <td class="col-name">0</td>
-                        <td class="col-name">50.0%</td>
+                        <td class="col-name">100.0%</td>
                         <td class="col-time">0.08 ms</td>
-                        <td class="col-duration">0.077 ms</td>
-                        <td class="col-links">0.08 ms</td>
-                        <td class="col-result"  align="center"><span class="col-result button small white">×</span></td>
+                        <td class="col-duration">0.076 ms</td>
+                        <td class="col-links">0.076 ms</td>
+                        <td class="col-result"  align="center"><span class="col-result button small white">√</span></td>
                     </tr>
             
                     <tr>
@@ -759,51 +759,15 @@ function change(details_id) {
 
                     <tr class="case">
                         <td align="center">1-1</td>
-                        <td>test_auth_api_EXEC_F7A3E7DDE3484E74907D50FF305FF7A5[param0-用户名正确密码错误-expect0]</td>
+                        <td>test_login_auth_api_EXEC_09E3678E955A4D9DA381599CA903EC93[param0-用户名和密码均正确-expect0]</td>
                         <td align="center">1</td>
-                        <td align="right">0.080</td>
-                        <td align="center" id="outcome" class="failed">Failed</td>
-                        <td align="center"><a style="" href="javascript:change('page_details_1-1')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
+                        <td align="right">0.076</td>
+                        <td align="center" id="outcome" class="passed">Passed</td>
+                        <td align="center"><a style="display:None" href="javascript:change('page_details_1-1')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
                                                                                       id="page_details_1-1_image"></a></td>
                     </tr>
 
-                    <tr class="page_details" style="" id="page_details_1-1">
-                        <td colspan="11">
-                            <div class="log" align="center">
-
-                                <table class="loginfo">
-                                    <tr align="left" style="color: red;">
-                                        <td style="white-space: normal;background-color:#faebd7;"><h3><span class="button small orange">Error</span> </h3>'AssertionError: assert False
- +  where False = parser({'details': 'Unauthorized', 'message': 'Invalid credentials'}, '$.code@0', '200')'</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:orange"><span class="button small orange">Details</span> </h3>self = param = {'password': 'dsadasd', 'username': 'admin'}, desc = '用户名正确密码错误' expect = {'$.code@0': '200'} json_template = .read_template_by_test_name at 0x7f4f63f881f0> @pytest.mark.parametrize("param,desc,expect", [[{'password': 'dsadasd', 'username': 'admin'}, '用户名正确密码错误', {'$.code@0': '200'}], [{'password': 'aaaa1111!', 'username': 'admin'}, '账号和密码正确', {'$.jwt@2': 'eyJ'}]]) @allure.story("Case:登录认证") @allure.severity("critical") def test_auth_api_EXEC_F7A3E7DDE3484E74907D50FF305FF7A5(self,param,desc,expect,json_template): """""" with allure.step("step:生成测试数据"): param = param if param !='' and param is not None else dict() case = json_template(**param) allure.attach(json.dumps(case,indent=4,ensure_ascii=False),"配置信息",allure.attachment_type.JSON) with allure.step("step:函数调用"): data_ = case.get('data') data = format_object.format_(data_) allure.attach(json.dumps(data,indent=4,ensure_ascii=False),"请求入参",allure.attachment_type.JSON) with allure.step(f"step:请求url: {case.get('url')}"): if case.get('method').upper() in ['POST','PUT']: res = request_(method=case.get('method').upper(),url=case.get('url'),headers=case.get('header'), data=data) elif case.get('method').upper()=='GET': res = request_("GET",url=case.get('url'),headers=case.get('header'), params=data) else: res = request_(case.get('method').upper(),url=case.get('url'),headers=case.get('header')) with allure.step("step:请求断言"): for expression,value in expect.items(): > assert parser(res,expression,value) E AssertionError: assert False E + where False = parser({'details': 'Unauthorized', 'message': 'Invalid credentials'}, '$.code@0', '200') testsuites/EXEC_F7A3E7DDE3484E74907D50FF305FF7A5/test_PORTAINER.py:39: AssertionError</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td style="white-space: pre-wrap;background-color:#f5f5f5;"><h3 style="color:blue"><span class="button small orange">Logs</span> </h3>'None'</td>
-                                    </tr>
-
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                
-   
-                
-
-                    <tr class="case">
-                        <td align="center">1-2</td>
-                        <td>test_auth_api_EXEC_F7A3E7DDE3484E74907D50FF305FF7A5[param1-账号和密码正确-expect1]</td>
-                        <td align="center">1</td>
-                        <td align="right">0.077</td>
-                        <td align="center" id="outcome" class="passed">Passed</td>
-                        <td align="center"><a style="display:None" href="javascript:change('page_details_1-2')"><img alt="expand/collapse" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAGUExURSZ0pv///xB+eSAAAAAWSURBVAjXY2CAAcYGBJL/AULIIjAAAJJrBjcL30J5AAAAAElFTkSuQmCC"
-                                                                                      id="page_details_1-2_image"></a></td>
-                    </tr>
-
-                    <tr class="page_details" style="display:None" id="page_details_1-2">
+                    <tr class="page_details" style="display:None" id="page_details_1-1">
                         <td colspan="11">
                             <div class="log" align="center">
 

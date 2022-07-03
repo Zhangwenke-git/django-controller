@@ -40,22 +40,29 @@ def celery_update(response,*args,**kwargs):
         logger.debug(f"Success to update a record with exec_id:[{exec_id}]")
 
 @shared_task
-def celery_exec_request(message:dict,re_flag=False):
+def celery_exec_request(message:dict,rerun_flag=False):
     """
     todo:核心代码
     将执行的参数通过MQ发给执行引擎，异步执行
     @param message: message = {"exec_id":"","body":[]}
     """
     logger.info("Publish message to MQ and backup request information.")
-    if not re_flag:
-        ExecutionRequestBackup.objects.create(
-            code = message.get("exec_id"),
-            body=message
-        )
+    if not rerun_flag:
+        try:
+            ExecutionRequestBackup.objects.create(
+                code = message.get("exec_id"),
+                body=message
+            )
+        except Exception:
+            ExecutionRequestBackup.objects.update(  # 若果已存在则更新下Body数据
+                body=message
+            )
 
     try:
         exec_request_mq = AMQP()
         exec_request_mq.basic_publish(message,"pytest.exec.report")
     except Exception as e:
         logger.error(f"Fail to publish message to execution engine,errors as following:{str(e)}.")
+
+
 

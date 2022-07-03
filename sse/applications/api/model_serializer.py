@@ -152,6 +152,7 @@ class ExecutionRecordSerializer(serializers.ModelSerializer):
     statue_display = serializers.CharField(source='get_statue_display', read_only=True)
     type_display = serializers.CharField(source='get_type_display', read_only=True)
     task_type_display = serializers.CharField(source='get_task_type_display', read_only=True)
+    cron_task_status_display = serializers.CharField(source='get_cron_task_status_display', read_only=True)
 
     class Meta:
         model = ExecutionRecord

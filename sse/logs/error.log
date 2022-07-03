@@ -629,3 +629,144 @@ Traceback (most recent call last):
     type_="轮询任务:周期"+setting["interval"]
 TypeError: can only concatenate str (not "int") to str
 [2022-07-01 18:07:21,309][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 98659
+[2022-07-02 11:20:03,403][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 248, in report_view
+    return render(request, 'ant/%s.html' % exec_id)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: ant/EXEC_0F17105C87C74124840A7EF357513DFF.html
+[2022-07-02 11:20:03,405][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 96711
+[2022-07-02 11:20:06,426][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 248, in report_view
+    return render(request, 'ant/%s.html' % exec_id)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: ant/EXEC_DC639F6A888C47EEAE84C0E366AC8A6C.html
+[2022-07-02 11:20:06,428][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 96711
+[2022-07-02 11:22:58,200][sse.lib.utils.logger.__init__():25] [ERROR] Fail to login [('192.168.246.128', 21)] with user info [('ftpuser', 'aaaa1111!')],error as follows:[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2022-07-02 11:22:58,245][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 243, in report_view
+    ftp.download_file(ant_report_dir, remote_path)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\utils\FtpUtils.py", line 123, in download_file
+    self.obj.retrbinary('RETR %s' % remote_file_path, file_handle.write)
+AttributeError: 'NoneType' object has no attribute 'retrbinary'
+[2022-07-02 11:22:58,247][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 86661
+[2022-07-02 11:23:11,755][sse.lib.utils.logger.__init__():25] [ERROR] Fail to login [('192.168.246.128', 21)] with user info [('ftpuser', 'aaaa1111!')],error as follows:[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2022-07-02 11:23:11,795][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 243, in report_view
+    ftp.download_file(ant_report_dir, remote_path)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\utils\FtpUtils.py", line 123, in download_file
+    self.obj.retrbinary('RETR %s' % remote_file_path, file_handle.write)
+AttributeError: 'NoneType' object has no attribute 'retrbinary'
+[2022-07-02 11:23:11,796][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 86643
+[2022-07-02 11:24:15,878][sse.lib.utils.logger.__init__():25] [ERROR] Fail to login [('192.168.246.128', 21)] with user info [('ftpuser001', 'aaaa1111!')],error as follows:[WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+[2022-07-02 11:24:15,926][django.request.log_response():230] [ERROR] Internal Server Error: /api/report-details/view/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 243, in report_view
+    ftp.download_file(ant_report_dir, remote_path)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\utils\FtpUtils.py", line 123, in download_file
+    self.obj.retrbinary('RETR %s' % remote_file_path, file_handle.write)
+AttributeError: 'NoneType' object has no attribute 'retrbinary'
+[2022-07-02 11:24:15,928][django.server.log_message():161] [ERROR] "POST /api/report-details/view/ HTTP/1.1" 500 86715
+[2022-07-02 20:27:36,697][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 163, in execute
+    cron_task_create(setting["stick_start_point"],message)
+KeyError: 'stick_start_point'
+[2022-07-02 20:27:36,699][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92741
+[2022-07-02 20:27:44,108][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 163, in execute
+    cron_task_create(setting["stick_start_point"],message)
+KeyError: 'stick_start_point'
+[2022-07-02 20:27:44,110][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92741
+[2022-07-03 20:13:25,098][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 173, in execute
+    ExecutionRecord.objects.get(code=code).first().update(cron_task_status=1)
+AttributeError: 'ExecutionRecord' object has no attribute 'first'
+[2022-07-03 20:13:25,102][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92889
+[2022-07-03 20:13:27,998][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 173, in execute
+    ExecutionRecord.objects.get(code=code).first().update(cron_task_status=1)
+AttributeError: 'ExecutionRecord' object has no attribute 'first'
+[2022-07-03 20:13:28,000][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92889
+[2022-07-03 20:14:09,368][django.request.log_response():230] [ERROR] Internal Server Error: /api/execute/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 173, in execute
+    ExecutionRecord.objects.get(code=code).update(cron_task_status=1)
+AttributeError: 'ExecutionRecord' object has no attribute 'update'
+[2022-07-03 20:14:09,370][django.server.log_message():161] [ERROR] "POST /api/execute/ HTTP/1.1" 500 92877

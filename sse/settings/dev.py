@@ -15,10 +15,12 @@ import datetime
 from pathlib import Path
 from sse.lib.utils.config_parser import ConfigParser
 from sse.settings.config import *
+
 CONSTANT = ConfigParser()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 sys.path.append(BASE_DIR)
 
@@ -37,9 +39,7 @@ SECRET_KEY = 'django-insecure-i(bo^m0hm-n%6%biu)$^g6c_x2^o22a#_u^u%55z@!3s+_q*u$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
-
-#ALLOWED_HOSTS = CONSTANT.read_allowed_ip
+# ALLOWED_HOSTS = CONSTANT.read_allowed_ip
 ALLOWED_HOSTS = ["*"]
 
 # Application definition
@@ -57,14 +57,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',  # 处理跨域请求cors，实现前后端打通，任意ip访问本服务的Urls  # pip install django-cors-headers
     'django_apscheduler', #定时任务包，数据库中会新生成两个表分别为：django_apscheduler_djangojob和django_apscheduler_djangojobexecution django_apscheduler_djangojob表结构和任务执行后数据记录
-
-    'django_celery_results',#用于存储Celery的执行结果，存放于数据库中
-    'django_celery_beat',#用于定时任务
-
+    'django_celery_results',  # 用于存储Celery的执行结果，存放于数据库中
+    'django_celery_beat',  # 用于定时任务
     'api',
     'user',
     'public',
-
 ]
 
 MIDDLEWARE = [
@@ -76,7 +73,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # 需添加，实现跨域请求
     'django.middleware.common.CommonMiddleware',
 
-    'django.middleware.csrf.CsrfViewMiddleware', #需注释
+    'django.middleware.csrf.CsrfViewMiddleware',  # 需注释
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -185,80 +182,8 @@ AUTH_USER_MODEL = 'user.UserProfile'
 from rest_framework.settings import settings
 
 
-
-
-"""======================================异步任务执行配置信息======================================"""
-
-from celery import Celery, platforms
-platforms.C_FORCE_ROOT = True
-
-
-#launcher order
-#先启动项目 python manage.py runserver 9091后再执行异步任务命令
-#python manage.py celery worker --loglevel=info
-
-
-#python pip 安装报错 error in setup command: use_2to3 is invalid. 解决方法:pip install setuptools==57.5.0
-
-
-# 最重要的配置，设置消息broker,格式为：db://user:password@host:port/dbname
-# 如果redis安装在本机，使用localhost
-# 如果docker部署的redis，使用redis://redis:6379
-#CELERY_BROKER_URL = "redis://192.168.44.129:6379/0"
-CELERY_BROKER_URL = "redis://192.168.246.128:6379/0"
-
-# 使用rabbit数据库
-# CELERY_BROKER_URL = "amqp://admin:aaaa1111!@192.168.44.129:5672//"
-
-
-
-# celery时区设置，建议与Django settings中TIME_ZONE同样时区，防止时差
-# Django设置时区需同时设置USE_TZ=True和TIME_ZONE = 'Asia/Shanghai'
-CELERY_TIMEZONE = "Asia/Shanghai"
-CELERY_ENABLE_UTC = False
-# 为django_celery_results存储Celery任务执行结果设置后台
-# 格式为：db+scheme://user:password@host:port/dbname
-# 支持数据库django-db和缓存django-cache存储任务状态及结果
-CELERY_RESULT_BACKEND = "django-db"
-# celery内容等消息的格式设置，默认json
-CELERY_ACCEPT_CONTENT = ['application/json', ]
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-
-# 为任务设置超时时间，单位秒。超时即中止，执行下个任务。
-CELERY_TASK_TIME_LIMIT = 5
-
-# 任务限流
-CELERY_TASK_ANNOTATIONS = {'sse.celery_job.lib.jobs.celery_exec_request': {'rate_limit': '10/s'}}
-
-# Worker并发数量，一般默认CPU核数，可以不设置
-CELERY_WORKER_CONCURRENCY = 2
-
-# 每个worker执行了多少任务就会死掉，默认是无限的
-CELERY_WORKER_MAX_TASKS_PER_CHILD = 200
-
-
-# CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'  #可以进入Periodic Task表添加和修改周期性任务
-
-
-
-#———————————启动步骤—————————————
-#1、启动python manage.py runserver 9091命令
-
-#2、启动Celery任务
-    # Windows下测试，启动Celery
-    #celery -A sse worker -l info -P eventlet
-
-#3、启动Celery定时任务命令
-#celery -A sse beat -l info
-
-#4、启动flower,浏览器打开，管理定时任务
-#celery --broker=redis://192.168.44.129:6379/0 flower #启动flower监控页面
-
-
 """============================================================================================="""
 TABLE_PREFIX = locals().get('TABLE_PREFIX', "")
-
 
 API_LOG_ENABLE = True
 # API_LOG_METHODS = 'ALL' # ['POST', 'DELETE']
