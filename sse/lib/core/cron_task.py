@@ -30,6 +30,7 @@ def cron_scheduler_create(expression):
     data = date_str_parser(expression)
     if data:
         y,m,d,h,m_,s = data
+        print("-------->",f"crontab time point:{y,m,d,h,m_,s}")
     # else:
     #     y,m,d,h,m_ = '*','*','*','*','*'
         schedule, _ = CrontabSchedule.objects.get_or_create(
@@ -57,18 +58,18 @@ def cron_task_create(expression, message=None,task_name=None, task='sse.celery_j
 
 
 
-def period_task_delete(task_name):
+def cron_task_delete(task_name):
     PeriodicTask.objects.get(name=task_name).delete()
 
 
-def period_task_stop(task_name):
+def cron_task_stop(task_name):
     obj = PeriodicTask.objects.get(name=task_name)
     if obj.enabled:
          obj.enabled= False
          obj.save()
 
 
-def period_task_restore(task_name):
+def cron_task_restore(task_name):
     obj = PeriodicTask.objects.get(name=task_name)
     if not obj.enabled:
          obj.enabled= True

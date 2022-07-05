@@ -107,8 +107,8 @@ platforms.C_FORCE_ROOT = True
 # 最重要的配置，设置消息broker,格式为：db://user:password@host:port/dbname
 # 如果redis安装在本机，使用localhost
 # 如果docker部署的redis，使用redis://redis:6379
-CELERY_BROKER_URL = "redis://192.168.44.129:6379/0"
-# CELERY_BROKER_URL = "redis://192.168.246.128:6379/0"
+#CELERY_BROKER_URL = "redis://192.168.44.129:6379/0"
+CELERY_BROKER_URL = "redis://192.168.246.128:6379/0"
 
 # 使用rabbit数据库
 # CELERY_BROKER_URL = "amqp://admin:aaaa1111!@192.168.44.129:5672//"

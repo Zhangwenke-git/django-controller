@@ -30,6 +30,9 @@ urlpatterns = [
     path('re-execute/',views.re_execute),
     path('batch-execute/',views.batch_execute),
     re_path(r'^report-download/(?P<pk>\w+)/$',views.report_download),
+    re_path(r'^stop-task/(?P<pk>\w+)/$',views.stop_task),
+    re_path(r'^delete-task/(?P<pk>\w+)/$',views.delete_task),
+    re_path(r'^restore-task/(?P<pk>\w+)/$',views.restore_task),
     path('report-details/view/',views.report_view),
     path('parameter-fields/',views.parameter_fields),
 ]

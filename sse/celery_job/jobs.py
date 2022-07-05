@@ -12,8 +12,9 @@ from pathlib import Path
 from apscheduler.schedulers.background import BackgroundScheduler
 from django_apscheduler.jobstores import DjangoJobStore, register_job
 from sse.lib.utils.config_parser import ConfigParser
-from api.models import ExecutionRecord
-from sse.lib.core.cron_task import period_task_delete, period_task_stop
+from api.models import ExecutionRecord,CrontabExecID
+from sse.lib.core.cron_task import *
+from sse.lib.core.period_task import *
 from apscheduler.schedulers import SchedulerNotRunningError
 from sse.lib.utils.logger import logger
 from celery import shared_task
@@ -138,6 +139,8 @@ def clean_cron_task_job():
             # res = map(period_task_delete, cron_task_names)
             for cron in cron_task_names:
                 period_task_delete(cron)
+                crontab_obj = CrontabExecID.objects.get(task = cron)
+                ExecutionRecord.objects.filter(code=crontab_obj.code).update(cron_task_status=4)
         except Exception as e:
             logger.error(f"Fail to clean completed crontab, due to error:{e}")
         else:
@@ -157,17 +160,18 @@ def reset_period_task_job():
         period_obj.total_run_count = 0
         period_obj.save()
 
-    periods = PeriodicTask.objects.filter(total_run_count__gte=3, name__contains='PERIOD')
+    periods = PeriodicTask.objects.filter(total_run_count__gte=2, name__contains='PERIOD')
     try:
 
         if len(periods) > 0:
             logger.info(f"Prepare to stop period tasks: {periods}.")
             for period in periods:
                 reset_gte3_count(period)
-            # for period in periods:
-            #     t = threading.Thread(target=reset_gte3_count,args=(period,))
-            #     t.start()
-            #     t.join()
+                try:
+                    crontab_obj = CrontabExecID.objects.get(task = period.name)
+                    ExecutionRecord.objects.filter(code=crontab_obj.code).update(cron_task_status=3)
+                except Exception:
+                    pass
         else:
             logger.info(f"There are no period-records in table [django_celery_beat_periodictask] to be updated.")
 

@@ -49,9 +49,11 @@ class ExecutionRecordFilter(filters.FilterSet):
     person = filters.CharFilter(field_name="person", lookup_expr='icontains')
     type = filters.NumberFilter(field_name="type")
     statue = filters.NumberFilter(field_name="statue")
+    task_type = filters.NumberFilter(field_name="task_type")
+    cron_task_status = filters.NumberFilter(field_name="cron_task_status")
     start = filters.DateTimeFilter(field_name="create_time",lookup_expr="gte")
     end = filters.DateTimeFilter(field_name="create_time",lookup_expr="lte")
     class Meta:
         model = ExecutionRecord
-        fields = ["remark","type","statue"]
+        fields = ["remark","type","statue","cron_task_status","task_type"]
 

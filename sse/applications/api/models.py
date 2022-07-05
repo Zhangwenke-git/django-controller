@@ -142,10 +142,8 @@ class Scenario(BaseModel):
 class Sql(BaseModel):
     name = models.CharField(max_length=64, verbose_name='名称')
     sql = models.CharField(max_length=640, verbose_name='sql语句')
-
     is_all = models.BooleanField(default=1, verbose_name="是否全量输出")
     field_list = models.CharField(max_length=320, verbose_name='字段列表')
-
     case = models.ManyToManyField(TestCase, verbose_name='所涉用例')
 
     @property
@@ -160,6 +158,7 @@ class ExecutionRecord(models.Model):
         (1, "执行中"),
         (2, "执行超时"),
         (3, "执行异常"),
+        (4, "未启动"),
     )
     type_choice = (
         (0, "测试项目"),
@@ -174,7 +173,6 @@ class ExecutionRecord(models.Model):
     )
 
     cron_task_status_choice = (
-        (0,"未启动"),
         (1,"运行中"),
         (2,"已结束"),
         (3,"暂停"),
@@ -184,9 +182,9 @@ class ExecutionRecord(models.Model):
 
     code = models.CharField(max_length=64,primary_key=True, verbose_name='执行编码')
     remark = models.CharField(max_length=128, verbose_name='执行备注',null=True,blank=True)
-    statue = models.SmallIntegerField(choices=statue_choice,default=1, verbose_name="状态")
+    statue = models.SmallIntegerField(choices=statue_choice,default=4, verbose_name="状态")
     type = models.SmallIntegerField(choices=type_choice, default=3,verbose_name="类型")
-    cron_task_status = models.SmallIntegerField(choices=cron_task_status_choice, default=0,verbose_name="类型")
+    cron_task_status = models.SmallIntegerField(choices=cron_task_status_choice,null=True, default=None,verbose_name="类型")
     task_type = models.SmallIntegerField(choices=task_type_choice, default=0,verbose_name="任务类型")
     stick_start_point = models.DateTimeField(null=True,verbose_name="定时任务时间点")
     loop_interval = models.SmallIntegerField(null=True, verbose_name="轮询任务时间间隔")
@@ -218,3 +216,21 @@ class ExecutionRequestBackup(models.Model):
         verbose_name_plural = '执行请求备份'
         ordering = ('-update_time',)
 
+
+
+class CrontabExecID(models.Model):
+    task_type_choice = (
+        (0,"普通任务"),
+        (1,"定时任务"),
+        (2,"轮询任务"),
+    )
+    code = models.CharField(max_length=64,null=True, verbose_name='执行编码')
+    task = models.CharField(max_length=64, null=True, verbose_name='定时任务名称')
+    task_type = models.SmallIntegerField(choices=task_type_choice, null=True, verbose_name="任务类型")
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    class Meta:
+        verbose_name_plural = '定时任务和执行编码对照表'
+        ordering = ('-create_time',)
+
+    def __str__(self):
+        return "%s-%s" % (self.code, self.task)

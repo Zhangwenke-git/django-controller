@@ -1,4 +1,3 @@
-import datetime
 import json
 import os,re
 import redis
@@ -12,7 +11,7 @@ from django.shortcuts import render
 from user.permissions import PermissionChecker
 from rest_framework.parsers import JSONParser
 from sse.lib.core.model_view_set import RewriteModelViewSet
-from api.models import Project, Scenario, Templates, TestCase, TestSuit, ExecutionRecord,ExecutionRequestBackup
+from api.models import Project, Scenario, Templates, TestCase, TestSuit, ExecutionRecord,ExecutionRequestBackup,CrontabExecID
 from api.model_serializer import ProjectSerializer, TestCaseSerializer, TestSuitSerializer, \
     TemplateSerializer, ScenarioSerializer, ExecutionRecordSerializer
 from api.filter import ProjectFilter, TemplateFilter, TestCaseFilter, TestSuitFilter, \
@@ -23,20 +22,11 @@ from sse.lib.utils.logger import logger
 from sse.celery_job.tasks import celery_exec_request
 from sse.lib.utils.config_parser import ConfigParser
 from sse.lib.utils.FtpUtils import FTPHelper
-from sse.lib.core.period_task import period_task_create
-from sse.lib.core.cron_task import cron_task_create
+from sse.lib.core.period_task import *
+from sse.lib.core.cron_task import *
+from django_celery_beat.models import PeriodicTask
 
 ip, port, user, pwd = ConfigParser().read_ftp_info
-redis_info = ConfigParser().getRedis
-
-
-rds = redis.Redis(**redis_info, decode_responses=True)
-period_task_names = []
-cron_task_names = []
-rds.set("period_task_names",json.dumps(period_task_names,ensure_ascii=False))
-rds.set("cron_task_names",json.dumps(cron_task_names,ensure_ascii=False))
-
-
 
 logger = logger()
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -153,7 +143,7 @@ def execute(request):
         ExecutionRecord.objects.create(
             code=code,
             remark=setting.get('remark'),
-            start=datetime.datetime.now(),
+            start=datetime.now(),
             type=type,
             task_type=setting["task_type"],
             stick_start_point=setting.get("start_point"),
@@ -166,33 +156,24 @@ def execute(request):
     else:
         message = {"exec_id": code, "body": body}
         logger.debug(f"Success to insert a record,exec_id:[{data['id']}]")
-        type_=setting['task_type']
+        task_type=setting['task_type']
 
-
-
-        if type_=="0":
+        if task_type=="0":
             type_="普通任务"
-            ExecutionRecord.objects.filter(code=code).update(cron_task_status=1)
+            task_name = None
             celery_exec_request.delay(message)
 
-        elif type_=="1":
+        elif task_type=="1":
             type_="定时任务:"+setting["start_point"]
-            cron_task_name = cron_task_create(setting["start_point"],message)
+            task_name = cron_task_create(setting["start_point"],message)
 
-            cron_task_names = json.loads(rds.get("cron_task_names"))
-            cron_task_names.append(cron_task_name)
-            rds.set("cron_task_names",json.dumps(cron_task_names))
-
-
-        elif type_=="2":
+        elif task_type=="2":
             type_="轮询任务:周期"+str(setting["interval"])
-            period_task_name = period_task_create(setting["interval"],message)
+            task_name = period_task_create(setting["interval"],message)
 
-
-            period_task_names = json.loads(rds.get("period_task_names"))
-            period_task_names.append(period_task_name)
-            rds.set("period_task_names",json.dumps(period_task_names))
-
+        if int(task_type) in [1,2]:
+            CrontabExecID.objects.create(code=code,task=task_name,task_type=int(task_type))
+            ExecutionRecord.objects.filter(code=code).update(cron_task_status=1)
 
         callback = {"id":code,"type":type_}
         res = {"success": True, "message": callback}
@@ -327,9 +308,7 @@ def parameter_fields(request):
                 pass
 
     res = {"success": False, "fields":fields,"func_dict_list": func_dict_list}
-    print(res)
     return HttpResponse(json.dumps(res, ensure_ascii=False))
-
 
 @csrf_exempt
 def report_download(request, pk=None):
@@ -369,3 +348,39 @@ def report_download(request, pk=None):
 
     return response
 
+@csrf_exempt
+def stop_task(request,pk):
+    res = {"success":True,"message":"停止任务成功"}
+    crontab_obj = CrontabExecID.objects.get(code=pk,task_type__in=[1,2])
+    if crontab_obj:
+        if crontab_obj.task_type == 1:
+            cron_task_stop(crontab_obj.task)
+        else:
+            period_task_stop(crontab_obj.task)
+        ExecutionRecord.objects.filter(code=pk).update(cron_task_status=3)
+    return HttpResponse(json.dumps(res,ensure_ascii=False))
+
+@csrf_exempt
+def delete_task(request,pk):
+    res = {"success":True,"message":"删除任务成功"}
+    crontab_obj = CrontabExecID.objects.get(code=pk,task_type__in=[1,2])
+    if crontab_obj:
+        if crontab_obj.task_type == 1:
+            cron_task_delete(crontab_obj.task)
+        else:
+            period_task_delete(crontab_obj.task)
+        ExecutionRecord.objects.filter(code=pk).update(cron_task_status=4)
+    return HttpResponse(json.dumps(res,ensure_ascii=False))
+
+
+@csrf_exempt
+def restore_task(request,pk):
+    res = {"success": True, "message": "恢复任务成功"}
+    crontab_obj = CrontabExecID.objects.get(code=pk, task_type__in=[1, 2])
+    if crontab_obj:
+        if crontab_obj.task_type == 1:
+            cron_task_restore(crontab_obj.task)
+        else:
+            period_task_restore(crontab_obj.task)
+        ExecutionRecord.objects.filter(code=pk).update(cron_task_status=1)
+    return HttpResponse(json.dumps(res, ensure_ascii=False))
