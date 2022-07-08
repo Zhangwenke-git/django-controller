@@ -79,7 +79,7 @@ class Templates(BaseModel):
     method = models.SmallIntegerField(choices=method_choice, default=1, verbose_name="请求方式")
     header = models.JSONField(null=True, default=default_header, verbose_name='headers')
     data = models.JSONField(verbose_name='请求模板', null=True)
-
+    default = models.JSONField(verbose_name='参数默认值',null=True)
     process_name = models.CharField(max_length=32, blank=True, null=True, verbose_name='进程名称')
     linux_order_str = models.CharField(max_length=100, blank=True, null=True, verbose_name='linux命令')
     table_name = models.CharField(max_length=32, blank=True, null=True, verbose_name='所需表名')
@@ -88,6 +88,9 @@ class Templates(BaseModel):
     class Meta:
         verbose_name_plural = '请求接口模板'
         ordering = ('-update_time',)
+        indexes = [
+            models.Index(fields=['name'])
+        ]
 
     def __str__(self):
         return self.name
@@ -108,7 +111,9 @@ class TestCase(BaseModel):
     class Meta:
         verbose_name_plural = '用例函数'
         ordering = ('-update_time',)
-
+        indexes = [
+            models.Index(fields=['case'])
+        ]
     @property
     def templates_name(self):
         return self.templates.name
@@ -130,7 +135,9 @@ class Scenario(BaseModel):
     class Meta:
         verbose_name_plural = '用例场景'
         ordering = ('-update_time',)
-
+        indexes = [
+            models.Index(fields=['scenario'])
+        ]
     @property
     def testcase_name(self):
         return self.testcase.case
@@ -199,7 +206,9 @@ class ExecutionRecord(models.Model):
     class Meta:
         verbose_name_plural = '执行记录'
         ordering = ('-update_time',)
-
+        indexes = [
+            models.Index(fields=['code'])
+        ]
 
     def __str__(self):
         return "%s-%s" % (self.code,self.remark)
@@ -215,7 +224,9 @@ class ExecutionRequestBackup(models.Model):
     class Meta:
         verbose_name_plural = '执行请求备份'
         ordering = ('-update_time',)
-
+        indexes = [
+            models.Index(fields=['code'])
+        ]
 
 
 class CrontabExecID(models.Model):
@@ -231,6 +242,8 @@ class CrontabExecID(models.Model):
     class Meta:
         verbose_name_plural = '定时任务和执行编码对照表'
         ordering = ('-create_time',)
-
+        indexes = [
+            models.Index(fields=['code'])
+        ]
     def __str__(self):
         return "%s-%s" % (self.code, self.task)

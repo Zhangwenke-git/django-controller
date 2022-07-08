@@ -20,12 +20,13 @@ class TestSuitFilter(filters.FilterSet):
 class TestCaseFilter(filters.FilterSet):
     case = filters.CharFilter(field_name="case", lookup_expr='icontains')
     statue = filters.NumberFilter(field_name="statue")
-    testsuit = filters.NumberFilter(field_name="testsuit")
+    testsuit = filters.CharFilter(field_name="testsuit")
+    template = filters.CharFilter(field_name="template")
     priority = filters.NumberFilter(field_name="priority")
 
     class Meta:
         model = TestCase
-        fields = ["case","statue","priority","testsuit"]
+        fields = ["case","statue","priority","testsuit","template"]
 
 class TemplateFilter(filters.FilterSet):
     name = filters.CharFilter(field_name="name", lookup_expr='icontains')
@@ -51,9 +52,10 @@ class ExecutionRecordFilter(filters.FilterSet):
     statue = filters.NumberFilter(field_name="statue")
     task_type = filters.NumberFilter(field_name="task_type")
     cron_task_status = filters.NumberFilter(field_name="cron_task_status")
-    start = filters.DateTimeFilter(field_name="create_time",lookup_expr="gte")
+    # create_time= filters.DateFromToRangeFilter(field_name="create_time",lookup_expr='gte')
+    start= filters.DateTimeFilter(field_name="create_time",lookup_expr="gte")
     end = filters.DateTimeFilter(field_name="create_time",lookup_expr="lte")
     class Meta:
         model = ExecutionRecord
-        fields = ["remark","type","statue","cron_task_status","task_type"]
+        fields = ["remark","type","statue","cron_task_status","task_type","start","end"]
 

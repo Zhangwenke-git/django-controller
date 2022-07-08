@@ -1,8 +1,5 @@
+from urllib.parse import urlencode,urlparse,unquote
 
-from datetime import datetime
-if __name__ == "__main__":
-    s= "2022-12-01 12:13:11"
+url = "http:10.110.112.2:9999/api/report/?remark=&statue=&person=&type=&task_type=&cron_task_status=&create_time%5B0%5D=2022-07-06&create_time%5B1%5D=2022-07-08&page=1"
 
-    x = datetime.strptime(s,'%Y-%m-%d %H:%M:%S')
-    print(x.year,x.hour)
-
+print(unquote(url).encode(encoding='utf-8'))

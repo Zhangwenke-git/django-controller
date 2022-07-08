@@ -150,32 +150,27 @@ def clean_cron_task_job():
 
 
 @shared_task
-def reset_period_task_job():
+def clear_period_task_job():
     """
     定时更新表django_celery_beat_periodictask中的总跑次数大等于3的period记录
     """
 
-    def reset_gte3_count(period_obj):
-        period_obj.enabled = False
-        period_obj.total_run_count = 0
-        period_obj.save()
 
-    periods = PeriodicTask.objects.filter(total_run_count__gte=2, name__contains='PERIOD')
+    periods = PeriodicTask.objects.filter(name__contains='PERIOD')
     try:
-
         if len(periods) > 0:
-            logger.info(f"Prepare to stop period tasks: {periods}.")
+            logger.info(f"Prepare to clear period tasks: {periods}.")
             for period in periods:
-                reset_gte3_count(period)
                 try:
+                    period.delete()
                     crontab_obj = CrontabExecID.objects.get(task = period.name)
-                    ExecutionRecord.objects.filter(code=crontab_obj.code).update(cron_task_status=3)
+                    ExecutionRecord.objects.filter(code=crontab_obj.code).update(cron_task_status=4)
                 except Exception:
                     pass
         else:
-            logger.info(f"There are no period-records in table [django_celery_beat_periodictask] to be updated.")
+            logger.info(f"There are no period-records in table [django_celery_beat_periodictask] to be cleaned.")
 
     except Exception as e:
-        logger.error(f"Update records in table [django_celery_beat_periodictask] failed,due to error:{str(e)}")
+        logger.error(f"Clear records in table [django_celery_beat_periodictask] failed,due to error:{str(e)}")
     else:
-        if len(periods) > 0: logger.info(f"Update records in table [django_celery_beat_periodictask] successfully.")
+        if len(periods) > 0: logger.info(f"Clear records in table [django_celery_beat_periodictask] successfully.")

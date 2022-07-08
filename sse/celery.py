@@ -57,14 +57,14 @@ app.conf.update(
         },
         'clean_cron_task_job': {
             'task': 'sse.celery_job.jobs.clean_cron_task_job',
-            'schedule': timedelta(seconds=600),
+            'schedule': crontab(hour=23, minute=59),
             'args': ()
         },
-        # 'reset_period_task_job': {
-        #     'task': 'sse.celery_job.jobs.reset_period_task_job',
-        #     'schedule': timedelta(seconds=180),
-        #     'args': ()
-        # }
+        'clear_period_task_job': {
+            'task': 'sse.celery_job.jobs.clear_period_task_job',
+            'schedule': crontab(hour=23, minute=59),
+            'args': ()
+        }
 
     }
 )

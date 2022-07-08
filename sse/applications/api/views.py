@@ -24,6 +24,9 @@ from sse.lib.utils.config_parser import ConfigParser
 from sse.lib.utils.FtpUtils import FTPHelper
 from sse.lib.core.period_task import *
 from sse.lib.core.cron_task import *
+from sse.lib.utils.parser_template import parameterized_fields
+from sse.lib.utils.Requester import request_
+from api.data_type_parser import parser_request_info
 from django_celery_beat.models import PeriodicTask
 
 ip, port, user, pwd = ConfigParser().read_ftp_info
@@ -164,11 +167,11 @@ def execute(request):
             celery_exec_request.delay(message)
 
         elif task_type=="1":
-            type_="定时任务:"+setting["start_point"]
+            type_="定时任务: "+setting["start_point"]
             task_name = cron_task_create(setting["start_point"],message)
 
         elif task_type=="2":
-            type_="轮询任务:周期"+str(setting["interval"])
+            type_="轮询任务: 周期-"+str(setting["interval"]*10) +"min"
             task_name = period_task_create(setting["interval"],message)
 
         if int(task_type) in [1,2]:
@@ -268,47 +271,29 @@ def parameter_fields(request):
     data = json.loads(request.body.decode())
     case_uuid = data["case"]
     case = TestCase.objects.all().filter(uid=case_uuid).first()
-
     case_template = case.template.data
-
-    def remove_character(string: str):
-        character = ['$', '{', '}']
-        for char_ in character:
-            string = string.replace(char_, '')
-        return string
-
-    filed_pattern = r'\{{(.+?)\}}'
-    comment = re.compile(filed_pattern, re.DOTALL)
-    field_list = comment.findall(json.dumps(case_template))
-    fields = list(map(remove_character, field_list))
-    fields = list(set(fields))
-
-    func_pattern = r'\$\{.+?>'
-    comment = re.compile(func_pattern, re.DOTALL)
-    func_list = comment.findall(json.dumps(case_template))
-    func = list(map(remove_character, func_list))
-    fields = list(set(fields))
-    func_dict_list = []
-    for fun in func:
-        func_dict = {}
-        fun_list = fun.split("|")
-        try:
-            func_dict[fun_list[0]] = fun_list[1]
-        except IndexError:
-            raise NameError(f"The separative sign '|' in function string: [{fun_list[0]}] not found!")
-        func_dict = {k: list(v.replace('<', '').replace('>', '').split(',')) for k, v in
-                     func_dict.items()}  # 处理参数的中特殊字符，并转换成tuple格式
-        func_dict_list.append(func_dict)
-
-    for temp in func_dict_list:
-        for k, v in temp.items():
-            if v[0] == "":
-                temp.update({k: None})
-            else:
-                pass
-
-    res = {"success": False, "fields":fields,"func_dict_list": func_dict_list}
+    fields,func_dict_list = parameterized_fields(case_template)
+    default = case.template.default
+    res = {"success": False, "fields":fields,"func_dict_list": func_dict_list,"default":default}
     return HttpResponse(json.dumps(res, ensure_ascii=False))
+
+@csrf_exempt
+def process_parameterized_fields(request):
+    data = json.loads(request.body.decode())
+    fields,func_dict_list = parameterized_fields(data)
+    res = {"success": True, "fields":fields,"func_dict_list": func_dict_list}
+    return HttpResponse(json.dumps(res, ensure_ascii=False))
+
+
+@csrf_exempt
+def process_request(request):
+    data = json.loads(request.body.decode())
+    request_info = parser_request_info(data)
+    res = request_(method=request_info.get("method"), url=request_info["url"], headers=request_info.get("header"), data=request_info.get("data"))
+    message = json.dumps(res,ensure_ascii=False,indent=4)
+    res = {"success": True, "message": message}
+    return HttpResponse(json.dumps(res, ensure_ascii=False))
+
 
 @csrf_exempt
 def report_download(request, pk=None):

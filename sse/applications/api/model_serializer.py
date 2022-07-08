@@ -1,4 +1,3 @@
-from rest_framework.exceptions import ValidationError
 from rest_framework import serializers
 from api.models import Project,Scenario,Templates,TestCase,TestSuit,ExecutionRecord
 from api.data_type_parser import parser
@@ -8,18 +7,13 @@ class TemplateSerializer(serializers.ModelSerializer):
     method_display = serializers.CharField(source='get_method_display', read_only=True)
 
     def create(self, validated_data):
-        headers={}
-        for header in validated_data["header"]:
-            headers.update({header["field"]:header["val"]})
+        headers = {header["field"]:header["val"] for header in validated_data["header"]}
         validated_data["header"]=headers
         template = Templates.objects.create(**validated_data)
         return template
 
     def update(self, instance, validated_data):
-        headers = {}
-        header_ = validated_data.get('header', instance.header)
-        for header in header_:
-            headers.update({header["field"]: header["val"]})
+        headers = {header["field"]:header["val"] for header in validated_data["header"]}
         instance.header = headers
         instance.name = validated_data.get('name',instance.name)
         instance.url = validated_data.get('url',instance.url)
@@ -29,6 +23,7 @@ class TemplateSerializer(serializers.ModelSerializer):
         instance.linux_order_str = validated_data.get('linux_order_str',instance.linux_order_str)
         instance.process_name = validated_data.get('process_name',instance.process_name)
         instance.table_name = validated_data.get('table_name',instance.table_name)
+        instance.default = validated_data.get('default',instance.default)
         instance.save()
         return instance
 
