@@ -1,0 +1,5 @@
+[2022-07-12 09:42:07,410] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-12 09:42:13,436] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-12 09:59:06,407] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-12 09:59:13,423] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-12 10:07:15,744] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor

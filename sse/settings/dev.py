@@ -65,8 +65,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # 'sse.lib.core.logsseta.LoggerMiddleware',
-    # 'sse.lib.core.logsseta.SentryMiddleware',
+    'sse.lib.core.logsseta.LoggerMiddleware',
+    'sse.lib.core.logsseta.SentryMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -79,7 +79,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     # 自定义中间件添加在最后
-    # 'sse.lib.core.logsseta.CollectionMiddleware',
+    'sse.lib.core.logsseta.CollectionMiddleware',
 
     'sse.lib.utils.middleware.middleware.ApiLoggingMiddleware'
 ]
@@ -174,7 +174,8 @@ TEMPLATE_ROOT = os.path.join(BASE_DIR, 'templates')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    TEMPLATE_ROOT
+    TEMPLATE_ROOT,
+    MEDIA_ROOT,
 ]
 
 AUTH_USER_MODEL = 'user.UserProfile'

@@ -64,14 +64,7 @@
 
 
 
-# -*- coding: utf-8 -*-
-
-"""
-@author: 猿小天
-@contact: QQ:1638245306
-@Created on: 2021/6/2 002 16:06
-@Remark: 自定义异常处理
-"""
+from rest_framework.status import HTTP_200_OK,HTTP_400_BAD_REQUEST
 import logging
 import traceback
 
@@ -120,4 +113,4 @@ def CustomExceptionHandler(ex, context):
     # for key in errorMsg:
     #     msg = errorMsg[key][0]
 
-    return ErrorResponse(msg=msg, code=code)
+    return ErrorResponse(msg=msg, code=code,status=HTTP_400_BAD_REQUEST)

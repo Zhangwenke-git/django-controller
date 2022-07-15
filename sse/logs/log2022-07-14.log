@@ -1,0 +1,10 @@
+[2022-07-14 10:02:23,901] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-14 10:03:43,619] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-14 10:03:48,247] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-14 10:19:31,943] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-14 10:19:35,471] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-14 10:47:14,375] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-14 10:47:43,675] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-14 11:12:23,524] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-14 11:14:32,238] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-14 11:59:28,965] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor

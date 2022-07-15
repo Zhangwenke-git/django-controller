@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
 
-"""
-@author: 猿小天
-@contact: QQ:1638245306
-@Created on: 2021/6/2 002 14:43
-@Remark: 自定义的JsonResonpse文件
-"""
 
 from rest_framework.response import Response
 
@@ -54,7 +47,7 @@ class ErrorResponse(Response):
     """
 
     def __init__(self, data=None, msg='error', code=400, status=None, template_name=None, headers=None,
-                 exception=False, content_type=None):
+                 exception=False, content_type=None,):
         std_data = {
             "code": code,
             "data": data,

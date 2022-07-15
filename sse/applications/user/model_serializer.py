@@ -1,6 +1,6 @@
 import re
 from rest_framework import serializers
-from user.models import UserProfile
+from user.models import UserProfile,Role,Menu
 from rest_framework.exceptions import ValidationError
 from django.contrib.auth.hashers import make_password
 from django.conf import settings
@@ -15,7 +15,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UserProfile
-        fields = ["user_id", "name", "password", "mobile", "email", "re_password"]
+        fields = ["user_id", "name", "password", "mobile", "email", "re_password","role"]
 
         extra_kwargs = {
             "password": {"write_only": True},
@@ -39,7 +39,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
             raise ValidationError({'msg': '用户ID不可长于16位'})
         if len(data) < 4:
             raise ValidationError({'msg': '用户ID不可少于4位'})
-        if not self.checke_(data,"[a-zA-z]\\w{4,15}$"):
+        if not self.checke_(data,"[a-zA-z]\\w{1,15}$"):
             raise ValidationError({'msg': '无效用户名'})
         return data
 
@@ -69,10 +69,12 @@ class UserProfileSerializer(serializers.ModelSerializer):
             raise ValidationError("user_id不可以被修改")
         else:
             validated_data.pop("re_password")
+            validated_data.pop("password")
             instance.name = validated_data.get('name', instance.name)
             instance.password = make_password(validated_data.get('password', instance.password))
             instance.mobile = validated_data.get('mobile', instance.mobile)
             instance.email = validated_data.get('email', instance.email)
+            # instance.role = validated_data.get('role',instance.role)
             instance.save()
             return instance
 
@@ -120,7 +122,32 @@ class LoginSerializer(serializers.ModelSerializer):
         return token
 
 
+
+
+
+
+class MenuSerializer(serializers.ModelSerializer):
+    statue_display = serializers.CharField(source='get_statue_display', read_only=True)
+    class Meta:
+        model = Menu
+        fields = "__all__"
+
+class RoleSerializer(serializers.ModelSerializer):
+    statue_display = serializers.CharField(source='get_statue_display', read_only=True)
+    class Meta:
+        model = Role
+        fields = "__all__"
+
 class UserProfileDetailsSerializer(serializers.ModelSerializer):
+    statue_display = serializers.CharField(source='get_statue_display', read_only=True)
+    sex_display = serializers.CharField(source='get_sex_display', read_only=True)
+    roles = serializers.SerializerMethodField()
+
+    def get_roles(self, obj):
+        queryset = obj.role.all()
+        roles = '|'.join([row.name for row in queryset])
+        return roles
     class Meta:
         model = UserProfile
         exclude = ["password",]
+

@@ -5,7 +5,7 @@ from datetime import datetime
 在url中使用    #path('login/',obtain_jwt_token),时，才会调用该方法
 '''
 def jwt_response_handler(token,user=None,request=None):
-
+    print(user,dir(user))
     jwt_res = {
         "result":True,
         "msg":"登录成功",
