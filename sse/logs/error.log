@@ -2626,3 +2626,427 @@ Traceback (most recent call last):
     'view': request.META['VIEW'],
 KeyError: 'VIEW'
 [2022-07-15 17:49:41,282][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg HTTP/1.1" 500 74499
+[2022-07-16 11:29:36,134][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-16 11:29:36,168][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 11:29:36,198][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 11:29:36,200][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg HTTP/1.1" 500 76986
+[2022-07-16 11:45:44,478][django.request.log_response():230] [ERROR] Internal Server Error: /api/process-parameterized/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 282, in process_parameterized_fields
+    data = json.loads(request.body.decode())
+  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\ZWK\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2022-07-16 11:45:44,480][django.server.log_message():161] [ERROR] "POST /api/process-parameterized/ HTTP/1.1" 500 93881
+[2022-07-16 11:51:46,224][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-16 11:51:46,253][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 11:51:46,282][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 11:51:46,283][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg HTTP/1.1" 500 76986
+[2022-07-16 13:19:02,365][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-16 13:19:02,400][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 13:19:02,433][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 13:19:02,434][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg HTTP/1.1" 500 76986
+[2022-07-16 15:49:54,775][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-16 15:49:54,814][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 15:49:54,847][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 15:49:54,849][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg HTTP/1.1" 500 76986
+[2022-07-16 16:12:51,472][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-16 16:12:51,504][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 16:12:51,534][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 16:12:51,535][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg/ HTTP/1.1" 500 76996
+[2022-07-16 17:49:16,677][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-16 17:49:16,708][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 17:49:16,739][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 17:49:16,740][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg/ HTTP/1.1" 500 76996
+[2022-07-16 19:25:30,103][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-16 19:25:30,135][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 19:25:30,165][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-16 19:25:30,167][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg/ HTTP/1.1" 500 76996
+[2022-07-17 09:37:32,195][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-17 09:37:32,229][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-17 09:37:32,261][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\AppData\Roaming\Python\Python37\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-17 09:37:32,262][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg/ HTTP/1.1" 500 76996
+[2022-07-17 16:15:35,597][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-17 16:15:35,627][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-17 16:15:35,656][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-17 16:15:35,657][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg/ HTTP/1.1" 500 78710
+[2022-07-17 16:20:01,699][django.request.log_response():230] [ERROR] Internal Server Error: /api/make/request/219baffcb4cb4c33956526fe2deef0ff/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+TypeError: make_request() got an unexpected keyword argument 'pk'
+[2022-07-17 16:20:01,702][django.server.log_message():161] [ERROR] "GET /api/make/request/219baffcb4cb4c33956526fe2deef0ff/ HTTP/1.1" 500 79638
+[2022-07-17 16:21:33,301][django.request.log_response():230] [ERROR] Internal Server Error: /api/make/request/219baffcb4cb4c33956526fe2deef0ff/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 303, in make_request
+    request_info = parser_request_info(obj)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\data_type_parser.py", line 43, in parser_request_info
+    header = data.get("header")
+AttributeError: 'Templates' object has no attribute 'get'
+[2022-07-17 16:21:33,304][django.server.log_message():161] [ERROR] "GET /api/make/request/219baffcb4cb4c33956526fe2deef0ff/ HTTP/1.1" 500 87503
+[2022-07-17 16:23:13,457][django.request.log_response():230] [ERROR] Internal Server Error: /api/make/request/219baffcb4cb4c33956526fe2deef0ff/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 305, in make_request
+    request_info = parser_request_info(obj)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\data_type_parser.py", line 45, in parser_request_info
+    header = {item["field"]:item["val"] for item in header}
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\data_type_parser.py", line 45, in <dictcomp>
+    header = {item["field"]:item["val"] for item in header}
+TypeError: string indices must be integers
+[2022-07-17 16:23:13,460][django.server.log_message():161] [ERROR] "GET /api/make/request/219baffcb4cb4c33956526fe2deef0ff/ HTTP/1.1" 500 92899
+[2022-07-17 16:24:30,812][django.request.log_response():230] [ERROR] Internal Server Error: /api/make/request/219baffcb4cb4c33956526fe2deef0ff/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 306, in make_request
+    request_info = parser_request_info(obj)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\data_type_parser.py", line 45, in parser_request_info
+    header = {item["field"]:item["val"] for item in header}
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\data_type_parser.py", line 45, in <dictcomp>
+    header = {item["field"]:item["val"] for item in header}
+TypeError: string indices must be integers
+[2022-07-17 16:24:30,815][django.server.log_message():161] [ERROR] "GET /api/make/request/219baffcb4cb4c33956526fe2deef0ff/ HTTP/1.1" 500 92917
+[2022-07-17 16:25:34,286][django.request.log_response():230] [ERROR] Internal Server Error: /api/make/request/219baffcb4cb4c33956526fe2deef0ff/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 306, in make_request
+    request_info = parser_request_info(obj)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\data_type_parser.py", line 45, in parser_request_info
+    header = {item["field"]:item["val"] for item in header}
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\data_type_parser.py", line 45, in <dictcomp>
+    header = {item["field"]:item["val"] for item in header}
+TypeError: string indices must be integers
+[2022-07-17 16:25:34,292][django.server.log_message():161] [ERROR] "GET /api/make/request/219baffcb4cb4c33956526fe2deef0ff/ HTTP/1.1" 500 92951
+[2022-07-17 16:25:55,500][django.request.log_response():230] [ERROR] Internal Server Error: /api/make/request/219baffcb4cb4c33956526fe2deef0ff/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 306, in make_request
+    request_info = parser_request_info(obj)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\data_type_parser.py", line 52, in parser_request_info
+    template = template.replace("{{","$").replace("}}","")
+AttributeError: 'dict' object has no attribute 'replace'
+[2022-07-17 16:25:55,504][django.server.log_message():161] [ERROR] "GET /api/make/request/219baffcb4cb4c33956526fe2deef0ff/ HTTP/1.1" 500 90243
+[2022-07-17 19:28:23,239][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-17 19:28:23,310][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-17 19:28:23,340][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-17 19:28:23,341][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg/ HTTP/1.1" 500 78710

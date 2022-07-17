@@ -1,6 +1,7 @@
 import json
 import os,re
 import redis
+from django.forms import model_to_dict
 from django.http import HttpResponse, StreamingHttpResponse
 from pathlib import Path
 from rest_framework_jwt.utils import jwt_decode_handler
@@ -293,6 +294,21 @@ def process_request(request):
     message = json.dumps(res,ensure_ascii=False,indent=4)
     res = {"success": True, "message": message}
     return HttpResponse(json.dumps(res, ensure_ascii=False))
+
+
+
+@csrf_exempt
+def make_request(request,pk):
+    obj =  Templates.objects.get(uid=pk)
+    if obj:
+        obj = model_to_dict(obj)
+        print(obj)
+        request_info = parser_request_info(obj)
+        res = request_(method=request_info.get("method"), url=request_info["url"], headers=request_info.get("header"),
+                       data=request_info.get("data"))
+        message = json.dumps(res, ensure_ascii=False, indent=4)
+        res = {"success": True, "message": message}
+        return HttpResponse(json.dumps(res, ensure_ascii=False))
 
 
 @csrf_exempt

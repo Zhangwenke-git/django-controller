@@ -3,6 +3,10 @@ import uuid
 from django.db import models
 from django.utils.safestring import mark_safe
 from user.models import UserProfile
+from django.conf import settings
+table_prefix = settings.TABLE_PREFIX
+
+
 
 class UUIDTools(object):
 
@@ -37,6 +41,7 @@ class Project(BaseModel):
 
 
     class Meta:
+        db_table = table_prefix + "project"
         verbose_name_plural = 'API项目管理'
         ordering = ('-update_time',)
 
@@ -50,6 +55,7 @@ class TestSuit(BaseModel):
     project = models.ManyToManyField(Project, verbose_name='所属项目')
 
     class Meta:
+        db_table = table_prefix + "suit"
         verbose_name_plural = '用例集'
         ordering = ('-update_time',)
 
@@ -86,6 +92,7 @@ class Templates(BaseModel):
 
 
     class Meta:
+        db_table = table_prefix + "templates"
         verbose_name_plural = '请求接口模板'
         ordering = ('-update_time',)
         indexes = [
@@ -109,6 +116,7 @@ class TestCase(BaseModel):
     )
     priority = models.SmallIntegerField(choices=priority_choice, default=0, verbose_name="优先级")
     class Meta:
+        db_table = table_prefix + "case"
         verbose_name_plural = '用例函数'
         ordering = ('-update_time',)
         indexes = [
@@ -133,6 +141,7 @@ class Scenario(BaseModel):
     cases = models.ForeignKey(TestCase, verbose_name='测试函数（用例）',related_name='case_scenario', on_delete=models.CASCADE)
 
     class Meta:
+        db_table = table_prefix + "scenario"
         verbose_name_plural = '用例场景'
         ordering = ('-update_time',)
         indexes = [
@@ -204,6 +213,7 @@ class ExecutionRecord(models.Model):
     update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
 
     class Meta:
+        db_table = table_prefix + "record"
         verbose_name_plural = '执行记录'
         ordering = ('-update_time',)
         indexes = [
@@ -222,6 +232,7 @@ class ExecutionRequestBackup(models.Model):
     update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
 
     class Meta:
+        db_table = table_prefix + "request_backup"
         verbose_name_plural = '执行请求备份'
         ordering = ('-update_time',)
         indexes = [
@@ -240,6 +251,7 @@ class CrontabExecID(models.Model):
     task_type = models.SmallIntegerField(choices=task_type_choice, null=True, verbose_name="任务类型")
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
     class Meta:
+        db_table = table_prefix + "crontab_exec"
         verbose_name_plural = '定时任务和执行编码对照表'
         ordering = ('-create_time',)
         indexes = [

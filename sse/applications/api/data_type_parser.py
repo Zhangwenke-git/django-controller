@@ -41,13 +41,16 @@ def parser(param:dict):
 
 def parser_request_info(data:dict):
     header = data.get("header")
-    if header:
+    if isinstance(header,list):
         header = {item["field"]:item["val"] for item in header}
     param = data.get("default")
     if param:
         param_ = list(map(parser,param))
         param = {item["field"]:item["val"] for item in param_}
     template = data.get("data")
+
+    if isinstance(template,dict):
+        template = json.dumps(template,ensure_ascii=False)
     if template and param:
         template = template.replace("{{","$").replace("}}","")
         template = json.loads(Template(template).safe_substitute(param))

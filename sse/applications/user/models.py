@@ -1,6 +1,9 @@
 import uuid
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.conf import settings
+table_prefix = settings.TABLE_PREFIX
+
 
 
 class UUIDTools(object):
@@ -86,7 +89,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin,BaseModel):
     )
     sex = models.SmallIntegerField(choices=sex_choice, default=2, verbose_name="性别")
     role = models.ManyToManyField('Role',verbose_name='角色')
-    upload = models.ImageField(upload_to='icon', default='icon/avatar.jpg', verbose_name='头像',max_length=512)
+    upload = models.ImageField(upload_to='icon', default='icon/avatar.jpg/', verbose_name='头像',max_length=512)
     birthday = models.DateField(null=True, blank=True, verbose_name='出生年月')
 
     objects = UserProfileManager()
@@ -118,77 +121,11 @@ class UserProfile(AbstractBaseUser, PermissionsMixin,BaseModel):
         return self.is_superuser
 
     class Meta:
+        db_table = table_prefix + "user"
         verbose_name_plural = "用户信息表"
 
-# from django.contrib.auth.models import Group
-#
-#
-# class Groups(Group):
-#     description = models.CharField(max_length=320, null=True, blank=True, verbose_name='描述')
-#
-#     class Meta:
-#         ordering = ['-pk']
-#         verbose_name_plural = '权限组'
-#
-#
-# class Role(models.Model):
-#     rolename = models.CharField(max_length=64, unique=True, verbose_name='角色名称')
-#     statue_choice = (
-#         (0, "作废"),
-#         (1, "有效"),
-#     )
-#     statue = models.SmallIntegerField(choices=statue_choice, default=1, verbose_name="状态")
-#     menus = models.ManyToManyField('FirstLayerMenu', verbose_name='一层菜单', blank=True)
-#     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建日期')
-#     update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
-#
-#     class Meta:
-#         ordering = ['-pk']
-#         verbose_name_plural = '角色表'
-#
-#     def __str__(self):
-#         return self.rolename
-#
-#
-# class FirstLayerMenu(models.Model):
-#     type_choice = (
-#         (0, "api"),
-#         (1, "public"),
-#     )
-#     type = models.SmallIntegerField(choices=type_choice, default=1, verbose_name="类型")
-#     name = models.CharField('一层菜单名', max_length=64)
-#     icon = models.CharField('图标', default=mark_safe("glyphicon glyphicon-blackboard"), max_length=64)
-#     url_type_choices = ((0, '相关的名字'), (1, '固定的URL'))
-#     url_type = models.SmallIntegerField(choices=url_type_choices, default=0, verbose_name="URL类型")
-#     url_name = models.CharField(max_length=64, verbose_name='一层菜单路径')
-#     order = models.SmallIntegerField(default=0, verbose_name='菜单排序')
-#     sub_menus = models.ManyToManyField('SubMenu', blank=True)
-#
-#     def __str__(self):
-#         return self.name
-#
-#     class Meta:
-#         ordering = ['-pk']
-#         verbose_name_plural = "第一层菜单"
-#
-#
-# class SubMenu(models.Model):
-#     '''第二层侧边栏菜单'''
-#     name = models.CharField('二层菜单名', max_length=64)
-#     url_type_choices = ((0, '相关的名字'), (1, '固定的URL'))
-#     url_type = models.SmallIntegerField(choices=url_type_choices, default=0, verbose_name="URL类型")
-#     url_name = models.CharField(max_length=64, verbose_name='二层菜单路径')
-#     order = models.SmallIntegerField(default=0, verbose_name='菜单排序')
-#
-#     def __str__(self):
-#         return self.name
-#
-#     class Meta:
-#         ordering = ['-pk']
-#         verbose_name_plural = "第二层菜单"
 
 
-from django.forms.models import model_to_dict
 class Role(models.Model):
     _id = models.CharField(max_length=64, auto_created=True, primary_key=True, default=UUIDTools.uuid4_hex, verbose_name="UID")
     name = models.CharField(max_length=64, unique=True, verbose_name='角色名称')
@@ -203,6 +140,7 @@ class Role(models.Model):
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建日期')
     update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
     class Meta:
+        db_table = table_prefix + "role"
         verbose_name_plural = '角色表'
 
     def __str__(self):
@@ -222,4 +160,5 @@ class Menu(BaseModel):
         return self.name
 
     class Meta:
+        db_table = table_prefix + "menu"
         verbose_name_plural = "菜单"

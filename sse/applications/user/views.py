@@ -86,11 +86,19 @@ class MenuViewSet(RewriteModelViewSet):
     serializer_class = MenuSerializer
     queryset = Menu.objects.all()
 
+    def perform_destroy(self, instance):
+        pid = instance.pid
+        if pid == 0:
+            rid = instance.rid
+            Menu.objects.filter(pid = rid).delete()
+        instance.delete()
+
+
+
 
 import json
 from user.models import UserProfile
 from functools import reduce
-# Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 
 

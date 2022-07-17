@@ -37,6 +37,7 @@ urlpatterns = [
     path('parameter-fields/',views.parameter_fields),
     path('process-parameterized/',views.process_parameterized_fields),
     path('send/request/',views.process_request),
+    re_path(r'^make/request/(?P<pk>\w+)/$',views.make_request),
 ]
 
 urlpatterns += router.urls
