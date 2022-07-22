@@ -13,23 +13,25 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path,re_path,include
-import api.urls as api_urls
-import user.urls as user_urls
-from rest_framework.documentation import include_docs_urls
 from django.conf import settings
+from django.contrib import admin
+from django.urls import path, re_path, include
 from django.views.static import serve
+from rest_framework.documentation import include_docs_urls
+
+import api.urls as api_urls
+import public.urls as public_urls
+import user.urls as user_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(api_urls)),
     path('user/', include(user_urls)),
+    path('public/', include(public_urls)),
     path('docs/', include_docs_urls(title='站点页面标题')),
     re_path(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
 
 ]
-
 
 """将jobs.py中的定时任务导入在该文件中，则python启动的时候则调用，使用apscheduler时需要导入该包"""
 # from sse.lib.celery_job.celery_job import scheduler

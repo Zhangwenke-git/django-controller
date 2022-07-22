@@ -81,6 +81,7 @@ class RoleViewSet(RewriteModelViewSet):
 
 class MenuViewSet(RewriteModelViewSet):
     parser_classes = [JSONParser, ]
+    pagination_class = None
     authentication_classes = [Authenticator, ]
 
     serializer_class = MenuSerializer

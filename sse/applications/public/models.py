@@ -1,6 +1,9 @@
-from django.db import models
 from django.conf import settings
+from django.db import models
+
 table_prefix = settings.TABLE_PREFIX
+
+
 class CoreModel(models.Model):
     """
     核心标准抽象模型模型,可直接继承使用
@@ -15,7 +18,10 @@ class CoreModel(models.Model):
     create_datetime = models.DateTimeField(auto_now_add=True, null=True, blank=True, help_text="创建时间",
                                            verbose_name="创建时间")
 
-# Create your models here.
+    class Meta:
+        abstract = True
+
+
 class OperationLog(CoreModel):
     request_modular = models.CharField(max_length=64, verbose_name="请求模块", null=True, blank=True, help_text="请求模块")
     request_path = models.CharField(max_length=400, verbose_name="请求地址", null=True, blank=True, help_text="请求地址")
@@ -35,6 +41,7 @@ class OperationLog(CoreModel):
         verbose_name_plural = verbose_name
         ordering = ("-create_datetime",)
 
+
 class ApiWhiteList(CoreModel):
     url = models.CharField(max_length=200, help_text="url地址", verbose_name="url")
     METHOD_CHOICES = (
@@ -51,3 +58,69 @@ class ApiWhiteList(CoreModel):
         verbose_name = "接口白名单"
         verbose_name_plural = verbose_name
         ordering = ("-create_datetime",)
+
+
+class Database(models.Model):
+    TYPE_CHOICES = (
+        (0, "MYSQL"),
+        (1, "ORACLE"),
+    )
+    type = models.IntegerField(default=0, verbose_name="数据库类型")
+    host = models.CharField(max_length=64, verbose_name="服务器地址")
+    username = models.CharField(max_length=64, verbose_name="登录用户")
+    password = models.CharField(max_length=64,null=True, verbose_name="密码")
+    dbname = models.CharField(max_length=64, verbose_name="数据库")
+    port = models.IntegerField(default=3306, verbose_name="端口")
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建日期')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
+    class Meta:
+        db_table = table_prefix + "database"
+        verbose_name_plural = "数据库配置信息"
+        ordering = ("-create_time",)
+        # indexes = [
+        #     models.Index(fields=['id','type','host','dbname'])
+        # ]
+        unique_together = ('id','type','host','dbname') # 必须加主键ID
+
+class Redis(models.Model):
+    host = models.CharField(max_length=64, verbose_name="服务器地址")
+    username = models.CharField(max_length=64, verbose_name="登录用户")
+    password = models.CharField(max_length=64, null=True,verbose_name="密码")
+    db = models.SmallIntegerField(default=1, verbose_name="数据库")
+    port = models.IntegerField(default=6379, verbose_name="端口")
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建日期')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
+    class Meta:
+        db_table = table_prefix + "redis"
+        verbose_name_plural = "REDIS配置信息"
+        ordering = ("-create_time",)
+
+
+class RabbitMQ(models.Model):
+    host = models.CharField(max_length=64, verbose_name="服务器地址")
+    username = models.CharField(max_length=64, verbose_name="登录用户")
+    password = models.CharField(max_length=64, verbose_name="密码")
+    vhost = models.CharField(max_length=64, null=True, verbose_name="vhost")
+    exchange = models.CharField(max_length=128, null=True, verbose_name="交换机")
+    producer = models.CharField(max_length=128, null=True, verbose_name="请求队列")
+    consumer = models.CharField(max_length=128, null=True, verbose_name="消费队列")
+    port = models.IntegerField(default=5672, verbose_name="端口")
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建日期')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
+    class Meta:
+        db_table = table_prefix + "rabbitmq"
+        verbose_name_plural = "MQ配置信息"
+        ordering = ("-create_time",)
+
+
+class FTP(models.Model):
+    host = models.CharField(max_length=64, verbose_name="服务器地址")
+    username = models.CharField(max_length=64, verbose_name="登录用户")
+    password = models.CharField(max_length=64, verbose_name="密码")
+    port = models.IntegerField(default=21, verbose_name="端口")
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建日期')
+    update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
+    class Meta:
+        db_table = table_prefix + "ftp"
+        verbose_name_plural = "FTP配置信息"
+        ordering = ("-create_time",)

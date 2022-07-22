@@ -35,6 +35,7 @@ urlpatterns = [
     re_path(r'^restore-task/(?P<pk>\w+)/$',views.restore_task),
     path('report-details/view/',views.report_view),
     path('parameter-fields/',views.parameter_fields),
+    path('one-key-expression/',views.oneKeyExpression),
     path('process-parameterized/',views.process_parameterized_fields),
     path('send/request/',views.process_request),
     re_path(r'^make/request/(?P<pk>\w+)/$',views.make_request),

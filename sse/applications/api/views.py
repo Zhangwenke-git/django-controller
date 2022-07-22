@@ -299,17 +299,35 @@ def process_request(request):
 
 @csrf_exempt
 def make_request(request,pk):
+    import requests
     obj =  Templates.objects.get(uid=pk)
     if obj:
         obj = model_to_dict(obj)
         print(obj)
         request_info = parser_request_info(obj)
-        res = request_(method=request_info.get("method"), url=request_info["url"], headers=request_info.get("header"),
-                       data=request_info.get("data"))
-        message = json.dumps(res, ensure_ascii=False, indent=4)
+        try:
+            res = request_(method=request_info.get("method"), url=request_info["url"], headers=request_info.get("header"),
+                           data=request_info.get("data"))
+            message = json.dumps(res, ensure_ascii=False, indent=4)
+        except TimeoutError:
+            message='Time out'
+        except requests.exceptions.ConnectTimeout:
+            message = 'ConnectTimeout'
         res = {"success": True, "message": message}
         return HttpResponse(json.dumps(res, ensure_ascii=False))
 
+@csrf_exempt
+def oneKeyExpression(request):
+    data = json.loads(request.body.decode())
+    obj =  Templates.objects.get(uid=data["interfaceName"])
+    res = {"success": False, "expression": ""}
+    if obj:
+        expression_ = data["expression"]
+        expressions = ["%s:%s" % (item["field"],item["express"]) for item in expression_]
+        expression = ",".join(expressions)
+        expression = "@{%s}|{%s}" % (obj.name,expression)
+        res = {"success": True, "expression": expression}
+    return HttpResponse(json.dumps(res, ensure_ascii=False))
 
 @csrf_exempt
 def report_download(request, pk=None):

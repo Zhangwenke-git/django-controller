@@ -122,10 +122,6 @@ class LoginSerializer(serializers.ModelSerializer):
         return token
 
 
-
-
-
-
 class MenuSerializer(serializers.ModelSerializer):
     statue_display = serializers.CharField(source='get_statue_display', read_only=True)
     class Meta:

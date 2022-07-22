@@ -27,11 +27,10 @@ class BaseModel(models.Model):
         abstract=True
 
 
-# Create your models here.
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser, PermissionsMixin
 )
-from django.utils.safestring import mark_safe
+
 
 
 class UserProfileManager(BaseUserManager):
@@ -110,12 +109,6 @@ class UserProfile(AbstractBaseUser, PermissionsMixin,BaseModel):
     def has_module_perms(self, app_label):
         return True
 
-    # @property
-    # def roles(self):
-    #     role_list = Role.objects.all()
-    #     roles =[role.name for role in role_list]
-    #     return roles
-
     @property
     def is_staff(self):
         return self.is_superuser
@@ -123,6 +116,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin,BaseModel):
     class Meta:
         db_table = table_prefix + "user"
         verbose_name_plural = "用户信息表"
+        ordering = ('-create_time',)
 
 
 
@@ -136,12 +130,12 @@ class Role(models.Model):
     )
     statue = models.SmallIntegerField(choices=statue_choice, default=1, verbose_name="状态")
     menu = models.ManyToManyField('Menu', verbose_name='拥有菜单')
-    order = models.SmallIntegerField(default=0, verbose_name='菜单排序')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建日期')
     update_time = models.DateTimeField(auto_now=True, verbose_name='更新日期')
     class Meta:
         db_table = table_prefix + "role"
         verbose_name_plural = '角色表'
+        ordering = ('-update_time',)
 
     def __str__(self):
         return self.name
@@ -162,3 +156,4 @@ class Menu(BaseModel):
     class Meta:
         db_table = table_prefix + "menu"
         verbose_name_plural = "菜单"
+        ordering = ('order',)

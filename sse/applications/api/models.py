@@ -86,9 +86,11 @@ class Templates(BaseModel):
     header = models.JSONField(null=True, default=default_header, verbose_name='headers')
     data = models.JSONField(verbose_name='请求模板', null=True)
     default = models.JSONField(verbose_name='参数默认值',null=True)
+    expect = models.JSONField(verbose_name='结果解析表达式',null=True)
     process_name = models.CharField(max_length=32, blank=True, null=True, verbose_name='进程名称')
     linux_order_str = models.CharField(max_length=100, blank=True, null=True, verbose_name='linux命令')
-    table_name = models.CharField(max_length=32, blank=True, null=True, verbose_name='所需表名')
+    sql = models.CharField(max_length=1024, blank=True, null=True, verbose_name='校验SQL')
+    dbinfo = models.CharField(max_length=128, blank=True, null=True, verbose_name='数据库信息')
 
 
     class Meta:
@@ -154,19 +156,6 @@ class Scenario(BaseModel):
     def __str__(self):
         return self.scenario  # 不添加这个的话，多对多关系中会提示：XXX.onject1,XXX.onject2,
 
-
-class Sql(BaseModel):
-    name = models.CharField(max_length=64, verbose_name='名称')
-    sql = models.CharField(max_length=640, verbose_name='sql语句')
-    is_all = models.BooleanField(default=1, verbose_name="是否全量输出")
-    field_list = models.CharField(max_length=320, verbose_name='字段列表')
-    case = models.ManyToManyField(TestCase, verbose_name='所涉用例')
-
-    @property
-    def cases(self):
-        case_list = TestCase.objects.all()
-        cases =[case.name for case in case_list]
-        return cases
 
 class ExecutionRecord(models.Model):
     statue_choice = (

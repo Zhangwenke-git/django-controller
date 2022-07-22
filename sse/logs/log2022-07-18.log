@@ -1,0 +1,1086 @@
+[2022-07-18 09:01:49,098] [ERROR] [MainThread] [celery.utils.dispatch.signal] | Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x000001C1F6168EE0>> raised: TimeoutError('Timeout connecting to server')
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 51, in call_with_retry
+    raise error
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 677, in _connect
+    raise err
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 665, in _connect
+    sock.connect(socket_address)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\eventlet\greenio\base.py", line 256, in connect
+    socket_checkerr(fd)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\eventlet\greenio\base.py", line 54, in socket_checkerr
+    raise socket.error(err, errno.errorcode[err])
+TimeoutError: [Errno 10060] WSAETIMEDOUT
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\utils\dispatch\signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\fixups\django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\fixups\django.py", line 121, in validate_models
+    run_checks()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\urls.py", line 23, in check_resolver
+    return check_method()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\urls.py", line 18, in <module>
+    import api.urls as api_urls
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\urls.py", line 16, in <module>
+    from api import views
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\views.py", line 23, in <module>
+    from sse.celery_job.tasks import celery_exec_request
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py", line 20, in <module>
+    rds.set("period_task_names_and_counts", json.dumps(period_task_names_and_counts, ensure_ascii=False))
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\commands\core.py", line 2220, in set
+    return self.execute_command("SET", *pieces, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 1387, in get_connection
+    connection.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 615, in connect
+    raise TimeoutError("Timeout connecting to server")
+redis.exceptions.TimeoutError: Timeout connecting to server
+[2022-07-18 09:01:58,541] [ERROR] [MainThread] [celery.utils.dispatch.signal] | Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x000001978C1D55A0>> raised: TimeoutError('Timeout connecting to server')
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 51, in call_with_retry
+    raise error
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 677, in _connect
+    raise err
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 665, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\utils\dispatch\signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\fixups\django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\fixups\django.py", line 121, in validate_models
+    run_checks()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\urls.py", line 23, in check_resolver
+    return check_method()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\urls.py", line 18, in <module>
+    import api.urls as api_urls
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\urls.py", line 16, in <module>
+    from api import views
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\views.py", line 23, in <module>
+    from sse.celery_job.tasks import celery_exec_request
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py", line 20, in <module>
+    rds.set("period_task_names_and_counts", json.dumps(period_task_names_and_counts, ensure_ascii=False))
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\commands\core.py", line 2220, in set
+    return self.execute_command("SET", *pieces, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 1387, in get_connection
+    connection.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 615, in connect
+    raise TimeoutError("Timeout connecting to server")
+redis.exceptions.TimeoutError: Timeout connecting to server
+[2022-07-18 09:02:10,172] [ERROR] [MainThread] [celery.utils.dispatch.signal] | Signal handler <promise@0x1c1f615d990 --> <bound method Celery._autodiscover_tasks of <Celery sse at 0x1c1f611f820>>> raised: TimeoutError('Timeout connecting to server')
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 51, in call_with_retry
+    raise error
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 677, in _connect
+    raise err
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 665, in _connect
+    sock.connect(socket_address)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\eventlet\greenio\base.py", line 256, in connect
+    socket_checkerr(fd)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\eventlet\greenio\base.py", line 54, in socket_checkerr
+    raise socket.error(err, errno.errorcode[err])
+TimeoutError: [Errno 10060] WSAETIMEDOUT
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\utils\dispatch\signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\vine\promises.py", line 160, in __call__
+    return self.throw()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\vine\promises.py", line 157, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\app\base.py", line 688, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_names(packages, related_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\app\base.py", line 693, in _autodiscover_tasks_from_names
+    return self.loader.autodiscover_tasks(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 221, in autodiscover_tasks
+    mod.__name__ for mod in autodiscover_tasks(packages or (),
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 247, in autodiscover_tasks
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 247, in <listcomp>
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 268, in find_related_module
+    return importlib.import_module(module_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py", line 20, in <module>
+    rds.set("period_task_names_and_counts", json.dumps(period_task_names_and_counts, ensure_ascii=False))
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\commands\core.py", line 2220, in set
+    return self.execute_command("SET", *pieces, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 1387, in get_connection
+    connection.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 615, in connect
+    raise TimeoutError("Timeout connecting to server")
+redis.exceptions.TimeoutError: Timeout connecting to server
+[2022-07-18 09:02:19,577] [ERROR] [MainThread] [celery.utils.dispatch.signal] | Signal handler <promise@0x1978c1cfd90 --> <bound method Celery._autodiscover_tasks of <Celery sse at 0x1978c19bdc0>>> raised: TimeoutError('Timeout connecting to server')
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 51, in call_with_retry
+    raise error
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 677, in _connect
+    raise err
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 665, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\utils\dispatch\signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\vine\promises.py", line 160, in __call__
+    return self.throw()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\vine\promises.py", line 157, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\app\base.py", line 688, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_names(packages, related_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\app\base.py", line 693, in _autodiscover_tasks_from_names
+    return self.loader.autodiscover_tasks(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 221, in autodiscover_tasks
+    mod.__name__ for mod in autodiscover_tasks(packages or (),
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 247, in autodiscover_tasks
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 247, in <listcomp>
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 268, in find_related_module
+    return importlib.import_module(module_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py", line 20, in <module>
+    rds.set("period_task_names_and_counts", json.dumps(period_task_names_and_counts, ensure_ascii=False))
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\commands\core.py", line 2220, in set
+    return self.execute_command("SET", *pieces, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 1387, in get_connection
+    connection.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 615, in connect
+    raise TimeoutError("Timeout connecting to server")
+redis.exceptions.TimeoutError: Timeout connecting to server
+[2022-07-18 09:03:58,141] [ERROR] [MainThread] [celery.utils.dispatch.signal] | Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x000001C297038EE0>> raised: TimeoutError('Timeout connecting to server')
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 51, in call_with_retry
+    raise error
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 677, in _connect
+    raise err
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 665, in _connect
+    sock.connect(socket_address)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\eventlet\greenio\base.py", line 256, in connect
+    socket_checkerr(fd)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\eventlet\greenio\base.py", line 54, in socket_checkerr
+    raise socket.error(err, errno.errorcode[err])
+TimeoutError: [Errno 10060] WSAETIMEDOUT
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\utils\dispatch\signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\fixups\django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\fixups\django.py", line 121, in validate_models
+    run_checks()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\urls.py", line 23, in check_resolver
+    return check_method()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\urls.py", line 18, in <module>
+    import api.urls as api_urls
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\urls.py", line 16, in <module>
+    from api import views
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\views.py", line 23, in <module>
+    from sse.celery_job.tasks import celery_exec_request
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py", line 20, in <module>
+    rds.set("period_task_names_and_counts", json.dumps(period_task_names_and_counts, ensure_ascii=False))
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\commands\core.py", line 2220, in set
+    return self.execute_command("SET", *pieces, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 1387, in get_connection
+    connection.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 615, in connect
+    raise TimeoutError("Timeout connecting to server")
+redis.exceptions.TimeoutError: Timeout connecting to server
+[2022-07-18 09:04:05,499] [ERROR] [MainThread] [celery.utils.dispatch.signal] | Signal handler <bound method DjangoFixup.on_import_modules of <celery.fixups.django.DjangoFixup object at 0x0000022A4F7155A0>> raised: TimeoutError('Timeout connecting to server')
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 51, in call_with_retry
+    raise error
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 677, in _connect
+    raise err
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 665, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\utils\dispatch\signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\fixups\django.py", line 82, in on_import_modules
+    self.worker_fixup.validate_models()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\fixups\django.py", line 121, in validate_models
+    run_checks()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\checks\urls.py", line 23, in check_resolver
+    return check_method()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\urls.py", line 18, in <module>
+    import api.urls as api_urls
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\urls.py", line 16, in <module>
+    from api import views
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\applications\api\views.py", line 23, in <module>
+    from sse.celery_job.tasks import celery_exec_request
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py", line 20, in <module>
+    rds.set("period_task_names_and_counts", json.dumps(period_task_names_and_counts, ensure_ascii=False))
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\commands\core.py", line 2220, in set
+    return self.execute_command("SET", *pieces, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 1387, in get_connection
+    connection.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 615, in connect
+    raise TimeoutError("Timeout connecting to server")
+redis.exceptions.TimeoutError: Timeout connecting to server
+[2022-07-18 09:04:19,188] [ERROR] [MainThread] [celery.utils.dispatch.signal] | Signal handler <promise@0x1c29702d990 --> <bound method Celery._autodiscover_tasks of <Celery sse at 0x1c296fef820>>> raised: TimeoutError('Timeout connecting to server')
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 51, in call_with_retry
+    raise error
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 677, in _connect
+    raise err
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 665, in _connect
+    sock.connect(socket_address)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\eventlet\greenio\base.py", line 256, in connect
+    socket_checkerr(fd)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\eventlet\greenio\base.py", line 54, in socket_checkerr
+    raise socket.error(err, errno.errorcode[err])
+TimeoutError: [Errno 10060] WSAETIMEDOUT
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\utils\dispatch\signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\vine\promises.py", line 160, in __call__
+    return self.throw()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\vine\promises.py", line 157, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\app\base.py", line 688, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_names(packages, related_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\app\base.py", line 693, in _autodiscover_tasks_from_names
+    return self.loader.autodiscover_tasks(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 221, in autodiscover_tasks
+    mod.__name__ for mod in autodiscover_tasks(packages or (),
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 247, in autodiscover_tasks
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 247, in <listcomp>
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 268, in find_related_module
+    return importlib.import_module(module_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py", line 20, in <module>
+    rds.set("period_task_names_and_counts", json.dumps(period_task_names_and_counts, ensure_ascii=False))
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\commands\core.py", line 2220, in set
+    return self.execute_command("SET", *pieces, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 1387, in get_connection
+    connection.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 615, in connect
+    raise TimeoutError("Timeout connecting to server")
+redis.exceptions.TimeoutError: Timeout connecting to server
+[2022-07-18 09:04:26,540] [ERROR] [MainThread] [celery.utils.dispatch.signal] | Signal handler <promise@0x22a4f70fd90 --> <bound method Celery._autodiscover_tasks of <Celery sse at 0x22a4f6dbdc0>>> raised: TimeoutError('Timeout connecting to server')
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 611, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 51, in call_with_retry
+    raise error
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 612, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 677, in _connect
+    raise err
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 665, in _connect
+    sock.connect(socket_address)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\utils\dispatch\signal.py", line 276, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\vine\promises.py", line 160, in __call__
+    return self.throw()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\vine\promises.py", line 157, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\app\base.py", line 688, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_names(packages, related_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\app\base.py", line 693, in _autodiscover_tasks_from_names
+    return self.loader.autodiscover_tasks(
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 221, in autodiscover_tasks
+    mod.__name__ for mod in autodiscover_tasks(packages or (),
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 247, in autodiscover_tasks
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 247, in <listcomp>
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\celery\loaders\base.py", line 268, in find_related_module
+    return importlib.import_module(module_name)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\lenovo\Desktop\workspace\django-controller\sse\celery_job\tasks.py", line 20, in <module>
+    rds.set("period_task_names_and_counts", json.dumps(period_task_names_and_counts, ensure_ascii=False))
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\commands\core.py", line 2220, in set
+    return self.execute_command("SET", *pieces, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\client.py", line 1235, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 1387, in get_connection
+    connection.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\redis\connection.py", line 615, in connect
+    raise TimeoutError("Timeout connecting to server")
+redis.exceptions.TimeoutError: Timeout connecting to server
+[2022-07-18 09:20:44,160] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-18 09:20:49,308] [DEBUG] [MainThread] [pika.adapters.select_connection] | Using SelectPoller
+[2022-07-18 09:20:49,309] [DEBUG] [MainThread] [pika.adapters.base_connection] | Created default connection workflow <pika.adapters.utils.connection_workflow.AMQPConnectionWorkflow object at 0x000001D0057D13F0>
+[2022-07-18 09:20:49,309] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | Starting AMQP Connection workflow asynchronously.
+[2022-07-18 09:20:49,310] [DEBUG] [MainThread] [pika.adapters.select_connection] | call_later: added timeout <pika.adapters.select_connection._Timeout object at 0x000001D0057D13C0> with deadline=1878.031 and callback=functools.partial(<bound method AMQPConnectionWorkflow._start_new_cycle_async of <pika.adapters.utils.connection_workflow.AMQPConnectionWorkflow object at 0x000001D0057D13F0>>, first=True); now=1878.031; delay=0
+[2022-07-18 09:20:49,310] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | Beginning a new AMQP connection workflow cycle; attempts remaining after this: 0
+[2022-07-18 09:20:49,310] [DEBUG] [MainThread] [pika.adapters.select_connection] | call_later: added timeout <pika.adapters.select_connection._Timeout object at 0x000001D0057D2EC0> with deadline=1878.031 and callback=<bound method AMQPConnectionWorkflow._try_next_config_async of <pika.adapters.utils.connection_workflow.AMQPConnectionWorkflow object at 0x000001D0057D13F0>>; now=1878.031; delay=0
+[2022-07-18 09:20:49,311] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | _try_next_config_async: '192.168.246.128':5672
+[2022-07-18 09:20:49,312] [DEBUG] [MainThread] [pika.adapters.select_connection] | process_timeouts: invoking callback=<bound method _AddressResolver._dispatch_result of <pika.adapters.utils.selector_ioloop_adapter._AddressResolver object at 0x000001D0057D2E00>>
+[2022-07-18 09:20:49,312] [DEBUG] [Thread-1] [pika.adapters.select_connection] | add_callback_threadsafe: added callback=<bound method _AddressResolver._dispatch_result of <pika.adapters.utils.selector_ioloop_adapter._AddressResolver object at 0x000001D0057D2E00>>
+[2022-07-18 09:20:49,312] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | Invoking asynchronous getaddrinfo() completion callback; host='192.168.246.128'
+[2022-07-18 09:20:49,313] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | getaddrinfo returned 1 records
+[2022-07-18 09:20:49,313] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | Attempting to connect using address record (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('192.168.246.128', 5672))
+[2022-07-18 09:20:49,313] [INFO] [MainThread] [pika.adapters.utils.connection_workflow] | Pika version 1.2.1 connecting to ('192.168.246.128', 5672)
+[2022-07-18 09:20:49,313] [DEBUG] [MainThread] [pika.adapters.select_connection] | add_callback_threadsafe: added callback=<bound method _AsyncSocketConnector._start_async of <pika.adapters.utils.io_services_utils._AsyncSocketConnector object at 0x000001D0057D31F0>>
+[2022-07-18 09:20:49,314] [DEBUG] [MainThread] [pika.adapters.select_connection] | call_later: added timeout <pika.adapters.select_connection._Timeout object at 0x000001D0057D13C0> with deadline=1888.046 and callback=<bound method AMQPConnector._on_tcp_connection_timeout of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001D0057D3250>>; now=1878.046; delay=10.0
+[2022-07-18 09:20:49,314] [DEBUG] [MainThread] [pika.adapters.select_connection] | call_later: added timeout <pika.adapters.select_connection._Timeout object at 0x000001D0057D32E0> with deadline=1893.046 and callback=<bound method AMQPConnector._on_overall_timeout of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001D0057D3250>>; now=1878.046; delay=15.0
+[2022-07-18 09:20:49,314] [DEBUG] [MainThread] [pika.adapters.select_connection] | process_timeouts: invoking callback=<bound method _AsyncSocketConnector._start_async of <pika.adapters.utils.io_services_utils._AsyncSocketConnector object at 0x000001D0057D31F0>>
+[2022-07-18 09:20:49,315] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncSocketConnector._on_writable of <pika.adapters.utils.io_services_utils._AsyncSocketConnector object at 0x000001D0057D31F0>>)
+[2022-07-18 09:20:49,315] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) added handler Wr
+[2022-07-18 09:20:49,315] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Connection-establishment is in progress for <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>.
+[2022-07-18 09:20:49,316] [INFO] [MainThread] [pika.adapters.utils.io_services_utils] | Socket connected: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,316] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncSocketConnector._report_completion(None); <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,317] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,317] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) removed handler
+[2022-07-18 09:20:49,317] [DEBUG] [MainThread] [pika.adapters.select_connection] | remove_timeout: removing timeout <pika.adapters.select_connection._Timeout object at 0x000001D0057D13C0> with deadline=1888.046 and callback=<bound method AMQPConnector._on_tcp_connection_timeout of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001D0057D3250>>
+[2022-07-18 09:20:49,317] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | TCP connection to broker established: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>.
+[2022-07-18 09:20:49,318] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector.start(); <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,318] [DEBUG] [MainThread] [pika.adapters.select_connection] | add_callback_threadsafe: added callback=<bound method _AsyncStreamConnector._start_async of <pika.adapters.utils.io_services_utils._AsyncStreamConnector object at 0x000001D0057D31C0>>
+[2022-07-18 09:20:49,318] [DEBUG] [MainThread] [pika.adapters.select_connection] | process_timeouts: invoking callback=<bound method _AsyncStreamConnector._start_async of <pika.adapters.utils.io_services_utils._AsyncStreamConnector object at 0x000001D0057D31C0>>
+[2022-07-18 09:20:49,319] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector._start_async(); <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,319] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector._linkup()
+[2022-07-18 09:20:49,320] [DEBUG] [MainThread] [pika.connection] | New Connection state: CLOSED (prev=CLOSED)
+[2022-07-18 09:20:49,334] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_connection_start of <SelectConnection CLOSED transport=None params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,334] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_connection_close_from_broker of <SelectConnection CLOSED transport=None params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,335] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._default_on_connection_error of <SelectConnection CLOSED transport=None params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,335] [DEBUG] [MainThread] [pika.connection] | New Connection state: INIT (prev=CLOSED)
+[2022-07-18 09:20:49,335] [DEBUG] [MainThread] [pika.connection] | Using external connection workflow.
+[2022-07-18 09:20:49,336] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncTransportBase.__init__: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,336] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_reader(1560, <bound method _AsyncPlaintextTransport._on_socket_readable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,336] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_reader(1560, _) added handler Rd
+[2022-07-18 09:20:49,336] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _linkup(): created transport <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>
+[2022-07-18 09:20:49,338] [DEBUG] [MainThread] [pika.connection] | New Connection state: PROTOCOL (prev=INIT)
+[2022-07-18 09:20:49,338] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,338] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) updated handler RdWr
+[2022-07-18 09:20:49,338] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,339] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _linkup(): introduced transport to protocol <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>; _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 09:20:49,339] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector._report_completion((<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>)); <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,340] [INFO] [MainThread] [pika.adapters.utils.connection_workflow] | Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>).
+[2022-07-18 09:20:49,340] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Connection._default_on_connection_error of <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,340] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method AMQPConnector._on_amqp_handshake_done of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001D0057D3250>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,341] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method AMQPConnector._on_amqp_handshake_done of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001D0057D3250>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,341] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector._cleanup(False)
+[2022-07-18 09:20:49,342] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,342] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) updated handler Rd
+[2022-07-18 09:20:49,342] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,345] [DEBUG] [MainThread] [pika.callback] | Processing 0:Connection.Start
+[2022-07-18 09:20:49,346] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,346] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,346] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Connection._on_connection_start of <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,347] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Connection._on_connection_start of <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>> for "0:Connection.Start"
+[2022-07-18 09:20:49,347] [DEBUG] [MainThread] [pika.connection] | New Connection state: START (prev=PROTOCOL)
+[2022-07-18 09:20:49,347] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_connection_tune of <SelectConnection START transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,348] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,348] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) updated handler RdWr
+[2022-07-18 09:20:49,348] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,348] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,349] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,349] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) updated handler Rd
+[2022-07-18 09:20:49,349] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,350] [DEBUG] [MainThread] [pika.callback] | Processing 0:Connection.Tune
+[2022-07-18 09:20:49,350] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,350] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,350] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Connection._on_connection_tune of <SelectConnection START transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,350] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Connection._on_connection_tune of <SelectConnection START transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>> for "0:Connection.Tune"
+[2022-07-18 09:20:49,351] [DEBUG] [MainThread] [pika.connection] | New Connection state: TUNE (prev=START)
+[2022-07-18 09:20:49,351] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,351] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) updated handler RdWr
+[2022-07-18 09:20:49,352] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,352] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_connection_open_ok of <SelectConnection TUNE transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,352] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,353] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,353] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) updated handler Rd
+[2022-07-18 09:20:49,353] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,355] [DEBUG] [MainThread] [pika.callback] | Processing 0:Connection.OpenOk
+[2022-07-18 09:20:49,355] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,355] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,356] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Connection._on_connection_open_ok of <SelectConnection TUNE transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,356] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Connection._on_connection_open_ok of <SelectConnection TUNE transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>> for "0:Connection.OpenOk"
+[2022-07-18 09:20:49,356] [DEBUG] [MainThread] [pika.connection] | New Connection state: OPEN (prev=TUNE)
+[2022-07-18 09:20:49,357] [DEBUG] [MainThread] [pika.callback] | Processing 0:_on_connection_open_ok
+[2022-07-18 09:20:49,357] [DEBUG] [MainThread] [pika.callback] | Calling <bound method AMQPConnector._on_amqp_handshake_done of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001D0057D3250>> for "0:_on_connection_open_ok"
+[2022-07-18 09:20:49,357] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | AMQPConnector: AMQP handshake attempt completed; state=3; error=None; '192.168.246.128'/(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('192.168.246.128', 5672))
+[2022-07-18 09:20:49,357] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | AMQPConnector: AMQP connection established for '192.168.246.128'/(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('192.168.246.128', 5672)): <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 09:20:49,357] [INFO] [MainThread] [pika.adapters.utils.connection_workflow] | AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 09:20:49,358] [DEBUG] [MainThread] [pika.adapters.select_connection] | remove_timeout: removing timeout <pika.adapters.select_connection._Timeout object at 0x000001D0057D32E0> with deadline=1893.046 and callback=<bound method AMQPConnector._on_overall_timeout of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001D0057D3250>>
+[2022-07-18 09:20:49,358] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | Connection attempt completed with <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 09:20:49,359] [INFO] [MainThread] [pika.adapters.utils.connection_workflow] | AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 09:20:49,359] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,359] [INFO] [MainThread] [pika.adapters.blocking_connection] | Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 09:20:49,359] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D0057F9640>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,360] [DEBUG] [MainThread] [pika.connection] | Creating channel 1
+[2022-07-18 09:20:49,360] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_channel_cleanup of <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': <Channel number=1 CLOSED conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,360] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_getempty of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,361] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_cancel of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,361] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_flow of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,361] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_close_from_broker of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,362] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,362] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) updated handler RdWr
+[2022-07-18 09:20:49,362] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,362] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Channel.Open(['out_of_band='])>; acceptable_replies=[<class 'pika.spec.Channel.OpenOk'>]
+[2022-07-18 09:20:49,363] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 09:20:49,363] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,363] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 09:20:49,363] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_openok of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,364] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method BlockingChannel._on_consumer_cancelled_by_broker of <BlockingChannel impl=<Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,364] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.signal_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005814640>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,364] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method BlockingChannel._on_channel_closed of <BlockingChannel impl=<Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>>, 'one_shot': False, 'only': <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'arguments': None}
+[2022-07-18 09:20:49,365] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005835F40>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,365] [INFO] [MainThread] [pika.adapters.blocking_connection] | Created channel=1
+[2022-07-18 09:20:49,365] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,365] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) updated handler Rd
+[2022-07-18 09:20:49,366] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,366] [DEBUG] [MainThread] [pika.callback] | Processing 1:Channel.OpenOk
+[2022-07-18 09:20:49,367] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,367] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,367] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,368] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,368] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,368] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_openok of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,368] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "1:Channel.OpenOk"
+[2022-07-18 09:20:49,368] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 09:20:49,369] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_openok of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "1:Channel.OpenOk"
+[2022-07-18 09:20:49,369] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,369] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,370] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) updated handler RdWr
+[2022-07-18 09:20:49,370] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,370] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Exchange.Declare(['arguments={}', 'auto_delete=False', 'durable=True', 'exchange=report_builder', 'internal=False', 'nowait=False', 'passive=False', 'ticket=0', 'type=topic'])>; acceptable_replies=[<class 'pika.spec.Exchange.DeclareOk'>]
+[2022-07-18 09:20:49,370] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 09:20:49,371] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,371] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 09:20:49,371] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005817740>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,371] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,372] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) updated handler Rd
+[2022-07-18 09:20:49,372] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,372] [DEBUG] [MainThread] [pika.callback] | Processing 1:Exchange.DeclareOk
+[2022-07-18 09:20:49,373] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,373] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,373] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,373] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,374] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,374] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005817740>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,374] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "1:Exchange.DeclareOk"
+[2022-07-18 09:20:49,374] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 09:20:49,375] [DEBUG] [MainThread] [pika.callback] | Calling <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005817740>> for "1:Exchange.DeclareOk"
+[2022-07-18 09:20:49,375] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,375] [DEBUG] [MainThread] [pika.connection] | Creating channel 2
+[2022-07-18 09:20:49,376] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_channel_cleanup of <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': <Channel number=2 CLOSED conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,376] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_getempty of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,376] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_cancel of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,377] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_flow of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,377] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_close_from_broker of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,377] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,377] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) updated handler RdWr
+[2022-07-18 09:20:49,378] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,378] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Channel.Open(['out_of_band='])>; acceptable_replies=[<class 'pika.spec.Channel.OpenOk'>]
+[2022-07-18 09:20:49,378] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 09:20:49,379] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,379] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 09:20:49,379] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_openok of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,380] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method BlockingChannel._on_consumer_cancelled_by_broker of <BlockingChannel impl=<Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,380] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.signal_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005837FC0>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,380] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method BlockingChannel._on_channel_closed of <BlockingChannel impl=<Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>>, 'one_shot': False, 'only': <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'arguments': None}
+[2022-07-18 09:20:49,381] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005837780>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 09:20:49,381] [INFO] [MainThread] [pika.adapters.blocking_connection] | Created channel=2
+[2022-07-18 09:20:49,381] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,382] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) updated handler Rd
+[2022-07-18 09:20:49,382] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,383] [DEBUG] [MainThread] [pika.callback] | Processing 2:Channel.OpenOk
+[2022-07-18 09:20:49,383] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,383] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,384] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,384] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,384] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,385] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_openok of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,385] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Channel.OpenOk"
+[2022-07-18 09:20:49,385] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 09:20:49,385] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_openok of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Channel.OpenOk"
+[2022-07-18 09:20:49,386] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,386] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,386] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) updated handler RdWr
+[2022-07-18 09:20:49,387] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,388] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Queue.Declare(['arguments={}', 'auto_delete=False', 'durable=True', 'exclusive=False', 'nowait=False', 'passive=False', 'queue=report_processor_reply', 'ticket=0'])>; acceptable_replies=[(<class 'pika.spec.Queue.DeclareOk'>, {'queue': 'report_processor_reply'})]
+[2022-07-18 09:20:49,388] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 09:20:49,388] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'report_processor_reply'}, 'calls': 1}
+[2022-07-18 09:20:49,388] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 09:20:49,389] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005836F00>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'report_processor_reply'}, 'calls': 1}
+[2022-07-18 09:20:49,389] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,389] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) updated handler Rd
+[2022-07-18 09:20:49,389] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,391] [DEBUG] [MainThread] [pika.callback] | Processing 2:Queue.DeclareOk
+[2022-07-18 09:20:49,391] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,391] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,391] [DEBUG] [MainThread] [pika.callback] | Comparing {'queue': 'report_processor_reply'} to {'queue': 'report_processor_reply'}
+[2022-07-18 09:20:49,391] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'report_processor_reply'}, 'calls': 0}
+[2022-07-18 09:20:49,391] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,391] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,391] [DEBUG] [MainThread] [pika.callback] | Comparing {'queue': 'report_processor_reply'} to {'queue': 'report_processor_reply'}
+[2022-07-18 09:20:49,391] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005836F00>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'report_processor_reply'}, 'calls': 0}
+[2022-07-18 09:20:49,392] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Queue.DeclareOk"
+[2022-07-18 09:20:49,392] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 09:20:49,392] [DEBUG] [MainThread] [pika.callback] | Calling <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005836F00>> for "2:Queue.DeclareOk"
+[2022-07-18 09:20:49,392] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,393] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,393] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) updated handler RdWr
+[2022-07-18 09:20:49,393] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,393] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Queue.Bind(['arguments={}', 'exchange=report_builder', 'nowait=False', 'queue=report_processor_reply', 'routing_key=pytest.result.#', 'ticket=0'])>; acceptable_replies=[<class 'pika.spec.Queue.BindOk'>]
+[2022-07-18 09:20:49,394] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 09:20:49,394] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,394] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 09:20:49,394] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005817B80>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 09:20:49,395] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,395] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) updated handler Rd
+[2022-07-18 09:20:49,396] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,397] [DEBUG] [MainThread] [pika.callback] | Processing 2:Queue.BindOk
+[2022-07-18 09:20:49,397] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,397] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,398] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,398] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,398] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,398] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005817B80>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 09:20:49,399] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Queue.BindOk"
+[2022-07-18 09:20:49,399] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 09:20:49,399] [DEBUG] [MainThread] [pika.callback] | Calling <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005817B80>> for "2:Queue.BindOk"
+[2022-07-18 09:20:49,400] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,400] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1560, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0>>)
+[2022-07-18 09:20:49,400] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1560, _) updated handler RdWr
+[2022-07-18 09:20:49,400] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,401] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Basic.Consume(['arguments={}', 'consumer_tag=ctag2.a40b4c0599b740c5981c3095c936bb51', 'exclusive=False', 'no_ack=False', 'no_local=False', 'nowait=False', 'queue=report_processor_reply', 'ticket=0'])>; acceptable_replies=[(<class 'pika.spec.Basic.ConsumeOk'>, {'consumer_tag': 'ctag2.a40b4c0599b740c5981c3095c936bb51'})]
+[2022-07-18 09:20:49,401] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 09:20:49,401] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag2.a40b4c0599b740c5981c3095c936bb51'}, 'calls': 1}
+[2022-07-18 09:20:49,401] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 09:20:49,402] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_eventok of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag2.a40b4c0599b740c5981c3095c936bb51'}, 'calls': 1}
+[2022-07-18 09:20:49,402] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1560)
+[2022-07-18 09:20:49,402] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1560) updated handler Rd
+[2022-07-18 09:20:49,403] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:20:49,403] [DEBUG] [MainThread] [pika.callback] | Processing 2:Basic.ConsumeOk
+[2022-07-18 09:20:49,404] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,404] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,404] [DEBUG] [MainThread] [pika.callback] | Comparing {'consumer_tag': 'ctag2.a40b4c0599b740c5981c3095c936bb51'} to {'consumer_tag': 'ctag2.a40b4c0599b740c5981c3095c936bb51'}
+[2022-07-18 09:20:49,404] [DEBUG] [MainThread] [pika.callback] | Removing callback #1: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag2.a40b4c0599b740c5981c3095c936bb51'}, 'calls': 0}
+[2022-07-18 09:20:49,405] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 09:20:49,405] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 09:20:49,405] [DEBUG] [MainThread] [pika.callback] | Comparing {'consumer_tag': 'ctag2.a40b4c0599b740c5981c3095c936bb51'} to {'consumer_tag': 'ctag2.a40b4c0599b740c5981c3095c936bb51'}
+[2022-07-18 09:20:49,405] [DEBUG] [MainThread] [pika.callback] | Removing callback #1: {'callback': <bound method Channel._on_eventok of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag2.a40b4c0599b740c5981c3095c936bb51'}, 'calls': 0}
+[2022-07-18 09:20:49,405] [DEBUG] [MainThread] [pika.callback] | Calling <bound method _CallbackResult.signal_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001D005837FC0>> for "2:Basic.ConsumeOk"
+[2022-07-18 09:20:49,406] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Basic.ConsumeOk"
+[2022-07-18 09:20:49,406] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 09:20:49,406] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_eventok of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001D0057D2CB0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Basic.ConsumeOk"
+[2022-07-18 09:20:49,407] [DEBUG] [MainThread] [pika.channel] | Discarding frame <METHOD(['channel_number=2', 'frame_type=1', "method=<Basic.ConsumeOk(['consumer_tag=ctag2.a40b4c0599b740c5981c3095c936bb51'])>"])>
+[2022-07-18 09:20:49,407] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 50964), raddr=('192.168.246.128', 5672)>
+[2022-07-18 09:27:08,578] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-18 09:28:01,623] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-18 15:52:05,763] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-18 15:52:09,968] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-18 16:29:05,901] [DEBUG] [MainThread] [asyncio] | Using proactor: IocpProactor
+[2022-07-18 16:29:09,234] [DEBUG] [MainThread] [pika.adapters.select_connection] | Using SelectPoller
+[2022-07-18 16:29:09,235] [DEBUG] [MainThread] [pika.adapters.base_connection] | Created default connection workflow <pika.adapters.utils.connection_workflow.AMQPConnectionWorkflow object at 0x000001E44C512E90>
+[2022-07-18 16:29:09,236] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | Starting AMQP Connection workflow asynchronously.
+[2022-07-18 16:29:09,236] [DEBUG] [MainThread] [pika.adapters.select_connection] | call_later: added timeout <pika.adapters.select_connection._Timeout object at 0x000001E44C512E30> with deadline=27582.078 and callback=functools.partial(<bound method AMQPConnectionWorkflow._start_new_cycle_async of <pika.adapters.utils.connection_workflow.AMQPConnectionWorkflow object at 0x000001E44C512E90>>, first=True); now=27582.078; delay=0
+[2022-07-18 16:29:09,236] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | Beginning a new AMQP connection workflow cycle; attempts remaining after this: 0
+[2022-07-18 16:29:09,237] [DEBUG] [MainThread] [pika.adapters.select_connection] | call_later: added timeout <pika.adapters.select_connection._Timeout object at 0x000001E44C512DA0> with deadline=27582.078 and callback=<bound method AMQPConnectionWorkflow._try_next_config_async of <pika.adapters.utils.connection_workflow.AMQPConnectionWorkflow object at 0x000001E44C512E90>>; now=27582.078; delay=0
+[2022-07-18 16:29:09,237] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | _try_next_config_async: '192.168.246.128':5672
+[2022-07-18 16:29:09,238] [DEBUG] [MainThread] [pika.adapters.select_connection] | process_timeouts: invoking callback=<bound method _AddressResolver._dispatch_result of <pika.adapters.utils.selector_ioloop_adapter._AddressResolver object at 0x000001E44C513190>>
+[2022-07-18 16:29:09,238] [DEBUG] [Thread-1] [pika.adapters.select_connection] | add_callback_threadsafe: added callback=<bound method _AddressResolver._dispatch_result of <pika.adapters.utils.selector_ioloop_adapter._AddressResolver object at 0x000001E44C513190>>
+[2022-07-18 16:29:09,239] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | Invoking asynchronous getaddrinfo() completion callback; host='192.168.246.128'
+[2022-07-18 16:29:09,239] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | getaddrinfo returned 1 records
+[2022-07-18 16:29:09,240] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | Attempting to connect using address record (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('192.168.246.128', 5672))
+[2022-07-18 16:29:09,240] [INFO] [MainThread] [pika.adapters.utils.connection_workflow] | Pika version 1.2.1 connecting to ('192.168.246.128', 5672)
+[2022-07-18 16:29:09,240] [DEBUG] [MainThread] [pika.adapters.select_connection] | add_callback_threadsafe: added callback=<bound method _AsyncSocketConnector._start_async of <pika.adapters.utils.io_services_utils._AsyncSocketConnector object at 0x000001E44C513460>>
+[2022-07-18 16:29:09,241] [DEBUG] [MainThread] [pika.adapters.select_connection] | call_later: added timeout <pika.adapters.select_connection._Timeout object at 0x000001E44C512E30> with deadline=27592.078 and callback=<bound method AMQPConnector._on_tcp_connection_timeout of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001E44C5134C0>>; now=27582.078; delay=10.0
+[2022-07-18 16:29:09,241] [DEBUG] [MainThread] [pika.adapters.select_connection] | call_later: added timeout <pika.adapters.select_connection._Timeout object at 0x000001E44C513550> with deadline=27597.078 and callback=<bound method AMQPConnector._on_overall_timeout of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001E44C5134C0>>; now=27582.078; delay=15.0
+[2022-07-18 16:29:09,242] [DEBUG] [MainThread] [pika.adapters.select_connection] | process_timeouts: invoking callback=<bound method _AsyncSocketConnector._start_async of <pika.adapters.utils.io_services_utils._AsyncSocketConnector object at 0x000001E44C513460>>
+[2022-07-18 16:29:09,242] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncSocketConnector._on_writable of <pika.adapters.utils.io_services_utils._AsyncSocketConnector object at 0x000001E44C513460>>)
+[2022-07-18 16:29:09,243] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) added handler Wr
+[2022-07-18 16:29:09,243] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Connection-establishment is in progress for <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>.
+[2022-07-18 16:29:09,244] [INFO] [MainThread] [pika.adapters.utils.io_services_utils] | Socket connected: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,244] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncSocketConnector._report_completion(None); <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,244] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,244] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) removed handler
+[2022-07-18 16:29:09,245] [DEBUG] [MainThread] [pika.adapters.select_connection] | remove_timeout: removing timeout <pika.adapters.select_connection._Timeout object at 0x000001E44C512E30> with deadline=27592.078 and callback=<bound method AMQPConnector._on_tcp_connection_timeout of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001E44C5134C0>>
+[2022-07-18 16:29:09,245] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | TCP connection to broker established: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>.
+[2022-07-18 16:29:09,245] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector.start(); <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,246] [DEBUG] [MainThread] [pika.adapters.select_connection] | add_callback_threadsafe: added callback=<bound method _AsyncStreamConnector._start_async of <pika.adapters.utils.io_services_utils._AsyncStreamConnector object at 0x000001E44C513430>>
+[2022-07-18 16:29:09,246] [DEBUG] [MainThread] [pika.adapters.select_connection] | process_timeouts: invoking callback=<bound method _AsyncStreamConnector._start_async of <pika.adapters.utils.io_services_utils._AsyncStreamConnector object at 0x000001E44C513430>>
+[2022-07-18 16:29:09,246] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector._start_async(); <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,247] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector._linkup()
+[2022-07-18 16:29:09,247] [DEBUG] [MainThread] [pika.connection] | New Connection state: CLOSED (prev=CLOSED)
+[2022-07-18 16:29:09,247] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_connection_start of <SelectConnection CLOSED transport=None params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,248] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_connection_close_from_broker of <SelectConnection CLOSED transport=None params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,248] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._default_on_connection_error of <SelectConnection CLOSED transport=None params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,249] [DEBUG] [MainThread] [pika.connection] | New Connection state: INIT (prev=CLOSED)
+[2022-07-18 16:29:09,249] [DEBUG] [MainThread] [pika.connection] | Using external connection workflow.
+[2022-07-18 16:29:09,249] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncTransportBase.__init__: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,249] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_reader(1280, <bound method _AsyncPlaintextTransport._on_socket_readable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,249] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_reader(1280, _) added handler Rd
+[2022-07-18 16:29:09,250] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _linkup(): created transport <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>
+[2022-07-18 16:29:09,250] [DEBUG] [MainThread] [pika.connection] | New Connection state: PROTOCOL (prev=INIT)
+[2022-07-18 16:29:09,250] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,250] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:29:09,251] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,251] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _linkup(): introduced transport to protocol <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>; _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 16:29:09,251] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector._report_completion((<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>)); <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,252] [INFO] [MainThread] [pika.adapters.utils.connection_workflow] | Streaming transport linked up: (<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>, _StreamingProtocolShim: <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>).
+[2022-07-18 16:29:09,252] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Connection._default_on_connection_error of <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,253] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method AMQPConnector._on_amqp_handshake_done of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001E44C5134C0>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,253] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method AMQPConnector._on_amqp_handshake_done of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001E44C5134C0>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,253] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | _AsyncStreamConnector._cleanup(False)
+[2022-07-18 16:29:09,253] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,254] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:29:09,254] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,257] [DEBUG] [MainThread] [pika.callback] | Processing 0:Connection.Start
+[2022-07-18 16:29:09,258] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,258] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,258] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Connection._on_connection_start of <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,259] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Connection._on_connection_start of <SelectConnection PROTOCOL transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>> for "0:Connection.Start"
+[2022-07-18 16:29:09,259] [DEBUG] [MainThread] [pika.connection] | New Connection state: START (prev=PROTOCOL)
+[2022-07-18 16:29:09,259] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_connection_tune of <SelectConnection START transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,260] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,260] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:29:09,260] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,261] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,261] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,261] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:29:09,261] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,262] [DEBUG] [MainThread] [pika.callback] | Processing 0:Connection.Tune
+[2022-07-18 16:29:09,262] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,262] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,262] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Connection._on_connection_tune of <SelectConnection START transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,263] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Connection._on_connection_tune of <SelectConnection START transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>> for "0:Connection.Tune"
+[2022-07-18 16:29:09,263] [DEBUG] [MainThread] [pika.connection] | New Connection state: TUNE (prev=START)
+[2022-07-18 16:29:09,263] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,263] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:29:09,263] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,264] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_connection_open_ok of <SelectConnection TUNE transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,264] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,264] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,265] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:29:09,265] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,266] [DEBUG] [MainThread] [pika.callback] | Processing 0:Connection.OpenOk
+[2022-07-18 16:29:09,266] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,266] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,266] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Connection._on_connection_open_ok of <SelectConnection TUNE transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,267] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Connection._on_connection_open_ok of <SelectConnection TUNE transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>> for "0:Connection.OpenOk"
+[2022-07-18 16:29:09,267] [DEBUG] [MainThread] [pika.connection] | New Connection state: OPEN (prev=TUNE)
+[2022-07-18 16:29:09,267] [DEBUG] [MainThread] [pika.callback] | Processing 0:_on_connection_open_ok
+[2022-07-18 16:29:09,267] [DEBUG] [MainThread] [pika.callback] | Calling <bound method AMQPConnector._on_amqp_handshake_done of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001E44C5134C0>> for "0:_on_connection_open_ok"
+[2022-07-18 16:29:09,268] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | AMQPConnector: AMQP handshake attempt completed; state=3; error=None; '192.168.246.128'/(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('192.168.246.128', 5672))
+[2022-07-18 16:29:09,268] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | AMQPConnector: AMQP connection established for '192.168.246.128'/(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('192.168.246.128', 5672)): <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 16:29:09,268] [INFO] [MainThread] [pika.adapters.utils.connection_workflow] | AMQPConnector - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 16:29:09,268] [DEBUG] [MainThread] [pika.adapters.select_connection] | remove_timeout: removing timeout <pika.adapters.select_connection._Timeout object at 0x000001E44C513550> with deadline=27597.078 and callback=<bound method AMQPConnector._on_overall_timeout of <pika.adapters.utils.connection_workflow.AMQPConnector object at 0x000001E44C5134C0>>
+[2022-07-18 16:29:09,269] [DEBUG] [MainThread] [pika.adapters.utils.connection_workflow] | Connection attempt completed with <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 16:29:09,269] [INFO] [MainThread] [pika.adapters.utils.connection_workflow] | AMQPConnectionWorkflow - reporting success: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 16:29:09,269] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,270] [INFO] [MainThread] [pika.adapters.blocking_connection] | Connection workflow succeeded: <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>
+[2022-07-18 16:29:09,270] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C53DB40>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,270] [DEBUG] [MainThread] [pika.connection] | Creating channel 1
+[2022-07-18 16:29:09,270] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_channel_cleanup of <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': <Channel number=1 CLOSED conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,271] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_getempty of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,271] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_cancel of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,271] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_flow of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,272] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_close_from_broker of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,272] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,273] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:29:09,273] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,273] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Channel.Open(['out_of_band='])>; acceptable_replies=[<class 'pika.spec.Channel.OpenOk'>]
+[2022-07-18 16:29:09,273] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 16:29:09,274] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,274] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 16:29:09,274] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_openok of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,275] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method BlockingChannel._on_consumer_cancelled_by_broker of <BlockingChannel impl=<Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,275] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.signal_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C56BB40>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,276] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method BlockingChannel._on_channel_closed of <BlockingChannel impl=<Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>>, 'one_shot': False, 'only': <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'arguments': None}
+[2022-07-18 16:29:09,276] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C56BEC0>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,276] [INFO] [MainThread] [pika.adapters.blocking_connection] | Created channel=1
+[2022-07-18 16:29:09,276] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,277] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:29:09,277] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,278] [DEBUG] [MainThread] [pika.callback] | Processing 1:Channel.OpenOk
+[2022-07-18 16:29:09,278] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,279] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,279] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,279] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,280] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,280] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_openok of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,280] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "1:Channel.OpenOk"
+[2022-07-18 16:29:09,280] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 16:29:09,280] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_openok of <Channel number=1 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "1:Channel.OpenOk"
+[2022-07-18 16:29:09,281] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,281] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,281] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:29:09,281] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,282] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Exchange.Declare(['arguments={}', 'auto_delete=False', 'durable=True', 'exchange=report_builder', 'internal=False', 'nowait=False', 'passive=False', 'ticket=0', 'type=topic'])>; acceptable_replies=[<class 'pika.spec.Exchange.DeclareOk'>]
+[2022-07-18 16:29:09,282] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 16:29:09,282] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,283] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 16:29:09,283] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C53F400>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,283] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,283] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:29:09,284] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,284] [DEBUG] [MainThread] [pika.callback] | Processing 1:Exchange.DeclareOk
+[2022-07-18 16:29:09,284] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,284] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,285] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,285] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,285] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,285] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C53F400>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,285] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=1 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "1:Exchange.DeclareOk"
+[2022-07-18 16:29:09,286] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 16:29:09,286] [DEBUG] [MainThread] [pika.callback] | Calling <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C53F400>> for "1:Exchange.DeclareOk"
+[2022-07-18 16:29:09,286] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,287] [DEBUG] [MainThread] [pika.connection] | Creating channel 2
+[2022-07-18 16:29:09,287] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Connection._on_channel_cleanup of <SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'one_shot': True, 'only': <Channel number=2 CLOSED conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,287] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_getempty of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,288] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_cancel of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,288] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_flow of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,288] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_close_from_broker of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,289] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,289] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:29:09,289] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,290] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Channel.Open(['out_of_band='])>; acceptable_replies=[<class 'pika.spec.Channel.OpenOk'>]
+[2022-07-18 16:29:09,290] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 16:29:09,290] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,291] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 16:29:09,291] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_openok of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,291] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method BlockingChannel._on_consumer_cancelled_by_broker of <BlockingChannel impl=<Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,292] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.signal_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C580340>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,292] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method BlockingChannel._on_channel_closed of <BlockingChannel impl=<Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>>, 'one_shot': False, 'only': <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>, 'arguments': None}
+[2022-07-18 16:29:09,292] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C580940>>, 'one_shot': False, 'only': None, 'arguments': None}
+[2022-07-18 16:29:09,293] [INFO] [MainThread] [pika.adapters.blocking_connection] | Created channel=2
+[2022-07-18 16:29:09,293] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,293] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:29:09,293] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,295] [DEBUG] [MainThread] [pika.callback] | Processing 2:Channel.OpenOk
+[2022-07-18 16:29:09,295] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,295] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,295] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,296] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,296] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,296] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_openok of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,296] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Channel.OpenOk"
+[2022-07-18 16:29:09,297] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 16:29:09,297] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_openok of <Channel number=2 OPENING conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Channel.OpenOk"
+[2022-07-18 16:29:09,297] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,297] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,298] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:29:09,298] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,298] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Queue.Declare(['arguments={}', 'auto_delete=False', 'durable=True', 'exclusive=False', 'nowait=False', 'passive=False', 'queue=report_processor_reply', 'ticket=0'])>; acceptable_replies=[(<class 'pika.spec.Queue.DeclareOk'>, {'queue': 'report_processor_reply'})]
+[2022-07-18 16:29:09,298] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 16:29:09,299] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'report_processor_reply'}, 'calls': 1}
+[2022-07-18 16:29:09,299] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 16:29:09,299] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C550E00>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'report_processor_reply'}, 'calls': 1}
+[2022-07-18 16:29:09,299] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,300] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:29:09,300] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,301] [DEBUG] [MainThread] [pika.callback] | Processing 2:Queue.DeclareOk
+[2022-07-18 16:29:09,301] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,301] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,301] [DEBUG] [MainThread] [pika.callback] | Comparing {'queue': 'report_processor_reply'} to {'queue': 'report_processor_reply'}
+[2022-07-18 16:29:09,301] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'report_processor_reply'}, 'calls': 0}
+[2022-07-18 16:29:09,302] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,302] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,302] [DEBUG] [MainThread] [pika.callback] | Comparing {'queue': 'report_processor_reply'} to {'queue': 'report_processor_reply'}
+[2022-07-18 16:29:09,302] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C550E00>>, 'one_shot': True, 'only': None, 'arguments': {'queue': 'report_processor_reply'}, 'calls': 0}
+[2022-07-18 16:29:09,302] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Queue.DeclareOk"
+[2022-07-18 16:29:09,303] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 16:29:09,303] [DEBUG] [MainThread] [pika.callback] | Calling <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C550E00>> for "2:Queue.DeclareOk"
+[2022-07-18 16:29:09,303] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,303] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,304] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:29:09,304] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,304] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Queue.Bind(['arguments={}', 'exchange=report_builder', 'nowait=False', 'queue=report_processor_reply', 'routing_key=pytest.result.#', 'ticket=0'])>; acceptable_replies=[<class 'pika.spec.Queue.BindOk'>]
+[2022-07-18 16:29:09,305] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 16:29:09,305] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,305] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 16:29:09,305] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C550E00>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 1}
+[2022-07-18 16:29:09,306] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,306] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:29:09,306] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,308] [DEBUG] [MainThread] [pika.callback] | Processing 2:Queue.BindOk
+[2022-07-18 16:29:09,309] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,309] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,309] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,309] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,310] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,310] [DEBUG] [MainThread] [pika.callback] | Removing callback #0: {'callback': <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C550E00>>, 'one_shot': True, 'only': None, 'arguments': None, 'calls': 0}
+[2022-07-18 16:29:09,310] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Queue.BindOk"
+[2022-07-18 16:29:09,311] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 16:29:09,311] [DEBUG] [MainThread] [pika.callback] | Calling <bound method _CallbackResult.set_value_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C550E00>> for "2:Queue.BindOk"
+[2022-07-18 16:29:09,311] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,311] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:29:09,312] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:29:09,312] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,312] [DEBUG] [MainThread] [pika.channel] | Entering blocking state on frame <Basic.Consume(['arguments={}', 'consumer_tag=ctag2.8a049d3f32ab41968d5bed83d089aa8c', 'exclusive=False', 'no_ack=False', 'no_local=False', 'nowait=False', 'queue=report_processor_reply', 'ticket=0'])>; acceptable_replies=[(<class 'pika.spec.Basic.ConsumeOk'>, {'consumer_tag': 'ctag2.8a049d3f32ab41968d5bed83d089aa8c'})]
+[2022-07-18 16:29:09,312] [DEBUG] [MainThread] [pika.channel] | Adding on_synchronous_complete callback
+[2022-07-18 16:29:09,313] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag2.8a049d3f32ab41968d5bed83d089aa8c'}, 'calls': 1}
+[2022-07-18 16:29:09,313] [DEBUG] [MainThread] [pika.channel] | Adding passed-in RPC response callback
+[2022-07-18 16:29:09,313] [DEBUG] [MainThread] [pika.callback] | Added: {'callback': <bound method Channel._on_eventok of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag2.8a049d3f32ab41968d5bed83d089aa8c'}, 'calls': 1}
+[2022-07-18 16:29:09,313] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:29:09,314] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:29:09,315] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:29:09,315] [DEBUG] [MainThread] [pika.callback] | Processing 2:Basic.ConsumeOk
+[2022-07-18 16:29:09,315] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,315] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,315] [DEBUG] [MainThread] [pika.callback] | Comparing {'consumer_tag': 'ctag2.8a049d3f32ab41968d5bed83d089aa8c'} to {'consumer_tag': 'ctag2.8a049d3f32ab41968d5bed83d089aa8c'}
+[2022-07-18 16:29:09,315] [DEBUG] [MainThread] [pika.callback] | Removing callback #1: {'callback': <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag2.8a049d3f32ab41968d5bed83d089aa8c'}, 'calls': 0}
+[2022-07-18 16:29:09,316] [DEBUG] [MainThread] [pika.callback] | Processing use of oneshot callback
+[2022-07-18 16:29:09,316] [DEBUG] [MainThread] [pika.callback] | 0 registered uses left
+[2022-07-18 16:29:09,316] [DEBUG] [MainThread] [pika.callback] | Comparing {'consumer_tag': 'ctag2.8a049d3f32ab41968d5bed83d089aa8c'} to {'consumer_tag': 'ctag2.8a049d3f32ab41968d5bed83d089aa8c'}
+[2022-07-18 16:29:09,316] [DEBUG] [MainThread] [pika.callback] | Removing callback #1: {'callback': <bound method Channel._on_eventok of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>>, 'one_shot': True, 'only': None, 'arguments': {'consumer_tag': 'ctag2.8a049d3f32ab41968d5bed83d089aa8c'}, 'calls': 0}
+[2022-07-18 16:29:09,317] [DEBUG] [MainThread] [pika.callback] | Calling <bound method _CallbackResult.signal_once of <pika.adapters.blocking_connection._CallbackResult object at 0x000001E44C580340>> for "2:Basic.ConsumeOk"
+[2022-07-18 16:29:09,317] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_synchronous_complete of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Basic.ConsumeOk"
+[2022-07-18 16:29:09,317] [DEBUG] [MainThread] [pika.channel] | 0 blocked frames
+[2022-07-18 16:29:09,317] [DEBUG] [MainThread] [pika.callback] | Calling <bound method Channel._on_eventok of <Channel number=2 OPEN conn=<SelectConnection OPEN transport=<pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0> params=<ConnectionParameters host=192.168.246.128 port=5672 virtual_host=report ssl=False>>>> for "2:Basic.ConsumeOk"
+[2022-07-18 16:29:09,317] [DEBUG] [MainThread] [pika.channel] | Discarding frame <METHOD(['channel_number=2', 'frame_type=1', "method=<Basic.ConsumeOk(['consumer_tag=ctag2.8a049d3f32ab41968d5bed83d089aa8c'])>"])>
+[2022-07-18 16:29:09,318] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,323] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,324] [INFO] [MainThread] [sse.lib.utils.logger] | The received response from execution engine is:{'exec_id': 'EXEC_89E2ED611889416C822D1FDC55EF78B7', 'success': True, 'path': '/home/volume/incoming/20220718/EXEC_89E2ED611889416C822D1FDC55EF78B7/EXEC_89E2ED611889416C822D1FDC55EF78B7.html', 'duration': '0.760'}.
+[2022-07-18 16:34:47,376] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:34:47,377] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:34:47,377] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,377] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:34:47,378] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:34:47,378] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,387] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,387] [INFO] [MainThread] [sse.lib.utils.logger] | The received response from execution engine is:{'exec_id': 'EXEC_56D19EA34ED847DEBC547575CEC74156', 'success': True, 'path': '/home/volume/incoming/20220718/EXEC_56D19EA34ED847DEBC547575CEC74156/EXEC_56D19EA34ED847DEBC547575CEC74156.html', 'duration': '0.736'}.
+[2022-07-18 16:34:47,411] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:34:47,412] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:34:47,412] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,412] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:34:47,412] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:34:47,413] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,437] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,438] [INFO] [MainThread] [sse.lib.utils.logger] | The received response from execution engine is:{'exec_id': 'EXEC_474972F3B6C8443694240F6EF5531138', 'success': True, 'path': '/home/volume/incoming/20220718/EXEC_474972F3B6C8443694240F6EF5531138/EXEC_474972F3B6C8443694240F6EF5531138.html', 'duration': '0.330'}.
+[2022-07-18 16:34:47,440] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:34:47,441] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:34:47,442] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,442] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:34:47,442] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:34:47,443] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,465] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,466] [INFO] [MainThread] [sse.lib.utils.logger] | The received response from execution engine is:{'exec_id': 'EXEC_92D7395C3EDE4EED9F345FBF474DCED5', 'success': True, 'path': '/home/volume/incoming/20220718/EXEC_92D7395C3EDE4EED9F345FBF474DCED5/EXEC_92D7395C3EDE4EED9F345FBF474DCED5.html', 'duration': '0.320'}.
+[2022-07-18 16:34:47,470] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:34:47,470] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:34:47,471] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,471] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:34:47,471] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:34:47,472] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,506] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,507] [INFO] [MainThread] [sse.lib.utils.logger] | The received response from execution engine is:{'exec_id': 'EXEC_F9B87813E7EF4CB4985450162AB1FBB6', 'success': True, 'path': '/home/volume/incoming/20220718/EXEC_F9B87813E7EF4CB4985450162AB1FBB6/EXEC_F9B87813E7EF4CB4985450162AB1FBB6.html', 'duration': '0.201'}.
+[2022-07-18 16:34:47,510] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:34:47,511] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:34:47,511] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,511] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:34:47,512] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:34:47,512] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,535] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,536] [INFO] [MainThread] [sse.lib.utils.logger] | The received response from execution engine is:{'exec_id': 'EXEC_1BA41054AD9645548CACF85EA5453501', 'success': True, 'path': '/home/volume/incoming/20220718/EXEC_1BA41054AD9645548CACF85EA5453501/EXEC_1BA41054AD9645548CACF85EA5453501.html', 'duration': '0.239'}.
+[2022-07-18 16:34:47,538] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:34:47,538] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:34:47,539] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:47,539] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:34:47,539] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:34:47,539] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:48,011] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Recv would block on <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:48,011] [INFO] [MainThread] [sse.lib.utils.logger] | The received response from execution engine is:{'exec_id': 'EXEC_4AED60D4C6204F8CA30258D6F0EC1BA3', 'success': True, 'path': '/home/volume/incoming/20220718/EXEC_4AED60D4C6204F8CA30258D6F0EC1BA3/EXEC_4AED60D4C6204F8CA30258D6F0EC1BA3.html', 'duration': '0.176'}.
+[2022-07-18 16:34:48,014] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.set_writer(1280, <bound method _AsyncPlaintextTransport._on_socket_writable of <pika.adapters.utils.io_services_utils._AsyncPlaintextTransport object at 0x000001E44AE57AC0>>)
+[2022-07-18 16:34:48,014] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | set_writer(1280, _) updated handler RdWr
+[2022-07-18 16:34:48,014] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned on writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
+[2022-07-18 16:34:48,015] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | SelectorIOServicesAdapter.remove_writer(1280)
+[2022-07-18 16:34:48,015] [DEBUG] [MainThread] [pika.adapters.utils.selector_ioloop_adapter] | remove_writer(1280) updated handler Rd
+[2022-07-18 16:34:48,015] [DEBUG] [MainThread] [pika.adapters.utils.io_services_utils] | Turned off writability watcher: <socket.socket fd=1280, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.246.1', 62815), raddr=('192.168.246.128', 5672)>
