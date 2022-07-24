@@ -5,7 +5,7 @@ from api.data_type_parser import parser
 class TemplateSerializer(serializers.ModelSerializer):
     statue_display = serializers.CharField(source='get_statue_display', read_only=True)
     method_display = serializers.CharField(source='get_method_display', read_only=True)
-
+    dbinfo_config = serializers.CharField(source='dbinfo', read_only=True)
     def create(self, validated_data):
         headers = {header["field"]:header["val"] for header in validated_data["header"]}
         validated_data["header"]=headers
@@ -22,7 +22,8 @@ class TemplateSerializer(serializers.ModelSerializer):
         instance.statue = validated_data.get('statue',instance.statue)
         instance.linux_order_str = validated_data.get('linux_order_str',instance.linux_order_str)
         instance.process_name = validated_data.get('process_name',instance.process_name)
-        instance.table_name = validated_data.get('table_name',instance.table_name)
+        instance.dbinfo = validated_data.get('dbinfo',instance.dbinfo)
+        instance.sql = validated_data.get('sql',instance.sql)
         instance.default = validated_data.get('default',instance.default)
         instance.save()
         return instance

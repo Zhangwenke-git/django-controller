@@ -1,6 +1,7 @@
 # -*-coding=utf8-*-
 import uuid
 from django.db import models
+from public.models import Database,RabbitMQ,Redis,FTP
 from django.utils.safestring import mark_safe
 from user.models import UserProfile
 from django.conf import settings
@@ -90,8 +91,10 @@ class Templates(BaseModel):
     process_name = models.CharField(max_length=32, blank=True, null=True, verbose_name='进程名称')
     linux_order_str = models.CharField(max_length=100, blank=True, null=True, verbose_name='linux命令')
     sql = models.CharField(max_length=1024, blank=True, null=True, verbose_name='校验SQL')
-    dbinfo = models.CharField(max_length=128, blank=True, null=True, verbose_name='数据库信息')
-
+    dbinfo = models.ForeignKey(Database, verbose_name='数据库信息配置',null=True, related_name='dbinfo_template', on_delete=models.CASCADE)
+    redis = models.ForeignKey(Redis, verbose_name='REDIS配置',null=True, related_name='redis_template', on_delete=models.CASCADE)
+    mq = models.ForeignKey(RabbitMQ, verbose_name='RabbitMQ信息配置',null=True, related_name='mq_template', on_delete=models.CASCADE)
+    ftp = models.ForeignKey(FTP, verbose_name='FTP配置',null=True, related_name='ftp_template', on_delete=models.CASCADE)
 
     class Meta:
         db_table = table_prefix + "templates"

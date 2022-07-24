@@ -1,0 +1,279 @@
+[2022-07-23 13:57:13,208][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 16, in update
+    headers = {header["field"]:header["val"] for header in validated_data["header"]}
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 16, in <dictcomp>
+    headers = {header["field"]:header["val"] for header in validated_data["header"]}
+TypeError: string indices must be integers
+
+[2022-07-23 13:57:14,807][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 16, in update
+    headers = {header["field"]:header["val"] for header in validated_data["header"]}
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 16, in <dictcomp>
+    headers = {header["field"]:header["val"] for header in validated_data["header"]}
+TypeError: string indices must be integers
+
+[2022-07-23 16:15:02,299][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:16:07,918][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:18:31,753][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:20:55,346][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:21:08,300][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:23:04,682][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:23:16,446][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:52:15,112][django.request.log_response():230] [ERROR] Internal Server Error: /api/process-parameterized/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 283, in process_parameterized_fields
+    data = json.loads(request.body.decode())
+  File "c:\users\zwk\appdata\local\programs\python\python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "c:\users\zwk\appdata\local\programs\python\python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\users\zwk\appdata\local\programs\python\python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2022-07-23 16:52:15,115][django.server.log_message():161] [ERROR] "POST /api/process-parameterized/ HTTP/1.1" 500 95576
+[2022-07-24 11:02:26,345][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-24 11:02:26,378][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-24 11:02:26,408][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-24 11:02:26,409][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg/ HTTP/1.1" 500 78691
+[2022-07-24 11:32:22,518][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 11:32:23,312][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 13:23:31,640][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 13:23:32,321][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 16:49:11,641][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 16:49:12,747][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+

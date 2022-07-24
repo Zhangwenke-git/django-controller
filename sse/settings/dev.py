@@ -187,10 +187,7 @@ from rest_framework.settings import settings
 TABLE_PREFIX = locals().get('TABLE_PREFIX', "")
 
 API_LOG_ENABLE = True
-# API_LOG_METHODS = 'ALL' # ['POST', 'DELETE']
 API_LOG_METHODS = ["POST", "DELETE", "PUT"]  # ['POST', 'DELETE']
 API_MODEL_MAP = {
-
     "/user/login/": "登录模块",
-
 }

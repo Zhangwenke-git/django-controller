@@ -1,0 +1,1387 @@
+[2022-07-23 11:47:05,043][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 11:51:48,667][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 11:56:09,383][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 12:01:15,630][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/login/ with method: POST
+[2022-07-23 12:01:15,631][django.server.log_message():161] [INFO] "POST /user/login/ HTTP/1.1" 200 419
+[2022-07-23 12:01:15,662][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:01:15,663][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2452
+[2022-07-23 12:01:17,308][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /media/icon/avatar.jpg/ with method: GET
+[2022-07-23 12:01:17,315][django.server.log_message():161] [INFO] "GET /media/icon/avatar.jpg/ HTTP/1.1" 200 272429
+[2022-07-23 12:03:08,129][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-23 12:03:08,130][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 142
+[2022-07-23 12:03:15,665][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:03:15,665][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4945
+[2022-07-23 12:03:18,858][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:03:18,859][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4945
+[2022-07-23 12:03:33,687][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/30/ with method: PUT
+[2022-07-23 12:03:33,688][django.server.log_message():161] [INFO] "PUT /user/menu/30/ HTTP/1.1" 200 310
+[2022-07-23 12:03:33,710][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:03:33,711][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 12:03:33,724][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:03:33,725][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 12:03:40,343][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:03:40,344][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 12:03:45,191][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:03:45,192][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 12:03:47,061][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:03:47,062][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1168
+[2022-07-23 12:03:55,104][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:03:55,105][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 12:04:02,114][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/38710147e7f14a1d96f29c49515e0784/ with method: PUT
+[2022-07-23 12:04:02,115][django.server.log_message():161] [INFO] "PUT /user/role/38710147e7f14a1d96f29c49515e0784/ HTTP/1.1" 200 319
+[2022-07-23 12:04:04,634][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:04:04,635][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 12:04:07,336][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/0b1f9548af594740938e4c8c86652dfa/ with method: PUT
+[2022-07-23 12:04:07,336][django.server.log_message():161] [INFO] "PUT /user/role/0b1f9548af594740938e4c8c86652dfa/ HTTP/1.1" 200 317
+[2022-07-23 12:04:09,127][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:04:09,128][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 12:04:11,690][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ with method: PUT
+[2022-07-23 12:04:11,691][django.server.log_message():161] [INFO] "PUT /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ HTTP/1.1" 200 314
+[2022-07-23 12:04:37,878][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-23 12:04:37,879][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 12:04:37,879][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 142
+[2022-07-23 12:04:37,880][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 12:04:37,895][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-23 12:04:37,896][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 142
+[2022-07-23 12:04:38,522][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 12:04:38,523][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 12:04:38,533][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 12:04:38,534][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 12:04:40,226][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-23 12:04:40,227][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-23 12:04:40,228][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 142
+[2022-07-23 12:04:40,228][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 142
+[2022-07-23 12:05:12,376][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:05:12,377][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 12:06:00,556][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: POST
+[2022-07-23 12:06:00,557][django.server.log_message():161] [INFO] "POST /user/menu/ HTTP/1.1" 200 291
+[2022-07-23 12:06:00,607][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:06:00,607][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:06:00,621][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:06:00,622][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:06:05,423][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:06:05,423][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:06:10,885][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/38710147e7f14a1d96f29c49515e0784/ with method: PUT
+[2022-07-23 12:06:10,886][django.server.log_message():161] [INFO] "PUT /user/role/38710147e7f14a1d96f29c49515e0784/ HTTP/1.1" 200 322
+[2022-07-23 12:06:13,118][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:06:13,119][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:06:29,047][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/0b1f9548af594740938e4c8c86652dfa/ with method: PUT
+[2022-07-23 12:06:29,048][django.server.log_message():161] [INFO] "PUT /user/role/0b1f9548af594740938e4c8c86652dfa/ HTTP/1.1" 200 320
+[2022-07-23 12:06:30,976][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:06:30,976][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-23 12:06:31,243][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:06:31,245][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1183
+[2022-07-23 12:06:35,472][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/report/ with method: GET
+[2022-07-23 12:06:35,473][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 142
+[2022-07-23 12:06:38,581][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 12:06:38,581][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 2
+[2022-07-23 12:06:39,447][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/redis/ with method: GET
+[2022-07-23 12:06:39,447][django.server.log_message():161] [INFO] "GET /public/redis/ HTTP/1.1" 200 2
+[2022-07-23 12:06:40,661][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/mq/ with method: GET
+[2022-07-23 12:06:40,662][django.server.log_message():161] [INFO] "GET /public/mq/ HTTP/1.1" 200 2
+[2022-07-23 12:06:54,443][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:06:54,444][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:06:58,335][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:06:58,336][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:07:01,016][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ with method: PUT
+[2022-07-23 12:07:01,017][django.server.log_message():161] [INFO] "PUT /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ HTTP/1.1" 200 317
+[2022-07-23 12:07:02,325][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:07:02,326][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:11:17,719][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:11:17,720][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2708
+[2022-07-23 12:11:18,026][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:11:18,027][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:11:19,876][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:11:19,876][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:11:21,402][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ with method: PUT
+[2022-07-23 12:11:21,402][django.server.log_message():161] [INFO] "PUT /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ HTTP/1.1" 200 317
+[2022-07-23 12:12:42,608][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:12:42,609][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2708
+[2022-07-23 12:12:42,935][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:12:42,936][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:12:43,644][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:12:43,645][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:12:45,309][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ with method: PUT
+[2022-07-23 12:12:45,310][django.server.log_message():161] [INFO] "PUT /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ HTTP/1.1" 200 317
+[2022-07-23 12:13:43,513][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:13:43,513][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:13:43,537][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 12:13:43,537][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 12:14:37,500][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:14:37,500][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2708
+[2022-07-23 12:14:37,734][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:14:37,735][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:14:37,740][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 12:14:37,740][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 12:15:37,914][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:15:37,915][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2708
+[2022-07-23 12:15:38,154][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:15:38,157][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:15:38,161][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 12:15:38,162][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 12:18:39,508][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:18:39,509][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2708
+[2022-07-23 12:18:39,808][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:18:39,810][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:18:39,816][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 12:18:39,817][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 12:18:43,457][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/?user_id=zhubaobao with method: GET
+[2022-07-23 12:18:43,458][django.server.log_message():161] [INFO] "GET /user/info/?user_id=zhubaobao HTTP/1.1" 200 568
+[2022-07-23 12:19:34,013][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:19:34,014][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2708
+[2022-07-23 12:19:34,300][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:19:34,304][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:19:34,309][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 12:19:34,309][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 12:20:33,612][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:20:33,613][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2708
+[2022-07-23 12:20:33,950][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:20:33,953][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:20:33,957][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 12:20:33,958][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 12:20:36,578][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/?user_id=zhubaobao with method: GET
+[2022-07-23 12:20:36,579][django.server.log_message():161] [INFO] "GET /user/info/?user_id=zhubaobao HTTP/1.1" 200 568
+[2022-07-23 12:21:05,471][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:21:05,471][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2708
+[2022-07-23 12:21:05,761][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:21:05,764][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:21:05,770][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 12:21:05,770][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 12:21:52,575][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/?user_id=zhubaobao with method: GET
+[2022-07-23 12:21:52,575][django.server.log_message():161] [INFO] "GET /user/info/?user_id=zhubaobao HTTP/1.1" 200 568
+[2022-07-23 12:21:58,408][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/ftp/ with method: GET
+[2022-07-23 12:21:58,409][django.server.log_message():161] [INFO] "GET /public/ftp/ HTTP/1.1" 200 2
+[2022-07-23 12:22:01,569][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 12:22:01,570][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 2
+[2022-07-23 12:22:10,068][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/redis/ with method: GET
+[2022-07-23 12:22:10,068][django.server.log_message():161] [INFO] "GET /public/redis/ HTTP/1.1" 200 2
+[2022-07-23 12:22:11,348][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/mq/ with method: GET
+[2022-07-23 12:22:11,349][django.server.log_message():161] [INFO] "GET /public/mq/ HTTP/1.1" 200 2
+[2022-07-23 12:42:44,715][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:42:44,716][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:42:47,700][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:42:47,701][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5195
+[2022-07-23 12:42:51,243][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/33/ with method: PUT
+[2022-07-23 12:42:51,244][django.server.log_message():161] [INFO] "PUT /user/menu/33/ HTTP/1.1" 200 296
+[2022-07-23 12:42:51,265][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:42:51,266][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 12:42:51,279][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:42:51,280][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 12:42:53,919][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 12:42:53,920][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 12:42:54,103][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:42:54,103][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 12:42:56,709][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/ftp/ with method: GET
+[2022-07-23 12:42:56,710][django.server.log_message():161] [INFO] "GET /public/ftp/ HTTP/1.1" 200 2
+[2022-07-23 12:43:18,519][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:43:18,520][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:43:18,543][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 12:43:18,544][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 12:43:20,558][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 12:43:20,559][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 2
+[2022-07-23 12:43:32,025][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 12:43:32,025][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 12:43:33,732][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 12:43:33,733][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 13:33:58,715][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:33:58,715][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:33:59,013][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 13:33:59,015][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 13:34:21,562][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:34:21,562][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:34:21,750][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 13:34:21,751][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 13:34:24,630][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:34:24,631][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:35:34,158][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:35:34,158][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:35:34,367][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:35:34,367][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:35:48,474][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:35:48,475][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:35:48,674][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:35:48,675][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:35:56,873][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:35:56,874][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:35:56,894][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 13:35:56,895][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 13:35:59,683][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 13:35:59,684][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 13:43:02,827][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:43:02,828][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:43:03,205][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:43:03,208][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:43:03,211][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 13:43:03,211][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 13:48:15,226][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:48:15,226][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:48:15,468][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:48:15,470][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:48:15,476][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 13:48:15,477][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 13:48:37,088][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:48:37,089][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:48:37,328][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:48:37,330][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:48:37,336][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 13:48:37,337][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 13:50:28,562][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:50:28,562][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:50:28,819][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:50:28,821][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:50:28,831][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 13:50:28,831][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 13:50:45,339][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:50:45,339][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:50:45,586][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:50:45,588][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:50:45,590][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 13:50:45,591][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 13:51:12,679][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:51:12,680][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:51:12,972][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:51:12,974][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:51:12,979][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 13:51:12,980][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 13:51:19,311][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 13:51:19,311][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 13:51:21,928][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/report/ with method: GET
+[2022-07-23 13:51:21,928][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 142
+[2022-07-23 13:51:24,938][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-23 13:51:24,939][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 142
+[2022-07-23 13:51:25,694][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-23 13:51:25,695][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 142
+[2022-07-23 13:51:25,697][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-23 13:51:25,698][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 142
+[2022-07-23 13:51:26,678][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 13:51:26,679][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 13:51:26,690][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 13:51:26,691][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 13:51:31,679][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:51:31,680][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:52:32,042][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:52:32,043][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:52:32,342][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:52:32,344][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:52:32,346][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 13:52:32,347][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 13:53:08,689][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 13:53:08,689][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 13:53:08,983][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:53:08,984][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 13:53:08,984][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:53:08,985][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 13:53:34,405][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 13:53:34,406][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 13:53:35,052][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 13:53:35,052][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1186
+[2022-07-23 13:53:39,116][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 13:53:39,117][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 13:53:39,128][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 13:53:39,129][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 13:55:22,953][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/send/request/ with method: POST
+[2022-07-23 13:55:22,954][django.server.log_message():161] [INFO] "POST /api/send/request/ HTTP/1.1" 200 182
+[2022-07-23 13:55:29,538][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/process-parameterized/ with method: POST
+[2022-07-23 13:55:29,538][django.server.log_message():161] [INFO] "POST /api/process-parameterized/ HTTP/1.1" 200 75
+[2022-07-23 13:55:40,937][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/send/request/ with method: POST
+[2022-07-23 13:55:40,938][django.server.log_message():161] [INFO] "POST /api/send/request/ HTTP/1.1" 200 207
+[2022-07-23 13:56:10,395][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: POST
+[2022-07-23 13:56:10,396][django.server.log_message():161] [INFO] "POST /api/template/ HTTP/1.1" 200 617
+[2022-07-23 13:56:10,439][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 13:56:10,440][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 13:57:13,208][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 16, in update
+    headers = {header["field"]:header["val"] for header in validated_data["header"]}
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 16, in <dictcomp>
+    headers = {header["field"]:header["val"] for header in validated_data["header"]}
+TypeError: string indices must be integers
+
+[2022-07-23 13:57:13,215][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: PUT
+[2022-07-23 13:57:13,216][django.request.log_response():230] [WARNING] Bad Request: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/
+[2022-07-23 13:57:13,216][django.server.log_message():161] [WARNING] "PUT /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 400 65
+[2022-07-23 13:57:14,807][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 16, in update
+    headers = {header["field"]:header["val"] for header in validated_data["header"]}
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 16, in <dictcomp>
+    headers = {header["field"]:header["val"] for header in validated_data["header"]}
+TypeError: string indices must be integers
+
+[2022-07-23 13:57:14,813][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: PUT
+[2022-07-23 13:57:14,813][django.request.log_response():230] [WARNING] Bad Request: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/
+[2022-07-23 13:57:14,814][django.server.log_message():161] [WARNING] "PUT /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 400 65
+[2022-07-23 14:01:38,275][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/send/request/ with method: POST
+[2022-07-23 14:01:38,275][django.server.log_message():161] [INFO] "POST /api/send/request/ HTTP/1.1" 200 207
+[2022-07-23 14:01:44,649][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 14:01:44,650][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 14:01:45,058][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:01:45,059][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:01:45,078][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:01:45,078][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:01:50,705][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/send/request/ with method: POST
+[2022-07-23 14:01:50,706][django.server.log_message():161] [INFO] "POST /api/send/request/ HTTP/1.1" 200 207
+[2022-07-23 14:02:16,033][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:02:16,034][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:02:19,842][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 14:02:19,843][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 14:02:20,232][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:02:20,233][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:02:20,251][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:02:20,252][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:02:23,931][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/send/request/ with method: POST
+[2022-07-23 14:02:23,932][django.server.log_message():161] [INFO] "POST /api/send/request/ HTTP/1.1" 200 207
+[2022-07-23 14:03:09,663][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 14:03:09,663][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 14:03:10,215][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:03:10,216][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:03:10,233][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:03:10,234][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:03:14,341][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/send/request/ with method: POST
+[2022-07-23 14:03:14,342][django.server.log_message():161] [INFO] "POST /api/send/request/ HTTP/1.1" 200 207
+[2022-07-23 14:07:56,846][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:07:56,847][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:07:59,974][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 14:07:59,974][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 14:08:00,357][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:08:00,358][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:08:00,377][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:08:00,378][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:08:04,269][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/send/request/ with method: POST
+[2022-07-23 14:08:04,270][django.server.log_message():161] [INFO] "POST /api/send/request/ HTTP/1.1" 200 207
+[2022-07-23 14:08:36,855][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/send/request/ with method: POST
+[2022-07-23 14:08:36,856][django.server.log_message():161] [INFO] "POST /api/send/request/ HTTP/1.1" 200 207
+[2022-07-23 14:12:51,390][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/make/request/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: GET
+[2022-07-23 14:12:51,391][django.server.log_message():161] [INFO] "GET /api/make/request/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 200 207
+[2022-07-23 14:13:44,348][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 14:13:44,349][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 14:13:45,076][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:13:45,077][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:13:45,095][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:13:45,095][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:13:56,196][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/one-key-expression/ with method: POST
+[2022-07-23 14:13:56,197][django.server.log_message():161] [INFO] "POST /api/one-key-expression/ HTTP/1.1" 200 50
+[2022-07-23 14:13:58,212][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/make/request/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: GET
+[2022-07-23 14:13:58,212][django.server.log_message():161] [INFO] "GET /api/make/request/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 200 207
+[2022-07-23 14:17:20,147][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\public\models.py changed, reloading.
+[2022-07-23 14:17:21,769][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 14:17:40,313][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\public\models.py changed, reloading.
+[2022-07-23 14:19:08,843][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 14:23:54,920][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:23:54,921][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 2
+[2022-07-23 14:24:33,715][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: POST
+[2022-07-23 14:24:33,716][django.request.log_response():230] [WARNING] Bad Request: /public/db/
+[2022-07-23 14:24:33,716][django.server.log_message():161] [WARNING] "POST /public/db/ HTTP/1.1" 400 75
+[2022-07-23 14:24:49,589][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: POST
+[2022-07-23 14:24:49,589][django.server.log_message():161] [INFO] "POST /public/db/ HTTP/1.1" 201 195
+[2022-07-23 14:24:49,604][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:24:49,605][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 195
+[2022-07-23 14:25:08,467][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 14:25:08,467][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 14:25:08,698][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:25:08,699][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 195
+[2022-07-23 14:25:14,782][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: PUT
+[2022-07-23 14:25:14,783][django.server.log_message():161] [INFO] "PUT /public/db/ HTTP/1.1" 200 195
+[2022-07-23 14:25:14,797][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:25:14,797][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 195
+[2022-07-23 14:26:06,792][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: POST
+[2022-07-23 14:26:06,792][django.server.log_message():161] [INFO] "POST /public/db/ HTTP/1.1" 201 424
+[2022-07-23 14:26:06,808][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:26:06,808][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 618
+[2022-07-23 14:26:06,828][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: PUT
+[2022-07-23 14:26:06,829][django.server.log_message():161] [INFO] "PUT /public/db/ HTTP/1.1" 200 195
+[2022-07-23 14:26:06,843][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:26:06,844][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 618
+[2022-07-23 14:26:52,495][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: PUT
+[2022-07-23 14:26:52,495][django.server.log_message():161] [INFO] "PUT /public/db/ HTTP/1.1" 200 636
+[2022-07-23 14:26:52,510][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:26:52,511][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 14:28:29,701][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 14:28:29,702][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 5200
+[2022-07-23 14:41:02,483][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:41:02,486][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:41:02,487][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 14:41:02,487][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:41:02,507][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:41:02,507][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:42:08,437][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:42:08,437][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 14:42:08,441][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:42:08,442][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:44:12,454][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 14:44:12,455][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 14:44:13,123][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:44:13,126][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:44:13,127][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 14:44:13,127][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:44:13,148][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:44:13,149][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:45:04,652][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:45:04,655][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:45:04,656][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 14:45:04,656][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:45:08,322][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 14:45:08,322][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 14:45:08,843][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:45:08,844][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 14:45:08,845][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 14:45:08,845][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 14:45:08,861][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 14:45:08,861][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 16:12:19,018][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/send/request/ with method: POST
+[2022-07-23 16:12:19,019][django.server.log_message():161] [INFO] "POST /api/send/request/ HTTP/1.1" 200 207
+[2022-07-23 16:12:35,085][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/make/request/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: GET
+[2022-07-23 16:12:35,086][django.server.log_message():161] [INFO] "GET /api/make/request/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 200 207
+[2022-07-23 16:15:02,299][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:15:02,306][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: PUT
+[2022-07-23 16:15:02,306][django.request.log_response():230] [WARNING] Bad Request: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/
+[2022-07-23 16:15:02,307][django.server.log_message():161] [WARNING] "PUT /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 400 82
+[2022-07-23 16:16:07,918][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:16:07,924][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: PUT
+[2022-07-23 16:16:07,924][django.request.log_response():230] [WARNING] Bad Request: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/
+[2022-07-23 16:16:07,925][django.server.log_message():161] [WARNING] "PUT /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 400 82
+[2022-07-23 16:17:23,323][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:17:23,326][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 16:17:23,327][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 16:17:23,327][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 16:17:52,476][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 16:17:52,476][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 16:17:52,859][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:17:52,860][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 16:17:52,861][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 16:17:52,861][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 16:17:52,881][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:17:52,882][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 16:18:31,753][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:18:31,758][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: PUT
+[2022-07-23 16:18:31,758][django.request.log_response():230] [WARNING] Bad Request: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/
+[2022-07-23 16:18:31,759][django.server.log_message():161] [WARNING] "PUT /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 400 82
+[2022-07-23 16:20:55,346][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:20:55,351][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: PUT
+[2022-07-23 16:20:55,351][django.request.log_response():230] [WARNING] Bad Request: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/
+[2022-07-23 16:20:55,351][django.server.log_message():161] [WARNING] "PUT /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 400 82
+[2022-07-23 16:20:58,188][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 16:20:58,188][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 16:20:58,472][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:20:58,473][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 16:20:58,483][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 16:20:58,489][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 16:20:58,503][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:20:58,504][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 16:21:08,300][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:21:08,305][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: PUT
+[2022-07-23 16:21:08,306][django.request.log_response():230] [WARNING] Bad Request: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/
+[2022-07-23 16:21:08,306][django.server.log_message():161] [WARNING] "PUT /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 400 82
+[2022-07-23 16:22:56,279][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 16:22:56,279][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2713
+[2022-07-23 16:22:56,669][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 16:22:56,673][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:22:56,673][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 636
+[2022-07-23 16:22:56,674][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 16:22:56,692][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:22:56,693][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 700
+[2022-07-23 16:23:04,682][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:23:04,688][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: PUT
+[2022-07-23 16:23:04,688][django.request.log_response():230] [WARNING] Bad Request: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/
+[2022-07-23 16:23:04,689][django.server.log_message():161] [WARNING] "PUT /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 400 82
+[2022-07-23 16:23:16,446][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 25, in update
+    instance.table_name = validated_data.get('table_name',instance.table_name)
+AttributeError: 'Templates' object has no attribute 'table_name'
+
+[2022-07-23 16:23:16,454][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ with method: PUT
+[2022-07-23 16:23:16,454][django.request.log_response():230] [WARNING] Bad Request: /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/
+[2022-07-23 16:23:16,455][django.server.log_message():161] [WARNING] "PUT /api/template/c68e178a5c1e4924a0ae7ccb24a0e78a/ HTTP/1.1" 400 82
+[2022-07-23 16:24:56,404][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py changed, reloading.
+[2022-07-23 16:24:57,933][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 16:30:10,037][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\models.py changed, reloading.
+[2022-07-23 16:30:11,500][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 16:40:08,721][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 16:41:27,327][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 16:41:27,328][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2454
+[2022-07-23 16:41:27,609][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 16:41:27,610][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:41:27,610][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 2
+[2022-07-23 16:41:27,611][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 16:41:27,626][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:41:27,627][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 16:41:46,110][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/login/ with method: POST
+[2022-07-23 16:41:46,111][django.server.log_message():161] [INFO] "POST /user/login/ HTTP/1.1" 200 419
+[2022-07-23 16:41:46,138][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 16:41:46,138][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2454
+[2022-07-23 16:41:53,701][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 16:41:53,702][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1168
+[2022-07-23 16:41:59,435][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 16:41:59,436][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 16:42:03,292][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ with method: PUT
+[2022-07-23 16:42:03,292][django.server.log_message():161] [INFO] "PUT /user/role/d9b4b4797b554db8ae4ac4e22ec9f1s1/ HTTP/1.1" 200 314
+[2022-07-23 16:42:07,779][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 16:42:07,780][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-23 16:42:07,976][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 16:42:07,976][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1171
+[2022-07-23 16:42:12,020][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 16:42:12,020][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 2
+[2022-07-23 16:43:01,695][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: POST
+[2022-07-23 16:43:01,695][django.server.log_message():161] [INFO] "POST /public/db/ HTTP/1.1" 201 209
+[2022-07-23 16:43:01,712][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 16:43:01,713][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 16:43:16,656][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/report/ with method: GET
+[2022-07-23 16:43:16,657][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 142
+[2022-07-23 16:43:25,980][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:43:25,981][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-23 16:43:25,982][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-23 16:43:25,983][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 16:43:25,983][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 142
+[2022-07-23 16:43:25,983][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 142
+[2022-07-23 16:43:26,471][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:43:26,473][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 16:43:26,474][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 16:43:26,474][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 16:43:26,485][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:43:26,486][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 142
+[2022-07-23 16:52:15,112][django.request.log_response():230] [ERROR] Internal Server Error: /api/process-parameterized/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\views.py", line 283, in process_parameterized_fields
+    data = json.loads(request.body.decode())
+  File "c:\users\zwk\appdata\local\programs\python\python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "c:\users\zwk\appdata\local\programs\python\python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\users\zwk\appdata\local\programs\python\python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2022-07-23 16:52:15,114][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/process-parameterized/ with method: POST
+[2022-07-23 16:52:15,115][django.server.log_message():161] [ERROR] "POST /api/process-parameterized/ HTTP/1.1" 500 95576
+[2022-07-23 16:54:19,469][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/process-parameterized/ with method: POST
+[2022-07-23 16:54:19,469][django.server.log_message():161] [INFO] "POST /api/process-parameterized/ HTTP/1.1" 200 75
+[2022-07-23 16:54:36,209][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: POST
+[2022-07-23 16:54:36,210][django.server.log_message():161] [INFO] "POST /api/template/ HTTP/1.1" 200 650
+[2022-07-23 16:54:36,277][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:54:36,278][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 733
+[2022-07-23 16:55:17,819][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/e55858de483643f8afbc4f682e0283b2/ with method: PUT
+[2022-07-23 16:55:17,820][django.server.log_message():161] [INFO] "PUT /api/template/e55858de483643f8afbc4f682e0283b2/ HTTP/1.1" 200 682
+[2022-07-23 16:55:17,888][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:55:17,889][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 765
+[2022-07-23 16:58:09,219][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 16:58:09,219][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-23 16:58:09,620][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 16:58:09,624][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:58:09,624][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 16:58:09,625][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 765
+[2022-07-23 16:58:09,644][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 16:58:09,645][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 765
+[2022-07-23 17:03:10,864][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py changed, reloading.
+[2022-07-23 17:03:12,321][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 17:03:27,464][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py changed, reloading.
+[2022-07-23 17:03:28,960][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 17:03:37,089][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 17:03:37,089][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-23 17:03:37,510][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 17:03:37,513][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 17:03:37,515][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:03:37,516][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 799
+[2022-07-23 17:03:37,547][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:03:37,547][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 799
+[2022-07-23 17:06:03,860][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\public\models.py changed, reloading.
+[2022-07-23 17:06:05,306][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 17:06:35,830][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 17:06:40,001][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 17:06:40,001][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-23 17:06:40,430][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 17:06:40,434][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 17:06:40,436][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:06:40,438][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 799
+[2022-07-23 17:06:40,459][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:06:40,459][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 799
+[2022-07-23 17:07:55,689][django.utils.autoreload.trigger_reload():251] [INFO] C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py changed, reloading.
+[2022-07-23 17:07:57,181][django.utils.autoreload.run_with_reloader():637] [INFO] Watching for file changes with StatReloader
+[2022-07-23 17:07:59,460][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 17:07:59,460][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-23 17:07:59,963][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 17:07:59,968][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 17:07:59,970][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:07:59,971][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:07:59,991][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:07:59,991][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:08:40,847][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 17:08:40,847][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-23 17:08:41,139][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 17:08:41,144][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 17:08:41,146][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:08:41,148][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:08:41,177][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:08:41,178][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:09:06,475][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 17:09:06,475][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-23 17:09:06,756][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 17:09:06,760][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 17:09:06,762][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:09:06,763][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:09:06,788][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:09:06,788][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:24:37,331][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/e55858de483643f8afbc4f682e0283b2/ with method: PUT
+[2022-07-23 17:24:37,332][django.server.log_message():161] [INFO] "PUT /api/template/e55858de483643f8afbc4f682e0283b2/ HTTP/1.1" 200 741
+[2022-07-23 17:24:37,372][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:24:37,372][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:24:47,987][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-23 17:24:47,988][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 142
+[2022-07-23 17:24:48,003][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-23 17:24:48,004][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 142
+[2022-07-23 17:24:49,292][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-23 17:24:49,293][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 142
+[2022-07-23 17:25:19,750][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-23 17:25:19,751][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-23 17:25:20,145][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-23 17:25:20,146][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 142
+[2022-07-23 17:25:38,697][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: POST
+[2022-07-23 17:25:38,698][django.server.log_message():161] [INFO] "POST /api/project/ HTTP/1.1" 200 334
+[2022-07-23 17:25:38,733][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-23 17:25:38,734][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 417
+[2022-07-23 17:25:42,145][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-23 17:25:42,147][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 142
+[2022-07-23 17:25:42,149][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-23 17:25:42,149][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 417
+[2022-07-23 17:26:06,233][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: POST
+[2022-07-23 17:26:06,234][django.server.log_message():161] [INFO] "POST /api/suit/ HTTP/1.1" 200 344
+[2022-07-23 17:26:06,266][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-23 17:26:06,267][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 427
+[2022-07-23 17:26:08,157][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:26:08,158][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:26:08,178][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 17:26:08,179][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 17:26:08,198][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:26:08,198][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:26:08,750][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-23 17:26:08,755][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-23 17:26:08,756][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-23 17:26:08,757][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-23 17:26:08,758][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 427
+[2022-07-23 17:26:08,758][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 142
+[2022-07-23 17:26:33,137][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: POST
+[2022-07-23 17:26:33,137][django.server.log_message():161] [INFO] "POST /api/case/ HTTP/1.1" 200 1188
+[2022-07-23 17:26:33,223][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-23 17:26:33,224][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1271
+[2022-07-23 17:26:34,585][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-23 17:26:34,586][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 142
+[2022-07-23 17:26:34,597][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-23 17:26:34,598][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1271
+[2022-07-23 17:26:38,258][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/parameter-fields/ with method: POST
+[2022-07-23 17:26:38,259][django.server.log_message():161] [INFO] "POST /api/parameter-fields/ HTTP/1.1" 200 193
+[2022-07-23 17:27:55,044][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: POST
+[2022-07-23 17:27:55,045][django.server.log_message():161] [INFO] "POST /api/scenario/ HTTP/1.1" 200 435
+[2022-07-23 17:27:55,099][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-23 17:27:55,100][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-23 17:28:03,476][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/3ff0e9d5cd9249329e449b72253ce5af/ with method: GET
+[2022-07-23 17:28:03,476][django.server.log_message():161] [INFO] "GET /api/case/3ff0e9d5cd9249329e449b72253ce5af/ HTTP/1.1" 200 1579
+[2022-07-23 17:28:09,675][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/execute/ with method: POST
+[2022-07-23 17:28:09,676][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 101
+[2022-07-23 17:28:38,975][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/execute/ with method: POST
+[2022-07-23 17:28:38,976][django.server.log_message():161] [INFO] "POST /api/execute/ HTTP/1.1" 200 101
+[2022-07-23 17:28:58,414][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/report/ with method: GET
+[2022-07-23 17:28:58,414][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1292
+[2022-07-23 18:33:36,915][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-23 18:33:36,916][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-23 21:47:43,693][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 21:47:43,693][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1171
+[2022-07-23 21:47:44,181][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-23 21:47:44,183][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1171
+[2022-07-23 21:47:44,187][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-23 21:47:44,187][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-23 21:47:47,362][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-23 21:47:47,363][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-23 21:47:49,501][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/redis/ with method: GET
+[2022-07-23 21:47:49,502][django.server.log_message():161] [INFO] "GET /public/redis/ HTTP/1.1" 200 2
+[2022-07-24 11:02:25,454][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/login/ with method: POST
+[2022-07-24 11:02:25,454][django.server.log_message():161] [INFO] "POST /user/login/ HTTP/1.1" 200 419
+[2022-07-24 11:02:25,479][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:02:25,480][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:02:26,345][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 65, in process_response
+    if response['content-type'] == 'application/json':
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\http\response.py", line 178, in __getitem__
+    return self.headers[header]
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\datastructures.py", line 316, in __getitem__
+    return self._store[key.lower()][1]
+KeyError: 'content-type'
+[2022-07-24 11:02:26,378][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 155, in process_response
+    message=request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-24 11:02:26,408][django.request.log_response():230] [ERROR] Internal Server Error: /media/icon/avatar.jpg/
+Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\django\utils\deprecation.py", line 119, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\logsseta.py", line 96, in process_response
+    'view': request.META['VIEW'],
+KeyError: 'VIEW'
+[2022-07-24 11:02:26,409][django.server.log_message():161] [ERROR] "GET /media/icon/avatar.jpg/ HTTP/1.1" 500 78691
+[2022-07-24 11:02:55,120][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-24 11:02:55,121][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 2252
+[2022-07-24 11:02:56,665][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-24 11:02:56,667][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1962
+[2022-07-24 11:02:56,668][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-24 11:02:56,669][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 2252
+[2022-07-24 11:02:57,455][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-24 11:02:57,456][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-24 11:02:57,461][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 11:02:57,461][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 11:02:57,480][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 11:02:57,481][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 11:02:58,578][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 11:02:58,580][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-24 11:02:58,583][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:02:58,583][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 11:02:58,583][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1962
+[2022-07-24 11:02:58,585][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:02:59,138][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:02:59,143][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:02:59,150][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:02:59,151][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:03:04,070][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/report/ with method: GET
+[2022-07-24 11:03:04,070][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1292
+[2022-07-24 11:05:39,830][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:05:39,831][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:05:40,227][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/report/ with method: GET
+[2022-07-24 11:05:40,228][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1292
+[2022-07-24 11:05:40,507][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /media/icon/avatar.jpg/ with method: GET
+[2022-07-24 11:05:40,512][django.server.log_message():161] [INFO] "GET /media/icon/avatar.jpg/ HTTP/1.1" 200 272429
+[2022-07-24 11:05:41,936][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:05:41,937][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:05:42,213][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/report/ with method: GET
+[2022-07-24 11:05:42,214][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1292
+[2022-07-24 11:05:43,153][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:05:43,154][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:05:43,336][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:05:43,337][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:05:43,597][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/report/ with method: GET
+[2022-07-24 11:05:43,598][django.server.log_message():161] [INFO] "GET /api/report/ HTTP/1.1" 200 1292
+[2022-07-24 11:05:46,258][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-24 11:05:46,259][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 2252
+[2022-07-24 11:06:53,976][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-24 11:06:53,977][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-24 11:07:50,290][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-24 11:07:50,291][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1171
+[2022-07-24 11:08:01,712][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-24 11:08:01,713][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-24 11:08:05,784][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/menu/ with method: GET
+[2022-07-24 11:08:05,784][django.server.log_message():161] [INFO] "GET /user/menu/ HTTP/1.1" 200 4947
+[2022-07-24 11:08:11,405][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/38710147e7f14a1d96f29c49515e0784/ with method: PUT
+[2022-07-24 11:08:11,405][django.server.log_message():161] [INFO] "PUT /user/role/38710147e7f14a1d96f29c49515e0784/ HTTP/1.1" 200 319
+[2022-07-24 11:08:14,265][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/role/ with method: GET
+[2022-07-24 11:08:14,268][django.server.log_message():161] [INFO] "GET /user/role/ HTTP/1.1" 200 1174
+[2022-07-24 11:08:14,272][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/ with method: GET
+[2022-07-24 11:08:14,272][django.server.log_message():161] [INFO] "GET /user/info/ HTTP/1.1" 200 1042
+[2022-07-24 11:08:26,342][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/?user_id=zhubaobao with method: GET
+[2022-07-24 11:08:26,343][django.server.log_message():161] [INFO] "GET /user/info/?user_id=zhubaobao HTTP/1.1" 200 568
+[2022-07-24 11:08:29,883][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/?user_id=zhubaobao with method: GET
+[2022-07-24 11:08:29,883][django.server.log_message():161] [INFO] "GET /user/info/?user_id=zhubaobao HTTP/1.1" 200 568
+[2022-07-24 11:08:31,919][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/info/?user_id=zhubaobao with method: GET
+[2022-07-24 11:08:31,920][django.server.log_message():161] [INFO] "GET /user/info/?user_id=zhubaobao HTTP/1.1" 200 568
+[2022-07-24 11:08:42,047][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-24 11:08:42,048][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-24 11:08:44,088][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/redis/ with method: GET
+[2022-07-24 11:08:44,088][django.server.log_message():161] [INFO] "GET /public/redis/ HTTP/1.1" 200 2
+[2022-07-24 11:09:39,844][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-24 11:09:39,847][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-24 11:09:39,849][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 11:09:39,850][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 11:09:39,866][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 11:09:39,867][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 11:10:25,857][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:10:25,859][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:10:25,869][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:10:25,870][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:14:14,329][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:14:14,329][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:14:14,814][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:14:14,820][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:14:14,824][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:14:14,825][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:16:49,700][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:16:49,700][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:16:50,033][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:16:50,037][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:16:50,041][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:16:50,042][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:17:38,115][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:17:38,116][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:17:38,368][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:17:38,375][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:17:38,381][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:17:38,381][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:17:40,876][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:17:40,877][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:17:41,161][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:17:41,165][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:17:41,167][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:17:41,168][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:26:04,819][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:26:04,820][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:26:05,062][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:26:05,072][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:26:05,076][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:26:05,077][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:28:51,612][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:28:51,613][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:28:51,851][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:28:51,854][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:28:51,869][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:28:51,870][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:29:39,072][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:29:39,073][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:29:39,329][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:29:39,337][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:29:39,340][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:29:39,341][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:31:20,399][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:31:20,399][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:31:20,704][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:31:20,718][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:31:20,721][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:31:20,723][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:32:22,518][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 11:32:22,526][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/eac355207c1c400b87405d4d4b78e665/ with method: PUT
+[2022-07-24 11:32:22,526][django.request.log_response():230] [WARNING] Bad Request: /api/scenario/eac355207c1c400b87405d4d4b78e665/
+[2022-07-24 11:32:22,527][django.server.log_message():161] [WARNING] "PUT /api/scenario/eac355207c1c400b87405d4d4b78e665/ HTTP/1.1" 400 65
+[2022-07-24 11:32:23,312][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 11:32:23,318][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/eac355207c1c400b87405d4d4b78e665/ with method: PUT
+[2022-07-24 11:32:23,319][django.request.log_response():230] [WARNING] Bad Request: /api/scenario/eac355207c1c400b87405d4d4b78e665/
+[2022-07-24 11:32:23,319][django.server.log_message():161] [WARNING] "PUT /api/scenario/eac355207c1c400b87405d4d4b78e665/ HTTP/1.1" 400 65
+[2022-07-24 11:33:49,193][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:33:49,193][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:33:49,551][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:33:49,556][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:33:49,560][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:33:49,560][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:37:45,685][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:37:45,686][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:37:45,978][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:37:45,982][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:37:45,993][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:37:45,994][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:38:01,317][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/?cases=&scenario=&statue=&page=1 with method: GET
+[2022-07-24 11:38:01,317][django.server.log_message():161] [INFO] "GET /api/scenario/?cases=&scenario=&statue=&page=1 HTTP/1.1" 200 518
+[2022-07-24 11:40:56,154][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:40:56,155][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:40:56,400][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:40:56,406][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 11:40:56,412][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:40:56,412][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:42:38,299][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 11:42:38,300][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 11:42:38,561][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 11:42:38,570][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 11:42:38,576][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 11:42:38,576][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 13:16:17,273][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 13:16:17,274][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 13:17:03,853][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 13:17:03,853][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 13:17:25,851][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 13:17:25,851][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 13:20:41,017][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 13:20:41,018][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 13:21:24,539][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 13:21:24,542][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 13:21:24,546][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 13:21:24,547][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 13:22:16,650][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 13:22:16,654][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 13:22:16,659][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 13:22:16,659][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 13:22:32,795][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 13:22:32,798][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 13:22:32,803][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 13:22:32,804][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 13:22:43,607][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 13:22:43,608][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 13:22:44,313][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 13:22:44,317][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 13:22:44,325][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 13:22:44,325][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 13:22:54,224][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 13:22:54,224][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 13:22:54,469][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 13:22:54,474][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 13:22:54,481][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 13:22:54,482][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 13:23:31,640][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 13:23:31,646][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/eac355207c1c400b87405d4d4b78e665/ with method: PUT
+[2022-07-24 13:23:31,646][django.request.log_response():230] [WARNING] Bad Request: /api/scenario/eac355207c1c400b87405d4d4b78e665/
+[2022-07-24 13:23:31,647][django.server.log_message():161] [WARNING] "PUT /api/scenario/eac355207c1c400b87405d4d4b78e665/ HTTP/1.1" 400 65
+[2022-07-24 13:23:32,321][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 13:23:32,326][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/eac355207c1c400b87405d4d4b78e665/ with method: PUT
+[2022-07-24 13:23:32,327][django.request.log_response():230] [WARNING] Bad Request: /api/scenario/eac355207c1c400b87405d4d4b78e665/
+[2022-07-24 13:23:32,327][django.server.log_message():161] [WARNING] "PUT /api/scenario/eac355207c1c400b87405d4d4b78e665/ HTTP/1.1" 400 65
+[2022-07-24 15:20:26,583][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:20:26,587][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:20:26,589][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:20:26,590][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:20:47,323][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:20:47,326][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:20:47,338][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:20:47,338][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:22:24,670][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 15:22:24,670][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 15:22:24,934][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:22:24,940][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:22:24,945][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:22:24,946][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:29:26,117][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 15:29:26,118][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 15:29:26,491][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:29:26,495][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:29:26,504][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:29:26,505][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:30:21,376][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:30:21,380][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:30:21,383][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:30:21,384][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:30:23,391][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 15:30:23,392][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 15:30:23,641][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:30:23,649][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:30:23,651][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:30:23,654][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:30:31,257][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 15:30:31,258][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 15:30:31,744][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:30:31,747][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:30:31,750][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:30:31,750][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:31:36,648][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 15:31:36,648][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 15:31:37,020][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:31:37,026][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:31:37,032][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:31:37,032][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:32:07,429][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:32:07,433][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:32:07,439][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:32:07,440][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:32:19,808][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:32:19,812][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:32:19,822][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:32:19,823][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:32:21,546][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 15:32:21,547][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 15:32:21,922][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:32:21,925][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:32:21,930][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:32:21,930][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:37:05,858][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:37:05,861][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:37:05,864][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:37:05,865][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:40:11,455][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:40:11,459][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:40:11,463][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:40:11,464][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:41:05,526][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:41:05,530][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:41:05,535][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:41:05,536][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:42:39,356][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:42:39,358][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:42:39,359][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:42:39,360][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:42:48,221][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:42:48,224][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:42:48,227][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:42:48,227][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:45:06,763][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 15:45:06,764][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 15:45:07,103][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:45:07,105][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:45:07,107][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:45:07,108][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:45:39,232][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:45:39,235][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:45:39,235][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:45:39,236][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:45:49,215][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 15:45:49,216][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 15:45:49,591][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:45:49,596][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:45:49,604][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:45:49,605][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:46:31,322][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 15:46:31,322][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 15:46:31,742][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:46:31,749][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:46:31,755][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:46:31,757][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:46:55,893][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:46:55,895][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:46:55,897][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:46:55,898][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 15:47:05,553][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 15:47:05,555][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 15:47:05,557][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 15:47:05,558][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:46:19,386][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:46:19,387][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:46:19,851][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:46:19,855][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:46:19,860][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:46:19,862][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:47:04,275][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:47:04,276][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:47:04,794][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:47:04,795][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:47:04,808][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:47:04,808][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:47:54,043][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:47:54,044][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:47:54,046][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:47:54,046][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:47:58,208][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:47:58,209][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:47:58,466][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:47:58,472][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:47:58,476][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:47:58,477][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:48:00,957][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:48:00,957][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:48:01,229][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:48:01,234][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:48:01,236][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:48:01,238][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:48:02,125][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:48:02,126][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:48:02,386][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:48:02,390][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:48:02,395][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:48:02,399][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:48:03,239][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:48:03,239][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:48:03,485][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:48:03,491][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:48:03,491][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:48:03,491][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:48:04,263][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:48:04,264][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:48:04,514][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:48:04,518][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:48:04,521][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:48:04,523][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:48:55,843][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:48:55,846][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:48:55,850][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:48:55,851][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:48:57,459][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:48:57,459][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:48:57,717][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:48:57,725][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:48:57,729][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:48:57,729][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:49:11,641][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 16:49:11,648][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/eac355207c1c400b87405d4d4b78e665/ with method: PUT
+[2022-07-24 16:49:11,648][django.request.log_response():230] [WARNING] Bad Request: /api/scenario/eac355207c1c400b87405d4d4b78e665/
+[2022-07-24 16:49:11,649][django.server.log_message():161] [WARNING] "PUT /api/scenario/eac355207c1c400b87405d4d4b78e665/ HTTP/1.1" 400 65
+[2022-07-24 16:49:12,747][sse.lib.core.exceptions.CustomExceptionHandler():109] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\lib\core\model_view_set.py", line 19, in update
+    response = super().update(request, *args, **kwargs)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\mixins.py", line 78, in perform_update
+    serializer.save()
+  File "C:\Users\ZWK\Desktop\virtual\django-rest\lib\site-packages\rest_framework\serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "C:\Users\ZWK\Desktop\homespace\django-controller\sse\applications\api\model_serializer.py", line 64, in update
+    field = param["field"] + "@" + str(param["type"])
+TypeError: string indices must be integers
+
+[2022-07-24 16:49:12,754][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/eac355207c1c400b87405d4d4b78e665/ with method: PUT
+[2022-07-24 16:49:12,754][django.request.log_response():230] [WARNING] Bad Request: /api/scenario/eac355207c1c400b87405d4d4b78e665/
+[2022-07-24 16:49:12,755][django.server.log_message():161] [WARNING] "PUT /api/scenario/eac355207c1c400b87405d4d4b78e665/ HTTP/1.1" 400 65
+[2022-07-24 16:50:33,450][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:50:33,453][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:50:33,460][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:50:33,460][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:50:45,850][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:50:45,852][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:50:45,853][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:50:45,854][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:50:48,689][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:50:48,689][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:50:48,929][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:50:48,933][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:50:48,944][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:50:48,945][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:51:17,366][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:51:17,367][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:51:17,652][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:51:17,655][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:51:17,664][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:51:17,664][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:51:41,416][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:51:41,417][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:51:41,656][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:51:41,668][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:51:41,673][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:51:41,674][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:52:06,530][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:52:06,530][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:52:06,774][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:52:06,775][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:52:06,790][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:52:06,790][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:52:07,610][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:52:07,612][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:52:07,737][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:52:07,737][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:52:08,027][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:52:08,032][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:52:08,036][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:52:08,037][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:52:09,251][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 16:52:09,258][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 16:52:09,260][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:52:09,263][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:52:09,264][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-24 16:52:09,265][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1962
+[2022-07-24 16:52:24,041][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 16:52:24,041][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 16:52:24,280][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:52:24,283][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:52:24,295][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:52:24,296][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 16:53:16,834][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/scenario/ with method: GET
+[2022-07-24 16:53:16,836][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/case/ with method: GET
+[2022-07-24 16:53:16,836][django.server.log_message():161] [INFO] "GET /api/scenario/ HTTP/1.1" 200 518
+[2022-07-24 16:53:16,837][django.server.log_message():161] [INFO] "GET /api/case/ HTTP/1.1" 200 1662
+[2022-07-24 17:22:32,200][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/login/ with method: POST
+[2022-07-24 17:22:32,201][django.server.log_message():161] [INFO] "POST /user/login/ HTTP/1.1" 200 419
+[2022-07-24 17:22:32,230][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 17:22:32,230][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 17:22:40,292][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-24 17:22:40,293][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 2252
+[2022-07-24 17:22:41,406][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/project/ with method: GET
+[2022-07-24 17:22:41,407][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/suit/ with method: GET
+[2022-07-24 17:22:41,408][django.server.log_message():161] [INFO] "GET /api/project/ HTTP/1.1" 200 2252
+[2022-07-24 17:22:41,408][django.server.log_message():161] [INFO] "GET /api/suit/ HTTP/1.1" 200 1962
+[2022-07-24 17:22:42,487][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-24 17:22:42,490][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-24 17:22:42,493][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 17:22:42,494][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 17:22:42,509][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 17:22:42,510][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 17:24:10,252][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 17:24:10,252][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 17:24:11,320][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-24 17:24:11,324][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-24 17:24:11,326][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 17:24:11,327][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 17:24:11,343][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 17:24:11,343][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 17:28:25,919][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /user/user-menus/ with method: POST
+[2022-07-24 17:28:25,919][django.server.log_message():161] [INFO] "POST /user/user-menus/ HTTP/1.1" 200 2583
+[2022-07-24 17:28:26,510][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /public/db/ with method: GET
+[2022-07-24 17:28:26,512][django.server.log_message():161] [INFO] "GET /public/db/ HTTP/1.1" 200 209
+[2022-07-24 17:28:26,516][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 17:28:26,517][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824
+[2022-07-24 17:28:26,540][sse.lib.utils.logger.process_response():112] [INFO] Receive request from IP: 127.0.0.1 by url: /api/template/ with method: GET
+[2022-07-24 17:28:26,541][django.server.log_message():161] [INFO] "GET /api/template/ HTTP/1.1" 200 824

@@ -66,6 +66,7 @@ class Database(models.Model):
         (1, "ORACLE"),
     )
     type = models.IntegerField(default=0, verbose_name="数据库类型")
+    name = models.CharField(max_length=128,unique=True,verbose_name="备注信息")
     host = models.CharField(max_length=64, verbose_name="服务器地址")
     username = models.CharField(max_length=64, verbose_name="登录用户")
     password = models.CharField(max_length=64,null=True, verbose_name="密码")
@@ -82,7 +83,11 @@ class Database(models.Model):
         # ]
         unique_together = ('id','type','host','dbname') # 必须加主键ID
 
+    def __str__(self):
+        return f"{self.name}/{self.host}/{self.port}/{self.dbname}"
+
 class Redis(models.Model):
+    name = models.CharField(max_length=128, unique=True,verbose_name="备注信息")
     host = models.CharField(max_length=64, verbose_name="服务器地址")
     username = models.CharField(max_length=64, verbose_name="登录用户")
     password = models.CharField(max_length=64, null=True,verbose_name="密码")
@@ -97,6 +102,7 @@ class Redis(models.Model):
 
 
 class RabbitMQ(models.Model):
+    name = models.CharField(max_length=128,unique=True,verbose_name="备注信息")
     host = models.CharField(max_length=64, verbose_name="服务器地址")
     username = models.CharField(max_length=64, verbose_name="登录用户")
     password = models.CharField(max_length=64, verbose_name="密码")
@@ -114,6 +120,7 @@ class RabbitMQ(models.Model):
 
 
 class FTP(models.Model):
+    name = models.CharField(max_length=128,unique=True, verbose_name="备注信息")
     host = models.CharField(max_length=64, verbose_name="服务器地址")
     username = models.CharField(max_length=64, verbose_name="登录用户")
     password = models.CharField(max_length=64, verbose_name="密码")
